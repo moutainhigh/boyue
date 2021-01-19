@@ -6,14 +6,19 @@ import com.boyue.common.enums.ExceptionEnum;
 import com.boyue.common.exception.ByException;
 import com.boyue.common.utils.BeanHelper;
 import com.boyue.item.dto.SpecGroupDTO;
+import com.boyue.item.dto.SpecParamDTO;
 import com.boyue.item.entity.BySpecGroup;
 import com.boyue.item.mapper.BySpecGroupMapper;
 import com.boyue.item.service.BySpecGroupService;
+import com.boyue.item.service.BySpecParamService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -26,6 +31,9 @@ import java.util.List;
 @Service
 @Slf4j
 public class BySpecGroupServiceImpl extends ServiceImpl<BySpecGroupMapper, BySpecGroup> implements BySpecGroupService {
+
+    @Autowired
+    private BySpecParamService specParamService;
 
     /**
      * 获取规格组
@@ -108,5 +116,30 @@ public class BySpecGroupServiceImpl extends ServiceImpl<BySpecGroupMapper, BySpe
         if (!updateFlag){
             throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
         }
+    }
+
+    /**
+     * 通过分类id查询商品的规格组和组内参数
+     *
+     * @param id 分类id
+     * @return specGroupDTO的list集合
+     */
+    @Override
+    public List<SpecGroupDTO> findSpecParamAndSpecGroup(Long id) {
+        //获取规格组的list集合
+        List<SpecGroupDTO> specGroupDTOList = this.findSpec(id);
+
+        //获取规格组内参数的list集合
+        List<SpecParamDTO> specParamDTOList = specParamService.findSpecParam(null, id, null);
+
+        //将specParamDTOList存储为map集合
+        Map<Long, List<SpecParamDTO>> map = specParamDTOList.stream().collect(Collectors.groupingBy(SpecParamDTO::getGroupId));
+        //将specParamDTO设置到specGroup对象中
+        for (SpecGroupDTO specGroupDTO : specGroupDTOList) {
+            Long gid = specGroupDTO.getId();
+            specGroupDTO.setParams(map.get(gid));
+        }
+
+        return specGroupDTOList;
     }
 }

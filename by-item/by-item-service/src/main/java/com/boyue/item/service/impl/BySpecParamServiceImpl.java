@@ -65,4 +65,58 @@ public class BySpecParamServiceImpl extends ServiceImpl<BySpecParamMapper, BySpe
 
         return specParamDTOList;
     }
+
+    /**
+     * 新增规格参数
+     *
+     * @param specParamDTO 新增对象
+     */
+    @Override
+    public void saveSpecParam(SpecParamDTO specParamDTO) {
+        //判断参数是否合法
+        if (specParamDTO == null){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        BySpecParam specParam = BeanHelper.copyProperties(specParamDTO, BySpecParam.class);
+
+        boolean flag = this.save(specParam);
+        if (!flag){
+            throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
+        }
+    }
+
+    /**
+     * 修改规格参数
+     *
+     * @param specParamDTO 新增对象
+     */
+    @Override
+    public void updateSpecParam(SpecParamDTO specParamDTO) {
+        //判断参数是否合格
+        if (specParamDTO == null){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        //转换数据类型
+        BySpecParam specParam = BeanHelper.copyProperties(specParamDTO, BySpecParam.class);
+        boolean updateFlag = this.updateById(specParam);
+        if (!updateFlag){
+            throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
+        }
+    }
+
+    /**
+     * 删除规格参数
+     *
+     * @param id 规格参数id
+     */
+    @Override
+    public void deleteSpecParam(Long id) {
+        if (id == null){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        boolean flag = this.removeById(id);
+        if (!flag){
+            throw new ByException(ExceptionEnum.DELETE_OPERATION_FAIL);
+        }
+    }
 }

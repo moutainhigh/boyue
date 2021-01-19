@@ -25,4 +25,25 @@ public interface BySpecParamService extends IService<BySpecParam> {
      * @return 规格组的list集合
      */
     List<SpecParamDTO> findSpecParam(Long gid, Long cid, Boolean searching);
+
+    /**
+     * 新增规格参数
+     *
+     * @param specParamDTO 新增对象
+     */
+    void saveSpecParam(SpecParamDTO specParamDTO);
+
+    /**
+     * 修改规格参数
+     *
+     * @param specParamDTO 新增对象
+     */
+    void updateSpecParam(SpecParamDTO specParamDTO);
+
+    /**
+     * 删除规格参数
+     *
+     * @param id 规格参数id
+     */
+    void deleteSpecParam(Long id);
 }

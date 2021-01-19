@@ -44,4 +44,12 @@ public interface BySpecGroupService extends IService<BySpecGroup> {
      * @param specGroupDTO 修改对象
      */
     void updateSpecGroup(SpecGroupDTO specGroupDTO);
+
+    /**
+     * 通过分类id查询商品的规格组和组内参数
+     *
+     * @param id 分类id
+     * @return specGroupDTO的list集合
+     */
+    List<SpecGroupDTO> findSpecParamAndSpecGroup(Long id);
 }

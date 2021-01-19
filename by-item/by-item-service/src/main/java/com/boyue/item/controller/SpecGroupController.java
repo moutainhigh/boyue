@@ -74,4 +74,15 @@ public class SpecGroupController {
         return ResponseEntity.noContent().build();
     }
 
+    /**
+     * 通过分类id查询商品的规格组和组内参数
+     *
+     * @param id 分类id
+     * @return specGroupDTO的list集合
+     */
+    @GetMapping(path = "/{id}", name = "通过分类id查询商品的规格组和组内参数")
+    public ResponseEntity<List<SpecGroupDTO>> findSpecParamAndSpecGroup(@PathVariable(name = "id") Long id) {
+        List<SpecGroupDTO> list = specGroupService.findSpecParamAndSpecGroup(id);
+        return ResponseEntity.ok(list);
+    }
 }
