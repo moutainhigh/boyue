@@ -1,6 +1,7 @@
 package com.boyue.item.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.boyue.item.dto.SpuDetailDTO;
 import com.boyue.item.entity.BySpuDetail;
 
 /**
@@ -13,4 +14,11 @@ import com.boyue.item.entity.BySpuDetail;
  */
 public interface BySpuDetailService extends IService<BySpuDetail> {
 
+    /**
+     * 查询SpuDetail接口
+     *
+     * @param id 商品id
+     * @return SpuDetailDTO
+     */
+    SpuDetailDTO findSpuDetailBySpuId(Long id);
 }

@@ -10,10 +10,13 @@ import com.boyue.item.dto.CategoryDTO;
 import com.boyue.item.entity.ByCategory;
 import com.boyue.item.mapper.ByCategoryMapper;
 import com.boyue.item.service.ByCategoryService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -24,6 +27,7 @@ import java.util.List;
  * @since 2021-01-17
  */
 @Service
+@Slf4j
 public class ByCategoryServiceImpl extends ServiceImpl<ByCategoryMapper, ByCategory> implements ByCategoryService {
     /**
      * 功能说明： 传递商品分类的父id值，获取属于这个父id的所有分类信息
@@ -138,6 +142,36 @@ public class ByCategoryServiceImpl extends ServiceImpl<ByCategoryMapper, ByCateg
         ByCategory category = BeanHelper.copyProperties(categoryDTO, ByCategory.class);
         boolean flag = this.save(category);
         if (!flag){
+            throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
+        }
+    }
+
+    /**
+     * 创建夫分类信息
+     *
+     * @param categoryDTO categoryDTO 分类对象
+     */
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void createCategory(CategoryDTO categoryDTO) {
+        if (categoryDTO == null){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        //类型转换
+        ByCategory category = BeanHelper.copyProperties(categoryDTO, ByCategory.class);
+        //构造分类对象
+        //select count(id) from by_category where parent_id = 0;
+        QueryWrapper<ByCategory> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("count(id) as total").lambda().eq(ByCategory::getParentId,0);
+        Map<String, Object> map = this.getMap(queryWrapper);
+        Long value = (Long) map.get("total");
+        int total = value.intValue();
+        total++;
+        //设置sort
+       category.setSort(total);
+       log.info("构造后的category={}",category);
+        boolean saveFlag = this.save(category);
+        if (!saveFlag){
             throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
         }
     }

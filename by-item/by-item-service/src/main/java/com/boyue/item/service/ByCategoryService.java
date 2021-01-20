@@ -52,4 +52,11 @@ public interface ByCategoryService extends IService<ByCategory> {
      * @param categoryDTO categoryDTO 分类对象
      */
     void saveCategory(CategoryDTO categoryDTO);
+
+    /**
+     * 创建夫分类信息
+     *
+     * @param categoryDTO categoryDTO 分类对象
+     */
+    void createCategory(CategoryDTO categoryDTO);
 }

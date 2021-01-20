@@ -2,6 +2,9 @@ package com.boyue.item.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.boyue.item.entity.ByBrand;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,11 @@ import com.boyue.item.entity.ByBrand;
  */
 public interface ByBrandMapper extends BaseMapper<ByBrand> {
 
+    /**
+     * 根据cid查询品牌信息
+     * @param cid
+     * @return
+     */
+    @Select("SELECT a.* FROM by_brand a ,by_category_brand b WHERE b.brand_id = a.id AND b.category_id=#{cid}")
+    List<ByBrand> findBrandByCategoryId(Long cid);
 }

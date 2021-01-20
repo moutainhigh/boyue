@@ -193,4 +193,24 @@ public class ByBrandServiceImpl extends ServiceImpl<ByBrandMapper, ByBrand> impl
         }
         return BeanHelper.copyProperties(brand, BrandDTO.class);
     }
+
+    /**
+     * 根据分类id获取品牌信息
+     *
+     * @param id 分类id
+     * @return brandDTO对象
+     */
+    @Override
+    public List<BrandDTO> findBrandByCategoryId(Long id) {
+        //判断参数是否合法
+        if (id == null){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        //构造查询条件对象
+        List<ByBrand> brandList =  this.getBaseMapper().findBrandByCategoryId(id);
+        if(CollectionUtils.isEmpty(brandList)){
+            throw new ByException(ExceptionEnum.BRAND_NOT_FOUND);
+        }
+        return BeanHelper.copyWithCollection(brandList,BrandDTO.class);
+    }
 }

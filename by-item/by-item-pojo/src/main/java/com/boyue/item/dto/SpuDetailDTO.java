@@ -1,14 +1,8 @@
-package com.boyue.item.entity;
+package com.boyue.item.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
@@ -21,11 +15,8 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class BySpuDetail extends Model<BySpuDetail> {
+public class SpuDetailDTO {
 
-private static final long serialVersionUID=1L;
-
-    @TableId(value = "spu_id",type = IdType.INPUT)
     private Long spuId;
 
     /**
@@ -52,15 +43,4 @@ private static final long serialVersionUID=1L;
      * 售后服务
      */
     private String afterService;
-
-    private Date createTime;
-
-    private Date updateTime;
-
-
-    @Override
-    protected Serializable pkVal() {
-        return this.spuId;
-    }
-
 }

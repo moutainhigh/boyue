@@ -92,4 +92,16 @@ public class BrandController {
         brandService.removeById(id);
         return ResponseEntity.noContent().build();
     }
+
+    /**
+     * 根据分类id获取品牌信息
+     * GET /brand/of/category?id=76
+     * @param id 分类id
+     * @return brandDTO对象
+     */
+    @GetMapping(path = "/brand/of/category",name = "根据分类id获取品牌信息")
+    public ResponseEntity<List<BrandDTO>> findBrandByCategoryId(@RequestParam(name = "id") Long id){
+        List<BrandDTO> brandDTOs = brandService.findBrandByCategoryId(id);
+        return ResponseEntity.ok(brandDTOs);
+    }
 }

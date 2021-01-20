@@ -2,6 +2,7 @@ package com.boyue.item.controller;
 
 import com.boyue.item.dto.CategoryDTO;
 import com.boyue.item.service.ByCategoryService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,7 @@ import java.util.List;
  * @Description:
  */
 @RestController
+@Slf4j
 public class CategoryController {
 
     @Autowired
@@ -68,6 +70,7 @@ public class CategoryController {
      */
     @PutMapping(path = "/category", name = "修改分类信息")
     public ResponseEntity<Void> updateCategoryById(@RequestBody CategoryDTO categoryDTO) {
+        log.info("categoryDTO={}",categoryDTO);
         categoryService.updateCategoryById(categoryDTO);
 
         return ResponseEntity.noContent().build();
@@ -82,12 +85,10 @@ public class CategoryController {
      */
     @PostMapping(path = "/category", name = "添加分类信息")
     public ResponseEntity<Void> saveCategory(@RequestBody CategoryDTO categoryDTO) {
+        log.info("categoryDTO={}",categoryDTO);
         categoryService.saveCategory(categoryDTO);
         return ResponseEntity.noContent().build();
     }
-
-    //删除分类
-    //DELETE http://api.boyue.com/api/item/category?id=1424
 
     /**
      * 删除分类
@@ -98,6 +99,20 @@ public class CategoryController {
     @DeleteMapping(path = "/category", name = "删除分类信息")
     public ResponseEntity<Void> deleteCategory(@RequestParam(name = "id") Long id){
         categoryService.removeById(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    /**
+     * 创建夫分类信息
+     * POST http://api.boyue.com/api/item/newCategory
+     *
+     * @param categoryDTO categoryDTO 分类对象
+     * @return 空
+     */
+    @PostMapping(path = "/newCategory", name = "添加分类信息")
+    public ResponseEntity<Void> createCategory(@RequestBody CategoryDTO categoryDTO) {
+        log.info("categoryDTO={}",categoryDTO);
+        categoryService.createCategory(categoryDTO);
         return ResponseEntity.noContent().build();
     }
 }

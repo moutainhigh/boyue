@@ -1,7 +1,10 @@
 package com.boyue.item.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.boyue.item.dto.SkuDTO;
 import com.boyue.item.entity.BySku;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,11 @@ import com.boyue.item.entity.BySku;
  */
 public interface BySkuService extends IService<BySku> {
 
+    /**
+     * 根据spu的id查询Sku集合接口
+     *
+     * @param id 商品实体id
+     * @return 商品实体
+     */
+    List<SkuDTO> findSkuBySpuId(Long id);
 }
