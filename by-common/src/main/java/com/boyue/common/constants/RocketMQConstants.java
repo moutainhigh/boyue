@@ -8,25 +8,31 @@ package com.boyue.common.constants;
  * @Description: 记录会用到的Topic名称、Tags名称
  */
 public abstract class RocketMQConstants {
+    /**
+     * 消息主题
+     */
     public static final class TOPIC {
         /**
          * 商品服务
          */
-        public static final String ITEM_TOPIC_NAME = "ly-item-topic";
+        public static final String ITEM_TOPIC_NAME = "by-item-topic";
         /**
          * 短信服务
          */
-        public static final String SMS_TOPIC_NAME = "ly-sms-topic";
+        public static final String SMS_TOPIC_NAME = "by-sms-topic";
         /**
          * 秒杀服务
          */
-        public static final String SECKILL_TOPIC_NAME = "ly-seckill-topic";
+        public static final String SECKILL_TOPIC_NAME = "by-seckill-topic";
         /**
          * 订单
          */
-        public static final String ORDER_TOPIC_NAME = "ly-order-topic";
+        public static final String ORDER_TOPIC_NAME = "by-order-topic";
     }
 
+    /**
+     * 消息标签
+     */
     public static final class TAGS {
         /**
          * 商品上架的TAGS
@@ -54,6 +60,9 @@ public abstract class RocketMQConstants {
         public static final String ORDER_OVERTIME_TAGS = "order.overtime";
     }
 
+    /**
+     * 消费主题
+     */
     public static final class CONSUMER {
         /**
          * 短信发送 的消费者

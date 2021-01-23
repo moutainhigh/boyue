@@ -4,7 +4,7 @@ import com.boyue.common.enums.ExceptionEnum;
 import com.boyue.common.exception.ByException;
 import com.boyue.item.client.*;
 import com.boyue.item.dto.*;
-import com.boyue.page.service.GoodsDetailService;
+import com.boyue.page.service.GoodsPageService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +28,7 @@ import java.util.Map;
  */
 @Service
 @Slf4j
-public class GoodsDetailServiceImpl implements GoodsDetailService {
+public class GoodsPageServiceImpl implements GoodsPageService {
 
     /**
      * 注入spu的feignClient接口
@@ -139,21 +139,42 @@ public class GoodsDetailServiceImpl implements GoodsDetailService {
         //模板解析器     springboot自动配置
         //构造静态页面存放的目录,nginx目录下
         File dir = new File(htmlPath);
-        if(!dir.exists()){
+        if (!dir.exists()) {
             dir.mkdir();
         }
-        File file = new File(dir,id+".html");
+        File file = new File(dir, id + ".html");
         PrintWriter printWriter = null;
         try {
             printWriter = new PrintWriter(file, "UTF-8");
             //模板引擎生成静态页面
-            templateEngine.process("item",context,printWriter);
+            templateEngine.process("item", context, printWriter);
         } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         } finally {
-            if(printWriter!= null){
+            if (printWriter != null) {
                 printWriter.close();
             }
+        }
+    }
+
+    /**
+     * 删除动态模板页
+     *
+     * @param id 商品id
+     */
+    @Override
+    public void removeHtml(Long id) {
+        if (id == null){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        File dir = new File(htmlPath);
+        if (!dir.exists()) {
+            return;
+        }
+        File file = new File(dir, id + ".html");
+        boolean flag = file.delete();
+        if (!flag){
+            throw new ByException(ExceptionEnum.REMOVE_PAGE_OPERATION_FAIL);
         }
     }
 }

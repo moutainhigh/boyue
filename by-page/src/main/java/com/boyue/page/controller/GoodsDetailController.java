@@ -1,6 +1,6 @@
 package com.boyue.page.controller;
 
-import com.boyue.page.service.GoodsDetailService;
+import com.boyue.page.service.GoodsPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +20,7 @@ import java.util.Map;
 public class GoodsDetailController {
 
     @Autowired
-    private GoodsDetailService goodsDetailService;
+    private GoodsPageService goodsPageService;
 
     /**
      * 显示item模板内容
@@ -31,7 +31,7 @@ public class GoodsDetailController {
      */
     @GetMapping(path = "/item/{id}.html", name = "显示item模板内容")
     public String goodsDetailPage(Model model, @PathVariable(name = "id") Long id) {
-        Map<String, Object> map = goodsDetailService.loadItemData(id);
+        Map<String, Object> map = goodsPageService.loadItemData(id);
         model.addAllAttributes(map);
         return "item";
     }

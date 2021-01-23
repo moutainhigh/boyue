@@ -14,6 +14,7 @@ import com.boyue.search.repository.GoodsRepository;
 import com.boyue.search.service.SearchGoodsService;
 import com.boyue.search.utils.HandlerGoodsUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.Operator;
@@ -43,6 +44,7 @@ import java.util.stream.Collectors;
  * @Description: 搜索的service层
  */
 @Service
+@Slf4j
 public class SearchGoodsServiceImpl implements SearchGoodsService {
 
     /**

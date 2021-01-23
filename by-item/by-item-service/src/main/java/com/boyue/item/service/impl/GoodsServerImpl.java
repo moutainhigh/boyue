@@ -16,12 +16,17 @@ import com.boyue.item.service.BySpuDetailService;
 import com.boyue.item.service.BySpuService;
 import com.boyue.item.service.GoodsServer;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
+
+import static com.boyue.common.constants.RocketMQConstants.TAGS.ITEM_DOWN_TAGS;
+import static com.boyue.common.constants.RocketMQConstants.TAGS.ITEM_UP_TAGS;
+import static com.boyue.common.constants.RocketMQConstants.TOPIC.ITEM_TOPIC_NAME;
 
 /**
  * Created by Intellij IDEA.
@@ -51,6 +56,12 @@ public class GoodsServerImpl implements GoodsServer {
      */
     @Autowired
     private BySkuService skuService;
+
+    /**
+     * 注入rocketMQTemplate
+     */
+    @Autowired
+    private RocketMQTemplate rocketMQTemplate;
 
     /**
      * 新增商品信息
@@ -146,6 +157,10 @@ public class GoodsServerImpl implements GoodsServer {
             log.error("******** sku对象下架操作失败 **********");
             throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
         }
+
+        //发送消息队列到rocketmq
+        String tag = saleable ? ITEM_UP_TAGS : ITEM_DOWN_TAGS;
+        rocketMQTemplate.convertAndSend(ITEM_TOPIC_NAME+":"+tag,id);
     }
 
     /**
@@ -211,6 +226,8 @@ public class GoodsServerImpl implements GoodsServer {
             log.error("******** 保存sku操作失败 **********");
             throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
         }
+
+        //TODO 修改商品完成
     }
 
     /**

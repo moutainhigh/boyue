@@ -40,6 +40,7 @@ public enum ExceptionEnum {
     INSERT_OPERATION_FAIL(500, "新增操作失败！"),
     UPDATE_OPERATION_FAIL(500, "更新操作失败！"),
     DELETE_OPERATION_FAIL(500, "删除操作失败！"),
+    REMOVE_PAGE_OPERATION_FAIL(500, "删除操作失败！"),
     FILE_UPLOAD_ERROR(500, "文件上传失败！"),
     DIRECTORY_WRITER_ERROR(500, "目录写入失败！"),
     FILE_WRITER_ERROR(500, "文件写入失败！"),

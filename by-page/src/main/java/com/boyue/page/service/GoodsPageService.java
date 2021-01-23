@@ -9,7 +9,7 @@ import java.util.Map;
  * @Author: Jacky
  * @Description: 商品详细页的service接口
  */
-public interface GoodsDetailService {
+public interface GoodsPageService {
     /**
      * 显示item模板内容
      *
@@ -20,7 +20,15 @@ public interface GoodsDetailService {
 
     /**
      * 生成动态模板页
+     *
      * @param id 商品id
      */
     void createHtml(Long id);
+
+    /**
+     * 删除动态模板页
+     *
+     * @param id 商品id
+     */
+    void removeHtml(Long id);
 }

@@ -3,7 +3,7 @@ package com.boyue.page.test;
 import com.boyue.common.vo.PageResult;
 import com.boyue.item.client.SpuClient;
 import com.boyue.item.dto.SpuDTO;
-import com.boyue.page.service.GoodsDetailService;
+import com.boyue.page.service.GoodsPageService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ import java.util.Map;
 public class CreatePageTest {
 
     @Autowired
-    private GoodsDetailService goodsDetailService;
+    private GoodsPageService goodsDetailService;
 
     @Autowired
     private SpuClient spuClient;
