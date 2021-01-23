@@ -14,6 +14,7 @@
         <module>by-common</module>
         <module>by-item</module>
         <module>by-oss</module>
+        <module>by-search</module>
     </modules>
 
     <parent>
@@ -47,6 +48,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--mybatisPlus依赖-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -61,11 +63,13 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+        <!--commons工具包-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.4</version>
         </dependency>
+        <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

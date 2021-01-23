@@ -23,3 +23,7 @@ by:
     dir: boyue-image/ # 保存到bucket的某个子目录
     expireTime: 120 # 过期时间，单位是S
     maxFileSize: 5242880 #文件大小限制，这里是5M
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/upload

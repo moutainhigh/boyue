@@ -60,4 +60,12 @@ public interface ByBrandService extends IService<ByBrand> {
      * @return brandDTO对象
      */
     List<BrandDTO> findBrandByCategoryId(Long id);
+
+    /**
+     * 传递品牌的的ids，获取品牌的集合数据
+     *
+     * @param brandIds 品牌的id集合
+     * @return 查询出来的品牌结果
+     */
+    List<BrandDTO> findBrandByIds(String brandIds);
 }

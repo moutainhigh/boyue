@@ -9,3 +9,7 @@ eureka:
       defaultZone: http://127.0.0.1:7200/eureka
     fetch-registry: false
     register-with-eureka: false
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/eureka

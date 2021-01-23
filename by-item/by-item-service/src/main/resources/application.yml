@@ -21,3 +21,7 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: 127.0.0.1
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/item

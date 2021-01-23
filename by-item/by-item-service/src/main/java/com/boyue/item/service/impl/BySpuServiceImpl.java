@@ -117,4 +117,22 @@ public class BySpuServiceImpl extends ServiceImpl<BySpuMapper, BySpu> implements
             spuDTO.setCategoryName(categoryName);
         }
     }
+
+    /**
+     * 根据主键id查询spu信息
+     *
+     * @param id 主键id
+     * @return spuDTO对象
+     */
+    @Override
+    public SpuDTO findSpuById(Long id) {
+        if (id == null) {
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        BySpu spu = this.getById(id);
+        if (spu == null) {
+            throw new ByException(ExceptionEnum.GOODS_NOT_FOUND);
+        }
+        return BeanHelper.copyProperties(spu, SpuDTO.class);
+    }
 }

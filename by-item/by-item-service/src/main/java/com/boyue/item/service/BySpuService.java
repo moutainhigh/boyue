@@ -25,4 +25,11 @@ public interface BySpuService extends IService<BySpu> {
      * @return pageResult对象
      */
     PageResult<SpuDTO> findAllOfSpu(Integer page, Integer rows, String key, Boolean saleable);
+
+    /**
+     * 根据主键id查询sou信息
+     * @param id 主键id
+     * @return spuDTO对象
+     */
+    SpuDTO findSpuById(Long id);
 }

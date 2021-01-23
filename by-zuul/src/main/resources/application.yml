@@ -25,11 +25,14 @@ zuul:
   prefix: /api # 添加路由前缀
   routes:
     item-service: /item/**      # 商品微服务       /item/**
-    oss-service: /upload/**  # 文件管理微服务   /upload/**
+    oss-service: /upload/**     # 文件管理微服务   /upload/**
+    search-service: /search/**  # 搜索微服务       /search/**
 by:
   cors:
     allowedOrigins:
       - http://manage.boyue.com
+      - http://www.boyue.com
+      - http://image.boyue.com;
     allowedCredentials: true
     allowedHeaders:
       - "*"
@@ -42,3 +45,7 @@ by:
       - HEAD
     maxAge: 3600
     filterPath: "/**"
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/zuul

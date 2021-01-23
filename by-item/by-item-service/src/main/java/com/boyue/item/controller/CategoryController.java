@@ -56,7 +56,7 @@ public class CategoryController {
      * @return 查询到的categoryDTO对象的集合
      */
     @GetMapping(path = "/category/of/brand", name = "获取分类信息")
-    public ResponseEntity<List<CategoryDTO>> findCategoryById(@RequestParam(name = "id") Long brandId) {
+    public ResponseEntity<List<CategoryDTO>> findCategoryByBrandId(@RequestParam(name = "id") Long brandId) {
         List<CategoryDTO> categoryList = categoryService.findCategoryById(brandId);
         return ResponseEntity.ok(categoryList);
     }

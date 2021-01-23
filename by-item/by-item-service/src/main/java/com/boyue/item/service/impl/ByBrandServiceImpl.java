@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -57,10 +58,12 @@ public class ByBrandServiceImpl extends ServiceImpl<ByBrandMapper, ByBrand> impl
         if (StringUtils.isNotBlank(key)) {
             queryWrapper.lambda().like(ByBrand::getName, key).or().like(ByBrand::getLetter, key);
         }
-        if (!StringUtils.isNotBlank(sortBy)) {
+        if (StringUtils.isNotBlank(sortBy)) {
             if (desc) {
+                //倒叙
                 queryWrapper.orderByDesc(sortBy);
             } else {
+                //正序
                 queryWrapper.orderByAsc(sortBy);
             }
         }
@@ -212,5 +215,34 @@ public class ByBrandServiceImpl extends ServiceImpl<ByBrandMapper, ByBrand> impl
             throw new ByException(ExceptionEnum.BRAND_NOT_FOUND);
         }
         return BeanHelper.copyWithCollection(brandList,BrandDTO.class);
+    }
+
+    /**
+     * 传递品牌的的ids，获取品牌的集合数据
+     *
+     * @param brandIds 品牌的id集合
+     * @return 查询出来的品牌结果
+     */
+    @Override
+    public List<BrandDTO> findBrandByIds(String brandIds) {
+        if (StringUtils.isEmpty(brandIds)){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+
+        //处理商品ids
+        String[] split = brandIds.split(",");
+        List<String> ids = Arrays.asList(split);
+
+        List<ByBrand> brands = (List<ByBrand>)this.listByIds(ids);
+        if (CollectionUtils.isEmpty(brands)){
+            throw new ByException(ExceptionEnum.BRAND_NOT_FOUND);
+        }
+        List<BrandDTO> brandDTOList = BeanHelper.copyWithCollection(brands, BrandDTO.class);
+
+        if (CollectionUtils.isEmpty(brandDTOList)){
+            throw new ByException(ExceptionEnum.DATA_TRANSFER_ERROR);
+        }
+
+        return brandDTOList;
     }
 }
