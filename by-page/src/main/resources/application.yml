@@ -1,0 +1,13 @@
+server:
+  port: 8084
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: page-service
+  thymeleaf:
+    cache: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7200/eureka

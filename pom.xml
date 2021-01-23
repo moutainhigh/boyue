@@ -15,6 +15,7 @@
         <module>by-item</module>
         <module>by-oss</module>
         <module>by-search</module>
+        <module>by-page</module>
     </modules>
 
     <parent>
