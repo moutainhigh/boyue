@@ -1,4 +1,4 @@
-package com.boyue.item.entity;
+package com.boyue.user.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 用户表
+ * 用户收货地址表
  * </p>
  *
  * @author Jacky
@@ -21,36 +21,63 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class ByUser extends Model<ByUser> {
+public class ByUserAddress extends Model<ByUserAddress> {
 
 private static final long serialVersionUID=1L;
 
+    /**
+     * 地址id
+     */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * 用户名
+     * 用户id
      */
-    private String username;
+    private Long userId;
 
     /**
-     * 密码，加密存储
+     * 收货人名称
      */
-    private String password;
+    private String addressee;
 
     /**
-     * 注册手机号
+     * 收货人电话
      */
     private String phone;
 
     /**
-     * 创建时间
+     * 收货人省份
      */
-    private Date createTime;
+    private String province;
 
     /**
-     * 更新时间
+     * 收货人市
      */
+    private String city;
+
+    /**
+     * 收货人区
+     */
+    private String district;
+
+    /**
+     * 收货人详细地址
+     */
+    private String address;
+
+    /**
+     * 收货人邮编
+     */
+    private String postcode;
+
+    /**
+     * 是否默认 0-不是  1-是
+     */
+    private Integer isDefault;
+
+    private Date createTime;
+
     private Date updateTime;
 
 

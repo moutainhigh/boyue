@@ -1,7 +1,7 @@
-package com.boyue.item.service;
+package com.boyue.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.boyue.item.entity.ByUserAddress;
+import com.boyue.user.entity.ByUserAddress;
 
 /**
  * <p>

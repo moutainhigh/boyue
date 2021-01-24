@@ -3,6 +3,7 @@ package com.boyue.item.controller;
 import com.boyue.common.vo.PageResult;
 import com.boyue.item.dto.SpuDTO;
 import com.boyue.item.service.BySpuService;
+import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Slf4j
+@Api("商品服务中心SpuController")
 public class SpuController {
 
     @Autowired
@@ -34,6 +36,13 @@ public class SpuController {
      * @param saleable 上架或下架
      * @return pageResult对象
      */
+    @ApiOperation(value = "查询商品SPU信息 ，分页查询")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "page",value = "当前页",required = false,dataType = "Integer",defaultValue = "1"),
+            @ApiImplicitParam(name = "rows",value = "每页显示条数",required = false,dataType = "Integer",defaultValue = "5"),
+            @ApiImplicitParam(name = "key",value = "过滤条件",required = false,dataType = "String"),
+            @ApiImplicitParam(name = "saleable",value = "上架或下架",required = false,dataType = "Boolean")
+    })
     @GetMapping(path = "/spu/page",name = "查询商品SPU信息 ，分页查询")
     public ResponseEntity<PageResult<SpuDTO>> findAllOfSpu(@RequestParam(name = "page",required = false,defaultValue = "1") Integer page,
                                                          @RequestParam(name = "rows",required = false,defaultValue = "5") Integer rows,
@@ -49,8 +58,11 @@ public class SpuController {
      * @param id 主键id
      * @return spuDTO对象
      */
+    @ApiOperation(value = "根据主键id查询sou信息")
+    @ApiImplicitParam(name = "id", value = "主键id", required = true, dataType = "Long")
     @GetMapping(path = "/spu/{id}",name = "根据主键id查询spu信息")
     public ResponseEntity<SpuDTO> findSpuById(@PathVariable(name = "id") Long id){
+        log.info("----- findSpuById接口，根据主键id查询sou信息 ------");
         SpuDTO spuDTO = spuService.findSpuById(id);
         return ResponseEntity.ok(spuDTO);
     }

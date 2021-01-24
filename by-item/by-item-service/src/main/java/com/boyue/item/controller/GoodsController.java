@@ -2,6 +2,10 @@ package com.boyue.item.controller;
 
 import com.boyue.item.dto.SpuDTO;
 import com.boyue.item.service.GoodsServer;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @Slf4j
+@Api("商品服务中心GoodsController")
 public class GoodsController {
 
     private final GoodsServer goodsServer;
@@ -32,6 +37,7 @@ public class GoodsController {
      * @param spuDTO 商品对象
      * @return 空
      */
+    @ApiOperation(value = "新增商品信息")
     @PostMapping(path = "/goods", name = "新增商品信息")
     public ResponseEntity<Void> saveGoods(@RequestBody SpuDTO spuDTO) {
         log.info("-----   saveGoods接口，完成新增商品信息   -------");
@@ -47,6 +53,11 @@ public class GoodsController {
      * @param saleable 上下架状态
      * @return 空
      */
+    @ApiOperation(value = "修改商品上下架，更新spu信息，同时需要更新sku")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id",value = "商品id",dataType = "Long"),
+            @ApiImplicitParam(name = "saleable",value = "上下架状态",dataType = "Boolean")
+    })
     @PutMapping(path = "/spu/saleable", name = "修改商品上下架，更新spu信息，同时需要更新sku")
     public ResponseEntity<Void> updateSaleable(@RequestParam(name = "id") Long id,
                                                @RequestParam(name = "saleable") Boolean saleable) {
@@ -62,6 +73,7 @@ public class GoodsController {
      * @param spuDTO 商品对象
      * @return 空
      */
+    @ApiOperation(value = "修改商品")
     @PutMapping(path = "/goods", name = "修改商品")
     public ResponseEntity<Void> updateGoods(@RequestBody SpuDTO spuDTO) {
         log.info("----- updateGoods接口，修改商品 ------");
@@ -77,6 +89,8 @@ public class GoodsController {
      * @param id 品牌id
      * @return 空
      */
+    @ApiOperation(value = "根据id删除商品spu数据")
+    @ApiImplicitParam(name = "id", value = "品牌id", required = true, dataType = "Long")
     @DeleteMapping(path = "/delete/spu/{id}", name = "根据id删除商品spu数据")
     public ResponseEntity<Void> deleteSpuById(@PathVariable(value = "id") Long id) {
         log.info("----- deleteSpuById接口，根据id删除商品spu数据  ------");

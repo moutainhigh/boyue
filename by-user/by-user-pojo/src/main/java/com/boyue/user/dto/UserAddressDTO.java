@@ -1,14 +1,8 @@
-package com.boyue.item.entity;
+package com.boyue.user.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
@@ -21,14 +15,12 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class ByUserAddress extends Model<ByUserAddress> {
+public class UserAddressDTO  {
 
-private static final long serialVersionUID=1L;
 
     /**
      * 地址id
      */
-    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
@@ -75,15 +67,4 @@ private static final long serialVersionUID=1L;
      * 是否默认 0-不是  1-是
      */
     private Integer isDefault;
-
-    private Date createTime;
-
-    private Date updateTime;
-
-
-    @Override
-    protected Serializable pkVal() {
-        return this.id;
-    }
-
 }

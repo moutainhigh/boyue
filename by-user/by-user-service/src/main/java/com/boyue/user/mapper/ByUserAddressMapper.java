@@ -1,7 +1,7 @@
-package com.boyue.item.mapper;
+package com.boyue.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.boyue.item.entity.ByUserAddress;
+import com.boyue.user.entity.ByUserAddress;
 
 /**
  * <p>

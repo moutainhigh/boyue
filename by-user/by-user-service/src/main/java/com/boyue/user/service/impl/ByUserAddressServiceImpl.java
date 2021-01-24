@@ -1,9 +1,9 @@
-package com.boyue.item.service.impl;
+package com.boyue.user.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.boyue.item.entity.ByUserAddress;
-import com.boyue.item.mapper.ByUserAddressMapper;
-import com.boyue.item.service.ByUserAddressService;
+import com.boyue.user.entity.ByUserAddress;
+import com.boyue.user.mapper.ByUserAddressMapper;
+import com.boyue.user.service.ByUserAddressService;
 import org.springframework.stereotype.Service;
 
 /**

@@ -2,6 +2,7 @@ package com.boyue.item.controller;
 
 import com.boyue.item.dto.SpuDetailDTO;
 import com.boyue.item.service.BySpuDetailService;
+import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Slf4j
+@Api("商品服务中心SpuDetailController")
 public class SpuDetailController {
 
     /**
@@ -33,6 +35,8 @@ public class SpuDetailController {
      * @param id 商品id
      * @return SpuDetailDTO
      */
+    @ApiOperation(value = "查询SpuDetail接口")
+    @ApiImplicitParam(name = "id", value = "商品id", required = true, dataType = "Long")
     @GetMapping(path = "/spu/detail", name = "查询SpuDetail接口")
     public ResponseEntity<SpuDetailDTO> findSpuDetailBySpuId(@RequestParam(name = "id") Long id) {
         log.info("----- findSpuDetailBySpuId接口，查询SpuDetail接口 ------");

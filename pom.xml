@@ -16,6 +16,9 @@
         <module>by-oss</module>
         <module>by-search</module>
         <module>by-page</module>
+        <module>by-sendSMS</module>
+        <module>by-user</module>
+        <module>by-user-service</module>
     </modules>
 
     <parent>
