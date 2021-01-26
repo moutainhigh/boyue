@@ -31,6 +31,7 @@ public enum ExceptionEnum {
 
     CATEGORY_NOT_FOUND(400, "商品分类不存在！"),
     USER_ADDRESS_NOT_FOUND(400, "商品分类不存在！"),
+    USER_ID_NOT_FOUND(400, "用户的userId不存在！"),
     BRAND_NOT_FOUND(400, "品牌不存在！"),
     SPEC_NOT_FOUND(400, "规格不存在！"),
     SPEC_GROUP_NOT_FOUND(400, "规格参数组不存在！"),
