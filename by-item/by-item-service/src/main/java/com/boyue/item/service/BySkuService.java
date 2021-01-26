@@ -23,4 +23,20 @@ public interface BySkuService extends IService<BySku> {
      * @return 商品实体
      */
     List<SkuDTO> findSkuBySpuId(Long id);
+
+    /**
+     * 根据skuId的List集合查询sku集合
+     *
+     * @param ids skuId的集合
+     * @return sku的集合
+     */
+    List<SkuDTO> findSkuByListIds(List<Long> ids);
+
+    /**
+     * 传递sku的ids，获取sku的集合数据
+     *
+     * @param ids sku的id集合，如有多个用逗号分隔
+     * @return skuDTO的集合
+     */
+    List<SkuDTO> findSkuByIds(String ids);
 }

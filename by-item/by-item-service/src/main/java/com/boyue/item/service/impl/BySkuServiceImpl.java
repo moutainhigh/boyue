@@ -12,7 +12,9 @@ import com.boyue.item.service.BySkuService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -48,5 +50,70 @@ public class BySkuServiceImpl extends ServiceImpl<BySkuMapper, BySku> implements
         }
 
         return BeanHelper.copyWithCollection(skuList, SkuDTO.class);
+    }
+
+    /**
+     * 根据skuId的List集合查询sku集合
+     *
+     * @param ids skuId的集合
+     * @return sku的集合
+     */
+    @Override
+    public List<SkuDTO> findSkuByListIds(List<Long> ids) {
+        //判断参数是否有效
+        if (CollectionUtils.isEmpty(ids)){
+            log.error("******** 传递参数ids为空**********");
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+
+        //获取结果集
+        List<BySku> skuList = (List<BySku>)this.listByIds(ids);
+        if (CollectionUtils.isEmpty(skuList)){
+            log.error("******** 查询出的结果为NULL，商品不存在 **********");
+            throw new ByException(ExceptionEnum.GOODS_NOT_FOUND);
+        }
+
+        //类型转换
+        List<SkuDTO> skuDTOList = BeanHelper.copyWithCollection(skuList, SkuDTO.class);
+        if (CollectionUtils.isEmpty(skuDTOList)) {
+            log.error("******** 类型转换失败！！！ **********");
+            throw new ByException(ExceptionEnum.DATA_TRANSFER_ERROR);
+        }
+
+        return skuDTOList;
+    }
+
+    /**
+     * 传递sku的ids，获取sku的集合数据
+     *
+     * @param ids sku的id集合，如有多个用逗号分隔
+     * @return skuDTO的集合
+     */
+    @Override
+    public List<SkuDTO> findSkuByIds(String ids) {
+        //判断参数是否有效
+        if (StringUtils.isEmpty(ids)){
+            log.error("******** 传递参数ids为空**********");
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+
+        //处理ids
+        List<String> skuIds = Collections.singletonList(ids);
+
+        //获取结果集
+        List<BySku> skuList = (List<BySku>)this.listByIds(skuIds);
+        if (CollectionUtils.isEmpty(skuList)){
+            log.error("******** 查询出的结果为NULL，商品不存在 **********");
+            throw new ByException(ExceptionEnum.GOODS_NOT_FOUND);
+        }
+
+        //类型转换
+        List<SkuDTO> skuDTOList = BeanHelper.copyWithCollection(skuList, SkuDTO.class);
+        if (CollectionUtils.isEmpty(skuDTOList)) {
+            log.error("******** 类型转换失败！！！ **********");
+            throw new ByException(ExceptionEnum.DATA_TRANSFER_ERROR);
+        }
+
+        return skuDTOList;
     }
 }

@@ -18,7 +18,9 @@
         <module>by-page</module>
         <module>by-sendSMS</module>
         <module>by-user</module>
-        <module>by-user-service</module>
+        <module>by-auth</module>
+        <module>by-config</module>
+        <module>by-shopCart</module>
     </modules>
 
     <parent>

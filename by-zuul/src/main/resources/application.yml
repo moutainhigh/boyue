@@ -24,10 +24,13 @@ ribbon:
 zuul:
   prefix: /api # 添加路由前缀
   routes:
-    item-service: /item/**      # 商品微服务       /item/**
-    oss-service: /upload/**     # 文件管理微服务   /upload/**
-    search-service: /search/**  # 搜索微服务       /search/**
-    user-service: /user/**      # 用户微服务       /user/**
+    item-service: /item/**          # 商品微服务         /item/**
+    oss-service: /upload/**         # 文件管理微服务     /upload/**
+    search-service: /search/**      # 搜索微服务         /search/**
+    user-service: /user/**          # 用户微服务         /user/**
+    auth-service: /auth/**          # 授权微服务         /auth/**
+    shopCart-service: /cart/**      # 购物车微服务       /cart/**
+  sensitive-headers:                #覆盖敏感头信息
 by:
   cors:
     allowedOrigins:
@@ -46,6 +49,18 @@ by:
       - HEAD
     maxAge: 3600
     filterPath: "/**"
+  jwt:
+    publicKeyPath: D:\GraduationProject\BoYue\ssh\id_rsa.pub # 公钥地址
+    user:
+      cookieName: BY_TOKEN # cookie名称
+  filter:   # 配置白名单
+    allowPaths:
+      - /api/auth/login
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/code
+      - /api/item
 logging:
   config:
     classpath: logback-spring.xml

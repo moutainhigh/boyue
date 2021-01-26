@@ -4,8 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.boyue.common.enums.ExceptionEnum;
 import com.boyue.common.exception.ByException;
+import com.boyue.common.utils.BeanHelper;
 import com.boyue.common.utils.JsonUtils;
 import com.boyue.common.utils.RegexUtils;
+import com.boyue.user.dto.UserDTO;
 import com.boyue.user.entity.ByUser;
 import com.boyue.user.mapper.ByUserMapper;
 import com.boyue.user.service.ByUserService;
@@ -204,5 +206,32 @@ public class ByUserServiceImpl extends ServiceImpl<ByUserMapper, ByUser> impleme
             throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
         }
         log.info("[by-user服务]register注册成功");
+    }
+
+    /**
+     * 根据用户名和密码查询用户：
+     * 查询功能，根据参数中的用户名和密码查询指定用户并且返回用户
+     *
+     * @param username 用户名
+     * @param password 用户密码
+     * @return userDTO对象
+     */
+    @Override
+    public UserDTO findUserByUsernameAndPassword(String username, String password) {
+        //构建查询对象
+        QueryWrapper<ByUser> queryWrapper = new QueryWrapper<>();
+        //设置查询条件
+        queryWrapper.lambda().eq(ByUser::getUsername,username);
+        //查询用户
+        ByUser user = this.getOne(queryWrapper);
+
+        //校验密码是否正确
+        boolean eqFlag = passwordEncoder.matches(password, user.getPassword());
+        if (!eqFlag){
+            log.error("[by-user服务]findUserByUsernameAndPassword密码不正确");
+            throw new ByException(ExceptionEnum.INVALID_USERNAME_PASSWORD);
+        }
+
+        return BeanHelper.copyProperties(user,UserDTO.class);
     }
 }

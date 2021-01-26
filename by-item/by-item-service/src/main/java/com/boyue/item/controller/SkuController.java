@@ -47,4 +47,32 @@ public class SkuController {
         List<SkuDTO> list = skuService.findSkuBySpuId(id);
         return ResponseEntity.ok(list);
     }
+
+    /**
+     * 根据skuId的List集合查询sku集合
+     *
+     * @param ids skuId的集合
+     * @return sku的集合
+     */
+    @ApiOperation(value = "根据skuId的List集合查询sku集合")
+    @GetMapping(path = "/sku/list", name = "根据skuId的List集合查询sku集合")
+    public ResponseEntity<List<SkuDTO>> findSkuByListIds(@RequestParam(name = "ids") List<Long> ids) {
+        log.info("----- findSkuByListIds接口，查询sku的商品实体 ------");
+        return ResponseEntity.ok(skuService.findSkuByListIds(ids));
+    }
+
+
+    /**
+     * 传递sku的ids，获取sku的集合数据
+     * GET /sku/list?ids=27359021572,28359021572
+     *
+     * @param ids sku的id集合，如有多个用逗号分隔
+     * @return skuDTO的集合
+     */
+    @ApiOperation(value = "传递sku的ids，获取sku的集合数据")
+    @GetMapping(path = "/sku/listIds", name = "传递sku的ids，获取sku的集合数据")
+    public ResponseEntity<List<SkuDTO>> findSkuByIds(@RequestParam(name = "ids") String ids) {
+        log.info("----- findSkuByIds接口，传递sku的ids，获取sku的集合数据 ------");
+        return ResponseEntity.ok(skuService.findSkuByIds(ids));
+    }
 }

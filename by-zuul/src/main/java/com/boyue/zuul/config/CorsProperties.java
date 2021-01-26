@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @Date: 2021/1/17 00:06
  * @Author: Jacky
- * @Description: lycors的配置类
+ * @Description: cors的配置类
  */
 @Data
 @ConfigurationProperties(prefix = "by.cors")

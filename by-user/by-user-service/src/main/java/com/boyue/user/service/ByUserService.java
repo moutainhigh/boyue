@@ -1,6 +1,7 @@
 package com.boyue.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.boyue.user.dto.UserDTO;
 import com.boyue.user.entity.ByUser;
 
 /**
@@ -56,4 +57,14 @@ public interface ByUserService extends IService<ByUser> {
      * @param code   前端传过来的手机验证码
      */
     void register(ByUser user, String code);
+
+    /**
+     * 根据用户名和密码查询用户：
+     * 查询功能，根据参数中的用户名和密码查询指定用户并且返回用户
+     *
+     * @param username 用户名
+     * @param password 用户密码
+     * @return userDTO对象
+     */
+    UserDTO findUserByUsernameAndPassword(String username, String password);
 }

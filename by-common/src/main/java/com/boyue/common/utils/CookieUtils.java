@@ -11,11 +11,8 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 /**
- * Created by Intellij IDEA.
- *
- * @Date: 2021/1/15 21:33
- * @Author: Jacky
- * @Description: Cookie 工具类
+ * Cookie 工具类
+ * @author Sun
  */
 @Slf4j
 public final class CookieUtils {
@@ -24,8 +21,8 @@ public final class CookieUtils {
      * 得到Cookie的值, 不编码
      *
      * @param request 请求
-     * @param cookieName cookie名称
-     * @return cookie内容
+     * @param cookieName cookie名
+     * @return
      */
     public static String getCookieValue(HttpServletRequest request, String cookieName) {
         return getCookieValue(request, cookieName, null);
@@ -34,9 +31,9 @@ public final class CookieUtils {
     /**
      * 得到Cookie的值,
      *
-     * @param request
-     * @param cookieName
-     * @return
+     * @param request 请求
+     * @param cookieName cookie名
+     * @return string
      */
     public static String getCookieValue(HttpServletRequest request, String cookieName, String charset) {
         Cookie[] cookieList = request.getCookies();
@@ -61,8 +58,16 @@ public final class CookieUtils {
         return retValue;
     }
 
-    public static CookieBuilder newBuilder() {
+    public static CookieBuilder newCookieBuilder() {
         return new CookieBuilder();
+    }
+
+    public static void deleteCookie(String cookieName, String domain,HttpServletResponse response) {
+        Cookie cookie = new Cookie(cookieName, "");
+        cookie.setMaxAge(0);
+        cookie.setPath("/");
+        cookie.setDomain(domain);
+        response.addCookie(cookie);
     }
 
     public static class CookieBuilder {
@@ -132,7 +137,7 @@ public final class CookieUtils {
                     value = URLEncoder.encode(value, charset);
                 }
                 Cookie cookie = new Cookie(name, value);
-                if (maxAge != null && maxAge > 0)
+                if (maxAge != null && maxAge >= 0)
                     cookie.setMaxAge(maxAge);
 
                 if(StringUtils.isNotBlank(domain)){

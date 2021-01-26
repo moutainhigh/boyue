@@ -18,6 +18,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.boyue</groupId>
             <artifactId>by-user-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>

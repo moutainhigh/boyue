@@ -1,6 +1,7 @@
 package com.boyue.user.controller;
 
 import com.boyue.common.exception.ByException;
+import com.boyue.user.dto.UserDTO;
 import com.boyue.user.entity.ByUser;
 import com.boyue.user.service.ByUserService;
 import io.swagger.annotations.*;
@@ -136,5 +137,23 @@ public class UserController {
 
         userService.register(user, code);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    /**
+     * 根据用户名和密码查询用户：
+     * 查询功能，根据参数中的用户名和密码查询指定用户并且返回用户
+     * 路径接口：
+     * GET /query
+     *
+     * @param username 用户名
+     * @param password 用户密码
+     * @return userDTO对象
+     */
+    @ApiOperation(value = "根据参数中的用户名和密码查询指定用户")
+    @GetMapping(path = "/query",name = "根据参数中的用户名和密码查询指定用户")
+    public ResponseEntity<UserDTO> findUserByUsernameAndPassword(@RequestParam(name = "username") String username,
+                                                                 @RequestParam(name = "password") String password) {
+        log.info("[by-user服务]findUserByUsernameAndPassword接口接收到请求,正在完成查询功能");
+        return ResponseEntity.ok(userService.findUserByUsernameAndPassword(username, password));
     }
 }

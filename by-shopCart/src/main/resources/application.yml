@@ -1,0 +1,31 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: shopCart-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: /boyue
+    username: boyue
+    password: boyue
+  redis:
+    host: 127.0.0.1
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7200/eureka
+    registry-fetch-interval-seconds: 10
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+by:
+  cart:
+    cookieName: BY_TOKEN # cookie名称
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/user
+  level:
+    com.boyue: debug
