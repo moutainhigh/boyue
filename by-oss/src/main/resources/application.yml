@@ -6,18 +6,14 @@ spring:
   servlet:
     multipart:
       max-file-size: 5MB
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:7200/eureka
-    registry-fetch-interval-seconds: 15
-  instance:
-    ip-address: 127.0.0.1
-    prefer-ip-address: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 by:
   oss:
-    accessKeyId: LTAI4G8x5FaMBokmocXk13Tc
-    accessKeySecret: qKeLggngdlCx0vqq3EwhqzqlFFXEag
+    accessKeyId: LTAI4G5VGwBxzzpx9BUVAMTA
+    accessKeySecret: fwKRfIeC22AIuT08ApJDOzcVmi4UXl
     host: http://boyue-oss.oss-cn-beijing.aliyuncs.com # 访问oss的域名，很重要bucket + endpoint
     endpoint: oss-cn-beijing.aliyuncs.com # 你的服务的端点，不一定跟我一样
     dir: boyue-image/ # 保存到bucket的某个子目录

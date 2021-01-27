@@ -37,12 +37,6 @@ public class SpuController {
      * @return pageResult对象
      */
     @ApiOperation(value = "查询商品SPU信息 ，分页查询")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "page",value = "当前页",required = false,dataType = "Integer",defaultValue = "1"),
-            @ApiImplicitParam(name = "rows",value = "每页显示条数",required = false,dataType = "Integer",defaultValue = "5"),
-            @ApiImplicitParam(name = "key",value = "过滤条件",required = false,dataType = "String"),
-            @ApiImplicitParam(name = "saleable",value = "上架或下架",required = false,dataType = "Boolean")
-    })
     @GetMapping(path = "/spu/page",name = "查询商品SPU信息 ，分页查询")
     public ResponseEntity<PageResult<SpuDTO>> findAllOfSpu(@RequestParam(name = "page",required = false,defaultValue = "1") Integer page,
                                                          @RequestParam(name = "rows",required = false,defaultValue = "5") Integer rows,

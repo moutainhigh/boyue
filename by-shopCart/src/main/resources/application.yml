@@ -12,14 +12,10 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:7200/eureka
-    registry-fetch-interval-seconds: 10
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 by:
   cart:
     cookieName: BY_TOKEN # cookie名称

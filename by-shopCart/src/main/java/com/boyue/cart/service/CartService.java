@@ -2,6 +2,8 @@ package com.boyue.cart.service;
 
 import com.boyue.cart.entity.Cart;
 
+import java.util.List;
+
 /**
  * Created by Intellij IDEA.
  *
@@ -17,4 +19,35 @@ public interface CartService {
      * @param cart 购物车数据
      */
     void addCart(Cart cart);
+
+    /**
+     * 查询购物车
+     * 通过请求，获取用户的购物车数据
+     *
+     * @return 查询出来的购物车数据的集合
+     */
+    List<Cart> findCarts();
+
+    /**
+     * 登录后合并购物车数据
+     * 用户登录后，把客户端的购物车数据，传到服务端，批量增加/ 修改 购物车数据
+     *
+     * @param cartList 前台的购物车数据
+     */
+    void addCartBatch(List<Cart> cartList);
+
+    /**
+     * 删除用户的购物车的商品
+     *
+     * @param skuId 商品id
+     */
+    void deleteCart(Long skuId);
+
+    /**
+     * 修改用户的购物车的商品数量
+     *
+     * @param id  商品id
+     * @param num 商品数量
+     */
+    void updateCart(Long id, Integer num);
 }

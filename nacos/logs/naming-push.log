@@ -1,0 +1,328 @@
+2021-01-27 15:24:33,378 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 15:26:32,358 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 15:29:23,763 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 15:29:27,648 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 15:29:38,957 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 15:29:42,676 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 15:38:46,896 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 15:39:14,802 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 15:39:14,925 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 15:39:29,535 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 15:39:43,172 INFO DEFAULT_GROUP@@auth-service is changed, add it to push queue.
+
+2021-01-27 15:39:52,676 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+
+2021-01-27 15:39:57,716 INFO DEFAULT_GROUP@@sendSMS-service is changed, add it to push queue.
+
+2021-01-27 15:39:59,924 INFO DEFAULT_GROUP@@shopCart-service is changed, add it to push queue.
+
+2021-01-27 15:40:12,451 INFO DEFAULT_GROUP@@user-service is changed, add it to push queue.
+
+2021-01-27 15:48:00,329 INFO DEFAULT_GROUP@@auth-service is changed, add it to push queue.
+
+2021-01-27 15:48:00,376 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 15:48:00,392 INFO DEFAULT_GROUP@@shopCart-service is changed, add it to push queue.
+
+2021-01-27 15:48:00,857 INFO DEFAULT_GROUP@@user-service is changed, add it to push queue.
+
+2021-01-27 15:48:01,250 INFO DEFAULT_GROUP@@sendSMS-service is changed, add it to push queue.
+
+2021-01-27 15:48:01,250 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 15:48:17,815 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 15:48:18,442 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+
+2021-01-27 15:48:20,421 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 15:48:32,847 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 15:48:33,476 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+
+2021-01-27 15:48:35,441 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 16:13:00,707 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:13:33,067 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 16:19:14,426 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:22:46,910 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:24:08,800 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:24:29,896 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:24:44,904 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:24:47,810 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 16:24:47,884 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:54676, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,54676,12176764476300
+
+2021-01-27 16:24:47,884 INFO send udp packet: 192.168.50.1,54676,12176764476300
+
+2021-01-27 16:24:47,896 INFO received ack: {"type": "push-ack", "lastRefTime":"12176764476300", "data":""} from: 192.168.50.1:54676, cost: 11 ms, unacked: 0, total push: 1
+
+2021-01-27 16:25:06,191 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:25:20,224 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 16:25:20,224 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:54676, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,54676,12209178480500
+
+2021-01-27 16:25:20,224 INFO send udp packet: 192.168.50.1,54676,12209178480500
+
+2021-01-27 16:25:20,227 INFO received ack: {"type": "push-ack", "lastRefTime":"12209178480500", "data":""} from: 192.168.50.1:54676, cost: 3 ms, unacked: 0, total push: 2
+
+2021-01-27 16:27:24,033 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:27:43,864 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:29:03,779 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 16:29:03,779 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:54676, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,54676,12432732824600
+
+2021-01-27 16:29:03,779 INFO send udp packet: 192.168.50.1,54676,12432732824600
+
+2021-01-27 16:29:03,782 INFO received ack: {"type": "push-ack", "lastRefTime":"12432732824600", "data":""} from: 192.168.50.1:54676, cost: 3 ms, unacked: 0, total push: 3
+
+2021-01-27 16:29:08,348 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:36:39,750 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:37:58,129 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:37:59,157 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:38:04,153 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:40:22,833 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 16:40:22,833 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:65472, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,65472,13111787255400
+
+2021-01-27 16:40:22,833 INFO send udp packet: 192.168.50.1,65472,13111787255400
+
+2021-01-27 16:40:22,837 INFO received ack: {"type": "push-ack", "lastRefTime":"13111787255400", "data":""} from: 192.168.50.1:65472, cost: 4 ms, unacked: 0, total push: 4
+
+2021-01-27 16:42:58,755 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:43:16,328 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:44:29,965 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:44:47,449 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:45:58,048 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:46:15,735 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:47:02,800 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:47:02,989 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 16:47:02,990 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:64859, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,64859,13511943492100
+
+2021-01-27 16:47:02,990 INFO send udp packet: 192.168.50.1,64859,13511943492100
+
+2021-01-27 16:47:03,115 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:47:12,997 INFO retry to push data, key: 192.168.50.1,64859,13511943492100
+
+2021-01-27 16:47:12,997 INFO send udp packet: 192.168.50.1,64859,13511943492100
+
+2021-01-27 16:47:22,997 INFO retry to push data, key: 192.168.50.1,64859,13511943492100
+
+2021-01-27 16:47:22,997 WARN max re-push times reached, retry times 2, key: 192.168.50.1,64859,13511943492100
+
+2021-01-27 16:49:08,257 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 16:49:32,228 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 16:49:39,401 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 16:59:55,187 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 17:00:00,084 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 17:00:05,068 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 17:02:58,517 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 17:02:58,517 INFO serviceName: DEFAULT_GROUP@@oss-service changed, schedule push for: 192.168.50.1:50644, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,50644,14467471026800
+
+2021-01-27 17:02:58,517 INFO send udp packet: 192.168.50.1,50644,14467471026800
+
+2021-01-27 17:02:58,523 INFO received ack: {"type": "push-ack", "lastRefTime":"14467471026800", "data":""} from: 192.168.50.1:50644, cost: 6 ms, unacked: 0, total push: 6
+
+2021-01-27 17:03:13,537 INFO DEFAULT_GROUP@@oss-service is changed, add it to push queue.
+
+2021-01-27 17:03:13,537 INFO serviceName: DEFAULT_GROUP@@oss-service changed, schedule push for: 192.168.50.1:50644, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,50644,14482491499700
+
+2021-01-27 17:03:13,537 INFO send udp packet: 192.168.50.1,50644,14482491499700
+
+2021-01-27 17:03:13,539 INFO received ack: {"type": "push-ack", "lastRefTime":"14482491499700", "data":""} from: 192.168.50.1:50644, cost: 2 ms, unacked: 0, total push: 7
+
+2021-01-27 17:03:24,637 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 17:03:30,518 INFO DEFAULT_GROUP@@shopCart-service is changed, add it to push queue.
+
+2021-01-27 17:03:34,441 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+
+2021-01-27 17:03:38,160 INFO DEFAULT_GROUP@@user-service is changed, add it to push queue.
+
+2021-01-27 18:08:33,830 INFO DEFAULT_GROUP@@shopCart-service is changed, add it to push queue.
+
+2021-01-27 18:08:56,127 INFO DEFAULT_GROUP@@shopCart-service is changed, add it to push queue.
+
+2021-01-27 18:13:14,309 INFO DEFAULT_GROUP@@auth-service is changed, add it to push queue.
+
+2021-01-27 18:13:14,310 INFO serviceName: DEFAULT_GROUP@@auth-service changed, schedule push for: 192.168.50.1:50644, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,50644,18683263225500
+
+2021-01-27 18:13:14,310 INFO send udp packet: 192.168.50.1,50644,18683263225500
+
+2021-01-27 18:13:14,311 INFO received ack: {"type": "push-ack", "lastRefTime":"18683263225500", "data":""} from: 192.168.50.1:50644, cost: 1 ms, unacked: 0, total push: 8
+
+2021-01-27 18:39:14,185 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 18:39:19,679 INFO DEFAULT_GROUP@@shopCart-service is changed, add it to push queue.
+
+2021-01-27 18:39:19,695 INFO DEFAULT_GROUP@@auth-service is changed, add it to push queue.
+
+2021-01-27 18:39:20,057 INFO DEFAULT_GROUP@@user-service is changed, add it to push queue.
+
+2021-01-27 18:39:20,057 INFO serviceName: DEFAULT_GROUP@@user-service changed, schedule push for: 192.168.50.1:59332, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,59332,20249010690900
+
+2021-01-27 18:39:20,057 INFO send udp packet: 192.168.50.1,59332,20249010690900
+
+2021-01-27 18:39:20,063 INFO received ack: {"type": "push-ack", "lastRefTime":"20249010690900", "data":""} from: 192.168.50.1:59332, cost: 6 ms, unacked: 0, total push: 9
+
+2021-01-27 18:39:34,985 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 18:39:34,985 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:57534, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,57534,20263938851100
+
+2021-01-27 18:39:34,985 INFO send udp packet: 192.168.50.1,57534,20263938851100
+
+2021-01-27 18:39:34,985 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:57530, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,57530,20263938851100
+
+2021-01-27 18:39:34,985 INFO send udp packet: 192.168.50.1,57530,20263938851100
+
+2021-01-27 18:39:43,623 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 18:39:43,623 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+
+2021-01-27 18:39:44,996 INFO retry to push data, key: 192.168.50.1,57534,20263938851100
+
+2021-01-27 18:39:44,996 INFO send udp packet: 192.168.50.1,57534,20263938851100
+
+2021-01-27 18:39:44,997 INFO retry to push data, key: 192.168.50.1,57530,20263938851100
+
+2021-01-27 18:39:44,997 INFO send udp packet: 192.168.50.1,57530,20263938851100
+
+2021-01-27 18:39:50,033 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 18:39:55,000 INFO retry to push data, key: 192.168.50.1,57534,20263938851100
+
+2021-01-27 18:39:55,000 WARN max re-push times reached, retry times 2, key: 192.168.50.1,57534,20263938851100
+
+2021-01-27 18:39:55,000 INFO retry to push data, key: 192.168.50.1,57530,20263938851100
+
+2021-01-27 18:39:55,000 WARN max re-push times reached, retry times 2, key: 192.168.50.1,57530,20263938851100
+
+2021-01-27 18:39:58,653 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+
+2021-01-27 18:39:58,653 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 18:40:00,660 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 18:50:15,386 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 18:50:29,683 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 18:51:17,973 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 18:51:22,609 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 18:56:45,966 INFO DEFAULT_GROUP@@auth-service is changed, add it to push queue.
+
+2021-01-27 18:56:48,504 INFO DEFAULT_GROUP@@shopCart-service is changed, add it to push queue.
+
+2021-01-27 18:56:50,310 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+
+2021-01-27 18:56:55,819 INFO DEFAULT_GROUP@@user-service is changed, add it to push queue.
+
+2021-01-27 18:58:55,602 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 18:59:20,011 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 19:12:37,470 INFO DEFAULT_GROUP@@item-service is changed, add it to push queue.
+
+2021-01-27 19:12:37,470 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:50950, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,50950,22246424542000
+
+2021-01-27 19:12:37,470 INFO send udp packet: 192.168.50.1,50950,22246424542000
+
+2021-01-27 19:12:37,470 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:52816, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,52816,22246424542000
+
+2021-01-27 19:12:37,471 INFO send udp packet: 192.168.50.1,52816,22246424542000
+
+2021-01-27 19:12:37,471 INFO serviceName: DEFAULT_GROUP@@item-service changed, schedule push for: 192.168.50.1:49438, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,49438,22246424542000
+
+2021-01-27 19:12:37,471 INFO send udp packet: 192.168.50.1,49438,22246424542000
+
+2021-01-27 19:12:37,471 INFO DEFAULT_GROUP@@auth-service is changed, add it to push queue.
+
+2021-01-27 19:12:37,471 INFO serviceName: DEFAULT_GROUP@@auth-service changed, schedule push for: 192.168.50.1:52816, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,52816,22246425159700
+
+2021-01-27 19:12:37,471 INFO send udp packet: 192.168.50.1,52816,22246425159700
+
+2021-01-27 19:12:37,476 INFO received ack: {"type": "push-ack", "lastRefTime":"22246424542000", "data":""} from: 192.168.50.1:49438, cost: 5 ms, unacked: 3, total push: 15
+
+2021-01-27 19:12:37,476 INFO received ack: {"type": "push-ack", "lastRefTime":"22246424542000", "data":""} from: 192.168.50.1:50950, cost: 6 ms, unacked: 2, total push: 15
+
+2021-01-27 19:12:37,637 INFO DEFAULT_GROUP@@user-service is changed, add it to push queue.
+
+2021-01-27 19:12:37,637 INFO serviceName: DEFAULT_GROUP@@user-service changed, schedule push for: 192.168.50.1:49439, agent: Nacos-Java-Client:v1.1.4, key: 192.168.50.1,49439,22246591912300
+
+2021-01-27 19:12:37,637 INFO send udp packet: 192.168.50.1,49439,22246591912300
+
+2021-01-27 19:12:37,653 INFO received ack: {"type": "push-ack", "lastRefTime":"22246591912300", "data":""} from: 192.168.50.1:49439, cost: 16 ms, unacked: 2, total push: 16
+
+2021-01-27 19:12:37,743 INFO DEFAULT_GROUP@@shopCart-service is changed, add it to push queue.
+
+2021-01-27 19:12:47,472 INFO retry to push data, key: 192.168.50.1,52816,22246424542000
+
+2021-01-27 19:12:47,472 INFO send udp packet: 192.168.50.1,52816,22246424542000
+
+2021-01-27 19:12:47,473 INFO retry to push data, key: 192.168.50.1,52816,22246425159700
+
+2021-01-27 19:12:47,473 INFO send udp packet: 192.168.50.1,52816,22246425159700
+
+2021-01-27 19:12:51,744 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 19:12:54,989 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 19:12:56,746 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+
+2021-01-27 19:12:57,484 INFO retry to push data, key: 192.168.50.1,52816,22246424542000
+
+2021-01-27 19:12:57,484 WARN max re-push times reached, retry times 2, key: 192.168.50.1,52816,22246424542000
+
+2021-01-27 19:12:57,484 INFO retry to push data, key: 192.168.50.1,52816,22246425159700
+
+2021-01-27 19:12:57,484 WARN max re-push times reached, retry times 2, key: 192.168.50.1,52816,22246425159700
+
+2021-01-27 19:13:06,770 INFO DEFAULT_GROUP@@by-zuul is changed, add it to push queue.
+
+2021-01-27 19:13:10,008 INFO DEFAULT_GROUP@@page-service is changed, add it to push queue.
+
+2021-01-27 19:13:11,776 INFO DEFAULT_GROUP@@search-service is changed, add it to push queue.
+

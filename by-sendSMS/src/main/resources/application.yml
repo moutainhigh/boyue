@@ -3,14 +3,10 @@ server:
 spring:
   application:
     name: sendSMS-service
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:7200/eureka
-    registry-fetch-interval-seconds: 10
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 rocketmq:
   name-server: 127.0.0.1:9876
   producer:   #用于测试

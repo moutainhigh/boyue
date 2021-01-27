@@ -3,11 +3,10 @@ server:
 spring:
   application:
     name: by-zuul
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:7200/eureka
-    registry-fetch-interval-seconds: 5
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 hystrix:
   command:
     default:
@@ -61,6 +60,7 @@ by:
       - /api/user/check
       - /api/user/code
       - /api/item
+      - /zuul/api/upload/signature
 logging:
   config:
     classpath: logback-spring.xml

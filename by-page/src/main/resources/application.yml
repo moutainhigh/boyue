@@ -7,10 +7,10 @@ spring:
     name: page-service
   thymeleaf:
     cache: false
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:7200/eureka
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 logging:
   config:
     classpath: logback-spring.xml

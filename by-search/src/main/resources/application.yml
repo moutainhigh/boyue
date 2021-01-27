@@ -8,14 +8,10 @@ spring:
   data:
     elasticsearch:
       cluster-nodes: 127.0.0.1:9300
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:7200/eureka
-    registry-fetch-interval-seconds: 10
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 ribbon:
   ConnectTimeout: 500 # 连接超时时长
   ReadTimeout: 2000 # 数据通信超时时长

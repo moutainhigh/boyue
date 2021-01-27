@@ -8,14 +8,10 @@ spring:
     virtual-host: /boyue
     username: boyue
     password: boyue
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:7200/eureka
-    registry-fetch-interval-seconds: 5
-  instance:
-    ip-address: 127.0.0.1
-    prefer-ip-address: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 by:
   jwt:
     publicKeyPath: D:\GraduationProject\BoYue\ssh\id_rsa.pub # 公钥地址

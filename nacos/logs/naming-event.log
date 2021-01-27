@@ -1,0 +1,366 @@
+2021-01-27 15:24:32,373 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:24:32,377 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_true,
+
+2021-01-27 15:26:31,352 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:26:31,352 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 192.168.202.1:8081_true,
+
+2021-01-27 15:29:22,754 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:10010@DEFAULT@DEFAULT_GROUP@@by-zuul, region: unknown, msg: client timeout after 15000, last beat: 1611732542984
+
+2021-01-27 15:29:26,643 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8081@DEFAULT@DEFAULT_GROUP@@item-service, region: unknown, msg: client timeout after 15000, last beat: 1611732546746
+
+2021-01-27 15:29:37,946 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 15:29:37,946 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 
+
+2021-01-27 15:29:41,672 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 15:29:41,673 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 
+
+2021-01-27 15:38:45,894 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:38:45,894 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_true,
+
+2021-01-27 15:39:13,800 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:39:13,800 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 192.168.202.1:8081_true,
+
+2021-01-27 15:39:13,911 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:39:13,911 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 192.168.202.1:8082_true,
+
+2021-01-27 15:39:28,524 INFO DEFAULT_GROUP@@page-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8084:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:39:28,525 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@page-service, ips: 192.168.202.1:8084_true,
+
+2021-01-27 15:39:42,163 INFO DEFAULT_GROUP@@auth-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8087:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:39:42,163 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@auth-service, ips: 192.168.202.1:8087_true,
+
+2021-01-27 15:39:51,673 INFO DEFAULT_GROUP@@search-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8083:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:39:51,673 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@search-service, ips: 192.168.202.1:8083_true,
+
+2021-01-27 15:39:56,708 INFO DEFAULT_GROUP@@sendSMS-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8086:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:39:56,708 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@sendSMS-service, ips: 192.168.202.1:8086_true,
+
+2021-01-27 15:39:58,918 INFO DEFAULT_GROUP@@shopCart-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8088:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:39:58,918 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@shopCart-service, ips: 192.168.202.1:8088_true,
+
+2021-01-27 15:40:11,446 INFO DEFAULT_GROUP@@user-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8085:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:40:11,446 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-service, ips: 192.168.202.1:8085_true,
+
+2021-01-27 15:47:59,322 INFO DEFAULT_GROUP@@auth-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8087:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:47:59,322 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@auth-service, ips: 
+
+2021-01-27 15:47:59,371 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:47:59,371 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 
+
+2021-01-27 15:47:59,388 INFO DEFAULT_GROUP@@shopCart-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8088:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:47:59,388 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@shopCart-service, ips: 
+
+2021-01-27 15:47:59,850 INFO DEFAULT_GROUP@@user-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8085:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:47:59,850 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-service, ips: 
+
+2021-01-27 15:48:00,243 INFO DEFAULT_GROUP@@sendSMS-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8086:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:48:00,243 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@sendSMS-service, ips: 
+
+2021-01-27 15:48:00,246 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 15:48:00,246 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 
+
+2021-01-27 15:48:16,813 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:10010@DEFAULT@DEFAULT_GROUP@@by-zuul, region: unknown, msg: client timeout after 15000, last beat: 1611733677168
+
+2021-01-27 15:48:17,439 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8083@DEFAULT@DEFAULT_GROUP@@search-service, region: unknown, msg: client timeout after 15000, last beat: 1611733677701
+
+2021-01-27 15:48:19,407 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8084@DEFAULT@DEFAULT_GROUP@@page-service, region: unknown, msg: client timeout after 15000, last beat: 1611733679583
+
+2021-01-27 15:48:31,842 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 15:48:31,842 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 
+
+2021-01-27 15:48:32,469 INFO DEFAULT_GROUP@@search-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8083:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 15:48:32,469 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@search-service, ips: 
+
+2021-01-27 15:48:34,435 INFO DEFAULT_GROUP@@page-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8084:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 15:48:34,435 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@page-service, ips: 
+
+2021-01-27 16:12:59,696 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:12:59,696 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_true,
+
+2021-01-27 16:13:32,066 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:13:32,066 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 192.168.202.1:8081_true,
+
+2021-01-27 16:19:13,412 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:19:13,412 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 192.168.202.1:8082_true,
+
+2021-01-27 16:22:45,898 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:22:45,898 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 
+
+2021-01-27 16:24:07,789 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:24:07,789 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 192.168.202.1:8082_true,
+
+2021-01-27 16:24:28,880 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8082@DEFAULT@DEFAULT_GROUP@@oss-service, region: unknown, msg: client timeout after 15000, last beat: 1611735852790
+
+2021-01-27 16:24:43,899 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 16:24:43,899 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 
+
+2021-01-27 16:24:46,799 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:24:46,799 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 
+
+2021-01-27 16:25:05,179 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:25:05,179 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 192.168.202.1:8082_true,
+
+2021-01-27 16:25:19,219 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:25:19,219 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 192.168.202.1:8081_true,
+
+2021-01-27 16:27:23,027 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:27:23,027 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 
+
+2021-01-27 16:27:42,855 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:27:42,855 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 192.168.202.1:8082_true,
+
+2021-01-27 16:29:02,768 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:29:02,768 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 
+
+2021-01-27 16:29:07,334 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:29:07,334 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 
+
+2021-01-27 16:36:38,741 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:36:38,741 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 192.168.202.1:8082_true,
+
+2021-01-27 16:37:57,116 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:10010@DEFAULT@DEFAULT_GROUP@@by-zuul, region: unknown, msg: client timeout after 15000, last beat: 1611736657882
+
+2021-01-27 16:37:58,144 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_false,
+
+2021-01-27 16:38:03,141 INFO service: DEFAULT_GROUP@@by-zuul {POS} {IP-ENABLED} valid: 192.168.202.1:10010@DEFAULT, region: unknown, msg: client beat ok
+
+2021-01-27 16:40:21,819 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:40:21,819 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 192.168.202.1:8081_true,
+
+2021-01-27 16:42:57,745 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:42:57,745 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 
+
+2021-01-27 16:43:15,324 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:43:15,324 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_true,
+
+2021-01-27 16:44:28,957 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:44:28,957 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 
+
+2021-01-27 16:44:46,441 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:44:46,441 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_true,
+
+2021-01-27 16:45:57,042 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:45:57,042 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 
+
+2021-01-27 16:46:14,722 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:46:14,722 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_true,
+
+2021-01-27 16:47:01,791 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:47:01,791 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 
+
+2021-01-27 16:47:01,984 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:47:01,984 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 
+
+2021-01-27 16:47:02,114 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:47:02,114 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 
+
+2021-01-27 16:49:07,246 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:49:07,246 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_true,
+
+2021-01-27 16:49:31,214 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:49:31,214 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 192.168.202.1:8082_true,
+
+2021-01-27 16:49:38,389 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 16:49:38,389 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 192.168.202.1:8081_true,
+
+2021-01-27 16:59:54,183 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:10010@DEFAULT@DEFAULT_GROUP@@by-zuul, region: unknown, msg: client timeout after 15000, last beat: 1611737978618
+
+2021-01-27 16:59:59,071 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_false,
+
+2021-01-27 17:00:04,066 INFO service: DEFAULT_GROUP@@by-zuul {POS} {IP-ENABLED} valid: 192.168.202.1:10010@DEFAULT, region: unknown, msg: client beat ok
+
+2021-01-27 17:02:57,510 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8082@DEFAULT@DEFAULT_GROUP@@oss-service, region: unknown, msg: client timeout after 15000, last beat: 1611738157957
+
+2021-01-27 17:03:12,533 INFO DEFAULT_GROUP@@oss-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8082:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 17:03:12,533 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@oss-service, ips: 
+
+2021-01-27 17:03:23,621 INFO DEFAULT_GROUP@@page-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8084:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 17:03:23,621 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@page-service, ips: 192.168.202.1:8084_true,
+
+2021-01-27 17:03:29,508 INFO DEFAULT_GROUP@@shopCart-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8088:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 17:03:29,508 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@shopCart-service, ips: 192.168.202.1:8088_true,
+
+2021-01-27 17:03:33,427 INFO DEFAULT_GROUP@@search-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8083:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 17:03:33,427 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@search-service, ips: 192.168.202.1:8083_true,
+
+2021-01-27 17:03:37,154 INFO DEFAULT_GROUP@@user-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8085:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 17:03:37,155 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-service, ips: 192.168.202.1:8085_true,
+
+2021-01-27 18:08:32,829 INFO DEFAULT_GROUP@@shopCart-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8088:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:08:32,829 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@shopCart-service, ips: 
+
+2021-01-27 18:08:55,118 INFO DEFAULT_GROUP@@shopCart-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8088:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:08:55,118 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@shopCart-service, ips: 192.168.202.1:8088_true,
+
+2021-01-27 18:13:13,296 INFO DEFAULT_GROUP@@auth-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8087:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:13:13,296 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@auth-service, ips: 192.168.202.1:8087_true,
+
+2021-01-27 18:39:13,176 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:39:13,176 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 
+
+2021-01-27 18:39:18,674 INFO DEFAULT_GROUP@@shopCart-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8088:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:39:18,674 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@shopCart-service, ips: 
+
+2021-01-27 18:39:18,688 INFO DEFAULT_GROUP@@auth-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8087:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:39:18,688 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@auth-service, ips: 
+
+2021-01-27 18:39:19,043 INFO DEFAULT_GROUP@@user-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8085:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:39:19,043 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-service, ips: 
+
+2021-01-27 18:39:33,983 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8081@DEFAULT@DEFAULT_GROUP@@item-service, region: unknown, msg: client timeout after 15000, last beat: 1611743957541
+
+2021-01-27 18:39:42,616 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8084@DEFAULT@DEFAULT_GROUP@@page-service, region: unknown, msg: client timeout after 15000, last beat: 1611743965787
+
+2021-01-27 18:39:42,616 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8083@DEFAULT@DEFAULT_GROUP@@search-service, region: unknown, msg: client timeout after 15000, last beat: 1611743965476
+
+2021-01-27 18:39:49,022 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 18:39:49,022 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 
+
+2021-01-27 18:39:57,647 INFO DEFAULT_GROUP@@search-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8083:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 18:39:57,647 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@search-service, ips: 
+
+2021-01-27 18:39:57,650 INFO DEFAULT_GROUP@@page-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8084:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 18:39:57,650 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@page-service, ips: 
+
+2021-01-27 18:39:59,651 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:39:59,651 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 192.168.202.1:8081_true,
+
+2021-01-27 18:50:14,381 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:50:14,381 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 
+
+2021-01-27 18:50:28,672 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:50:28,672 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 192.168.202.1:10010_true,
+
+2021-01-27 18:51:16,969 INFO DEFAULT_GROUP@@page-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8084:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:51:16,969 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@page-service, ips: 192.168.202.1:8084_true,
+
+2021-01-27 18:51:21,596 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:51:21,596 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 192.168.202.1:8081_true,
+
+2021-01-27 18:56:44,953 INFO DEFAULT_GROUP@@auth-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8087:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:56:44,953 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@auth-service, ips: 192.168.202.1:8087_true,
+
+2021-01-27 18:56:47,500 INFO DEFAULT_GROUP@@shopCart-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8088:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:56:47,500 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@shopCart-service, ips: 192.168.202.1:8088_true,
+
+2021-01-27 18:56:49,301 INFO DEFAULT_GROUP@@search-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8083:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:56:49,301 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@search-service, ips: 192.168.202.1:8083_true,
+
+2021-01-27 18:56:54,805 INFO DEFAULT_GROUP@@user-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8085:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:56:54,805 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-service, ips: 192.168.202.1:8085_true,
+
+2021-01-27 18:58:54,588 INFO DEFAULT_GROUP@@page-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8084:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:58:54,588 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@page-service, ips: 
+
+2021-01-27 18:59:19,010 INFO DEFAULT_GROUP@@page-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.202.1:8084:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 18:59:19,010 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@page-service, ips: 192.168.202.1:8084_true,
+
+2021-01-27 19:12:36,460 INFO DEFAULT_GROUP@@item-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 19:12:36,460 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@item-service, ips: 
+
+2021-01-27 19:12:36,460 INFO DEFAULT_GROUP@@auth-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8087:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 19:12:36,460 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@auth-service, ips: 
+
+2021-01-27 19:12:36,634 INFO DEFAULT_GROUP@@user-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8085:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 19:12:36,634 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-service, ips: 
+
+2021-01-27 19:12:36,730 INFO DEFAULT_GROUP@@shopCart-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8088:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-27 19:12:36,730 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@shopCart-service, ips: 
+
+2021-01-27 19:12:50,731 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:10010@DEFAULT@DEFAULT_GROUP@@by-zuul, region: unknown, msg: client timeout after 15000, last beat: 1611745951354
+
+2021-01-27 19:12:53,983 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8084@DEFAULT@DEFAULT_GROUP@@page-service, region: unknown, msg: client timeout after 15000, last beat: 1611745955699
+
+2021-01-27 19:12:55,741 INFO {POS} {IP-DISABLED} valid: 192.168.202.1:8083@DEFAULT@DEFAULT_GROUP@@search-service, region: unknown, msg: client timeout after 15000, last beat: 1611745956251
+
+2021-01-27 19:13:05,767 INFO DEFAULT_GROUP@@by-zuul {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:10010:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 19:13:05,767 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@by-zuul, ips: 
+
+2021-01-27 19:13:08,998 INFO DEFAULT_GROUP@@page-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8084:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 19:13:08,999 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@page-service, ips: 
+
+2021-01-27 19:13:10,767 INFO DEFAULT_GROUP@@search-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.202.1:8083:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-27 19:13:10,767 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@search-service, ips: 
+

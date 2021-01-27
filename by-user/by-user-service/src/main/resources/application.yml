@@ -11,19 +11,14 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 #myBatis-plus
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #输出sql日志
-  #mapper-locations: classpath*:mapper/**Mapper.xml 可以不写
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:7200/eureka
-    registry-fetch-interval-seconds: 10
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
 logging:
   config:
     classpath: logback-spring.xml
