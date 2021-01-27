@@ -74,7 +74,7 @@ private static final long serialVersionUID=1L;
     /**
      * 是否默认 0-不是  1-是
      */
-    private Integer isDefault;
+    private Boolean isDefault;
 
     private Date createTime;
 
@@ -85,5 +85,4 @@ private static final long serialVersionUID=1L;
     protected Serializable pkVal() {
         return this.id;
     }
-
 }

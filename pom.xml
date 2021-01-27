@@ -20,6 +20,7 @@
         <module>by-auth</module>
         <module>by-config</module>
         <module>by-shopCart</module>
+        <module>by-order</module>
     </modules>
 
     <parent>

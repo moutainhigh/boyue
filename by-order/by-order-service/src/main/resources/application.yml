@@ -1,0 +1,33 @@
+server:
+  port: 8090
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql:///boyue_shop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+by:
+  jwt:
+    user:
+      cookieName: BY_TOKEN # cookie名称
+      cookieDomain: boyue.com # cookie的域
+  worker:
+    workerId: 1
+    dataCenterId: 1
+rocketmq:
+  name-server: 127.0.0.1:9876
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/order

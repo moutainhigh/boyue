@@ -30,7 +30,7 @@ public enum ExceptionEnum {
     INVALID_NOTIFY_SIGN(400, "收货人信息不存在！"),
 
     CATEGORY_NOT_FOUND(400, "商品分类不存在！"),
-    USER_ADDRESS_NOT_FOUND(400, "商品分类不存在！"),
+    USER_ADDRESS_NOT_FOUND(400, "用户地址不存在！"),
     USER_ID_NOT_FOUND(400, "用户的userId不存在！"),
     BRAND_NOT_FOUND(400, "品牌不存在！"),
     SPEC_NOT_FOUND(400, "规格不存在！"),

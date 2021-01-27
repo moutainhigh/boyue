@@ -18,3 +18,7 @@ management: #暴露触发消息总线的地址 post请求
     web:
       exposure:
         include: bus-refresh
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/config
