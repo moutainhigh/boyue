@@ -35,17 +35,15 @@ public class UserAddressController {
     private ByUserAddressService userAddressService;
 
     /**
-     * 查询收货人地址信息
+     * 根据 主键id 查询收货人地址信息
      * GET /address/byId
      *
      * @param id 地址id
      * @return 用户地址对象
      */
-    @ApiOperation("查询收货人地址信息")
-    @GetMapping(path = "/address/byId", name = "查询收货人地址信息")
-    public ResponseEntity<UserAddressDTO> findUserAddressByAddId(@RequestParam(name = "id") Long id) {
-        log.info("[by-user服务]findUserAddressByAddId接口接收到请求,查询收货人地址信息");
-        UserAddressDTO userAddressDTO = userAddressService.findUserAddressByAddId(id);
+    @GetMapping(path = "/address/byId", name = "根据 主键id 查询收货人地址信息")
+    public ResponseEntity<UserAddressDTO> findUserAddressById(@RequestParam(name = "id") Long id) {
+        UserAddressDTO userAddressDTO = userAddressService.findUserAddressById(id);
         return ResponseEntity.ok(userAddressDTO);
     }
 
@@ -57,7 +55,6 @@ public class UserAddressController {
      * @param id     地址id
      * @return 用户地址对象
      */
-    @ApiOperation("根据用户id获取用户地址信息")
     @GetMapping(path = "/address", name = "根据用户id获取用户地址信息")
     public ResponseEntity<UserAddressDTO> findUserAddressByUid(@RequestParam(name = "userId") Long userId,
                                                                @RequestParam(name = "id") Long id) {

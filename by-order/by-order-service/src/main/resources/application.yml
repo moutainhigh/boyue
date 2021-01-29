@@ -25,6 +25,13 @@ by:
   worker:
     workerId: 1
     dataCenterId: 1
+  pay:
+    wx:
+      appID: wx8397f8696b538317
+      mchID: 1473426802
+      key: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb
+      payType: NATIVE
+      notifyUrl: http://7jq9rb.natappfree.cc/api/pay/wx/notify
 rocketmq:
   name-server: 127.0.0.1:9876
 logging:

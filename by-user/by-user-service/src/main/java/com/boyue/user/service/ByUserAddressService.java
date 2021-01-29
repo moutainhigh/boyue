@@ -22,7 +22,7 @@ public interface ByUserAddressService extends IService<ByUserAddress> {
      * @param id 地址id
      * @return 用户地址对象
      */
-    UserAddressDTO findUserAddressByAddId(Long id);
+    UserAddressDTO findUserAddressById(Long id);
 
     /**
      * 根据用户id获取用户地址信息

@@ -5,6 +5,8 @@ import com.boyue.common.vo.PageResult;
 import com.boyue.item.dto.SpuDTO;
 import com.boyue.item.entity.BySpu;
 
+import java.util.List;
+
 /**
  * <p>
  * spu表，该表描述的是一个抽象性的商品，比如 iphone8 服务类
@@ -32,4 +34,13 @@ public interface BySpuService extends IService<BySpu> {
      * @return spuDTO对象
      */
     SpuDTO findSpuById(Long id);
+
+    /**
+     * 根据brandId品牌id查询商品
+     *
+     * @param brandId 品牌id
+     * @param cid3    分类id
+     * @return 查询到的spu的list集合
+     */
+    List<SpuDTO> findSpuByBrandId(Long brandId, Long cid3);
 }

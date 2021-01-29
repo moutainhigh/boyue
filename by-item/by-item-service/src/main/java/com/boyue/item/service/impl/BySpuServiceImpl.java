@@ -39,9 +39,15 @@ import java.util.stream.Collectors;
 @Slf4j
 public class BySpuServiceImpl extends ServiceImpl<BySpuMapper, BySpu> implements BySpuService {
 
+    /**
+     * 注入品牌的service
+     */
     @Autowired
     private ByBrandService brandService;
 
+    /**
+     * 注入分类的service
+     */
     @Autowired
     private ByCategoryService categoryService;
 
@@ -134,5 +140,29 @@ public class BySpuServiceImpl extends ServiceImpl<BySpuMapper, BySpu> implements
             throw new ByException(ExceptionEnum.GOODS_NOT_FOUND);
         }
         return BeanHelper.copyProperties(spu, SpuDTO.class);
+    }
+
+    /**
+     * 根据brandId品牌id查询商品
+     *
+     * @param brandId 品牌id
+     * @param cid3    分类id
+     * @return 查询到的spu的list集合
+     */
+    @Override
+    public List<SpuDTO> findSpuByBrandId(Long brandId, Long cid3) {
+        if (brandId == null || cid3 == null){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        QueryWrapper<BySpu> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda().
+                eq(BySpu::getBrandId, brandId).
+                eq(BySpu::getCid3, cid3);
+        List<BySpu> tbSpuList = this.list(queryWrapper);
+        List<SpuDTO> spuDTOList = BeanHelper.copyWithCollection(tbSpuList, SpuDTO.class);
+        if (CollectionUtils.isEmpty(spuDTOList)){
+            throw new ByException(ExceptionEnum.DATA_TRANSFER_ERROR);
+        }
+        return spuDTOList;
     }
 }

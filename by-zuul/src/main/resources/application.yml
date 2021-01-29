@@ -35,6 +35,10 @@ zuul:
       path: /order/**
       serviceId: order-service
       strip-prefix: false
+    pay-service:                    #  支付服务         /pay/**
+      path: /pay/**
+      serviceId: order-service
+      strip-prefix: false
   sensitive-headers:                #覆盖敏感头信息
 by:
   cors:
@@ -66,6 +70,7 @@ by:
       - /api/user/check
       - /api/user/code
       - /api/item
+      - /api/pay
       - /zuul/api/upload/signature
 logging:
   config:

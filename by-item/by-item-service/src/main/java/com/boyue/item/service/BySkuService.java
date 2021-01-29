@@ -39,4 +39,22 @@ public interface BySkuService extends IService<BySku> {
      * @return skuDTO的集合
      */
     List<SkuDTO> findSkuByIds(String ids);
+
+    /**
+     * 减库存
+     *
+     * @param skuId  商品id
+     * @param number 商品数量
+     * @return 保存结果
+     */
+    int minusStock(Long skuId, Integer number);
+
+    /**
+     * 加库存
+     *
+     * @param skuId 商品id
+     * @param number 数量
+     * @return 返回值
+     */
+    int plusStock(Long skuId, Integer number);
 }

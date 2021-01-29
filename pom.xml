@@ -21,6 +21,7 @@
         <module>by-config</module>
         <module>by-shopCart</module>
         <module>by-order</module>
+        <module>by-eureka</module>
     </modules>
 
     <parent>

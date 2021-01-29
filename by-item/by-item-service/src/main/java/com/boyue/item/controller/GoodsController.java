@@ -1,7 +1,7 @@
 package com.boyue.item.controller;
 
 import com.boyue.item.dto.SpuDTO;
-import com.boyue.item.service.GoodsServer;
+import com.boyue.item.service.GoodsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 /**
  * Created by Intellij IDEA.
@@ -23,11 +25,11 @@ import org.springframework.web.bind.annotation.*;
 @Api("商品服务中心GoodsController")
 public class GoodsController {
 
-    private final GoodsServer goodsServer;
+    private final GoodsService goodsService;
 
     @Autowired
-    public GoodsController(GoodsServer goodsServer) {
-        this.goodsServer = goodsServer;
+    public GoodsController(GoodsService goodsService) {
+        this.goodsService = goodsService;
     }
 
     /**
@@ -41,7 +43,7 @@ public class GoodsController {
     @PostMapping(path = "/goods", name = "新增商品信息")
     public ResponseEntity<Void> saveGoods(@RequestBody SpuDTO spuDTO) {
         log.info("-----   saveGoods接口，完成新增商品信息   -------");
-        goodsServer.saveGoods(spuDTO);
+        goodsService.saveGoods(spuDTO);
         return ResponseEntity.noContent().build();
     }
 
@@ -55,14 +57,14 @@ public class GoodsController {
      */
     @ApiOperation(value = "修改商品上下架，更新spu信息，同时需要更新sku")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "id",value = "商品id",dataType = "Long"),
-            @ApiImplicitParam(name = "saleable",value = "上下架状态",dataType = "Boolean")
+            @ApiImplicitParam(name = "id", value = "商品id", dataType = "Long"),
+            @ApiImplicitParam(name = "saleable", value = "上下架状态", dataType = "Boolean")
     })
     @PutMapping(path = "/spu/saleable", name = "修改商品上下架，更新spu信息，同时需要更新sku")
     public ResponseEntity<Void> updateSaleable(@RequestParam(name = "id") Long id,
                                                @RequestParam(name = "saleable") Boolean saleable) {
         log.info("----- updateSaleable接口，修改商品上下架 ------");
-        goodsServer.updateSaleable(id, saleable);
+        goodsService.updateSaleable(id, saleable);
         return ResponseEntity.noContent().build();
     }
 
@@ -77,7 +79,7 @@ public class GoodsController {
     @PutMapping(path = "/goods", name = "修改商品")
     public ResponseEntity<Void> updateGoods(@RequestBody SpuDTO spuDTO) {
         log.info("----- updateGoods接口，修改商品 ------");
-        goodsServer.updateGoods(spuDTO);
+        goodsService.updateGoods(spuDTO);
 
         return ResponseEntity.noContent().build();
     }
@@ -94,7 +96,32 @@ public class GoodsController {
     @DeleteMapping(path = "/delete/spu/{id}", name = "根据id删除商品spu数据")
     public ResponseEntity<Void> deleteSpuById(@PathVariable(value = "id") Long id) {
         log.info("----- deleteSpuById接口，根据id删除商品spu数据  ------");
-        goodsServer.deleteSpuById(id);
+        goodsService.deleteSpuById(id);
         return ResponseEntity.noContent().build();
     }
+
+    /**
+     * 减库存
+     *
+     * @param map 商品id和数量键值对
+     */
+    @ApiOperation(value = "减库存")
+    @PutMapping(path = "/sku/minusStock", name = "减库存")
+    public ResponseEntity<Void> minusStock(@RequestBody Map<Long, Integer> map) {
+        log.info("----- minusStock接口，减库存  ------");
+        goodsService.minusStock(map);
+        return ResponseEntity.noContent().build();
+    }
+
+    /**
+     * 加库存
+     *
+     * @param map 商品id和数量键值对
+     */
+    @PutMapping("/sku/plusStock")
+    public ResponseEntity<Void> plusStock(@RequestBody Map<Long, Integer> map) {
+        goodsService.plusStock(map);
+        return ResponseEntity.noContent().build();
+    }
+
 }

@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -115,5 +116,36 @@ public class BySkuServiceImpl extends ServiceImpl<BySkuMapper, BySku> implements
         }
 
         return skuDTOList;
+    }
+
+    /**
+     * 减库存
+     *
+     * @param skuId  商品id
+     * @param number 商品数量
+     * @return 保存结果
+     */
+    @Override
+    public int minusStock(Long skuId, Integer number) {
+        if (skuId == null || number == null){
+            throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
+        }
+
+        return this.getBaseMapper().minusStock(skuId,number);
+    }
+
+    /**
+     * 加库存
+     *
+     * @param skuId 商品id
+     * @param number 数量
+     * @return 返回值
+     */
+    @Override
+    public int plusStock(Long skuId, Integer number) {
+        if (skuId == null || number == null){
+            throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
+        }
+        return this.getBaseMapper().plusStock(skuId,number);
     }
 }

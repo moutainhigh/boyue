@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.util.List;
+
 /**
  * Created by Intellij IDEA.
  *
@@ -72,4 +74,12 @@ public class OrderVo {
      */
     private Integer status;
 
+    /**
+     * 订单物流信息
+     */
+    private OrderLogisticsVO logistics;
+    /**
+     * 订单详情信息
+     */
+    private List<OrderDetailVO> detailList;
 }

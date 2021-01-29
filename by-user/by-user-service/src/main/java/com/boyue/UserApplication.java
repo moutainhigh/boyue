@@ -14,6 +14,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
+
 @MapperScan("com.boyue.user.mapper")
 public class UserApplication {
     public static void main(String[] args) {

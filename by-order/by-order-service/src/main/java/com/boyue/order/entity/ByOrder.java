@@ -1,5 +1,7 @@
 package com.boyue.order.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -26,6 +28,7 @@ private static final long serialVersionUID=1L;
     /**
      * 订单id
      */
+    @TableId(value = "order_id",type = IdType.INPUT)
     private Long orderId;
 
     /**
@@ -46,12 +49,12 @@ private static final long serialVersionUID=1L;
     /**
      * 支付类型，1、微信支付，2、货到付款
      */
-    private Boolean paymentType;
+    private Integer paymentType;
 
     /**
      * 订单业务类型1- 商城订单 2、秒杀订单
      */
-    private Boolean bType;
+    private Integer bType;
 
     /**
      * 邮费。单位:分。如:20007，表示:200元7分
@@ -76,7 +79,7 @@ private static final long serialVersionUID=1L;
     /**
      * 订单的状态，1、未付款 2、已付款,未发货 3、已发货,未确认 4、确认收货，交易成功 5、交易取消，订单关闭 6、交易结束，已评价
      */
-    private Boolean status;
+    private Integer status;
 
     /**
      * 创建时间

@@ -36,7 +36,7 @@ public class ByUserAddressServiceImpl extends ServiceImpl<ByUserAddressMapper, B
      * @return 用户地址对象
      */
     @Override
-    public UserAddressDTO findUserAddressByAddId(Long id) {
+    public UserAddressDTO findUserAddressById(Long id) {
         if (id == null){
             throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
         }
