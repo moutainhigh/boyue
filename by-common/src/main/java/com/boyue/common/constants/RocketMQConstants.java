@@ -58,6 +58,10 @@ public abstract class RocketMQConstants {
          * 秒杀业务创建订单TAGS
          */
         public static final String ORDER_OVERTIME_TAGS = "order.overtime";
+        /**
+         * 秒杀订单超时TAGS
+         */
+        public static final String SECKILL_ORDER_OVERTIME_TAGS = "seckillOrder.overtime";
     }
 
     /**
@@ -96,6 +100,10 @@ public abstract class RocketMQConstants {
          * 搜索商品下架
          */
         public static final String ITEM_SEARCH_DOWN_CONSUMER = "ITEM_SEARCH_DOWN_CONSUMER";
+        /**
+         * 秒杀订单清理
+         */
+        public static final String SECKILL_ORDER_OVERTIME_CONSUMER = "SECKILL_ORDER_OVERTIME_CONSUMER";
 
     }
 }

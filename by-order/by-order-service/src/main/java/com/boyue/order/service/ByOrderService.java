@@ -3,8 +3,10 @@ package com.boyue.order.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.boyue.dto.OrderDTO;
 import com.boyue.order.entity.ByOrder;
+import com.boyue.seckill.dto.OrderSecKillDTO;
 import com.boyue.vo.OrderVo;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -51,9 +53,37 @@ public interface ByOrderService extends IService<ByOrder> {
     void updateOrderStatus(Map<String, String> map);
 
     /**
+     * 查询超时订单业务
+     *
+     * @param overDate 超时
+     * @return 超时的订单集合
+     */
+    List<Long> getOverTimeIds(String overDate);
+
+    /**
      * 关闭 超时未支付的订单
      *
      * @param time 当前时间-15分钟
      */
     void closeOverTimeOrder(String time);
+
+    /**
+     * 接收秒杀订单创建消息
+     *
+     * @param orderSecKillDTO 秒杀订单的dto对象
+     */
+    void createSecKillOrder(OrderSecKillDTO orderSecKillDTO);
+
+    /**
+     * 通过订单id查询订单
+     *
+     * @param orderId 订单id
+     * @return 订单的vo对象
+     */
+    OrderVo findOrderByOrderId(Long orderId);
+
+    /**
+     * 闭秒杀订单的listener
+     */
+    void closeOverTimeSecKillOrder();
 }

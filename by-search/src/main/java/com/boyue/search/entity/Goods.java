@@ -18,6 +18,7 @@ import java.util.Set;
  */
 @Data
 @Document(indexName = "boyue-goods", type = "docs", replicas = 1, shards = 3)
+//@Document(indexName = "boyue", type = "docs", replicas = 1, shards = 3)
 public class Goods {
     /**
      * spuId 唯一标识id，是字符串类型

@@ -23,23 +23,35 @@ ribbon:
   MaxAutoRetriesNextServer: 1 # 切换服务重试次数
   OkToRetryOnAllOperations: false # 是否对所有的请求方式都重试，只对get请求重试
 zuul:
-  prefix: /api # 添加路由前缀
+  prefix: /api                          # 添加路由前缀
   routes:
-    item-service: /item/**          # 商品微服务         /item/**
-    oss-service: /upload/**         # 文件管理微服务     /upload/**
-    search-service: /search/**      # 搜索微服务         /search/**
-    user-service: /user/**          # 用户微服务         /user/**
-    auth-service: /auth/**          # 授权微服务         /auth/**
-    shopCart-service: /cart/**      # 购物车微服务       /cart/**
-    order-service:                  # 订单微服务         /order/**
+    item-service: /item/**              # 商品微服务         /item/**
+    oss-service: /upload/**             # 文件管理微服务     /upload/**
+    search-service: /search/**          # 搜索微服务         /search/**
+    user-service: /user/**              # 用户微服务         /user/**
+    auth-service: /auth/**              # 授权微服务         /auth/**
+    shopCart-service: /cart/**          # 购物车微服务       /cart/**
+    order-service:                      # 订单微服务         /order/**
       path: /order/**
       serviceId: order-service
       strip-prefix: false
-    pay-service:                    #  支付服务         /pay/**
+    pay-service:                        #  支付服务         /pay/**
       path: /pay/**
       serviceId: order-service
       strip-prefix: false
-  sensitive-headers:                #覆盖敏感头信息
+    seckill-service: /seckillgoods/**   #前端秒杀使用       /seckillgoods/**
+    seckillManage-service:              #后端秒杀管理使用   /manageSec/**
+      path: /manageSec/**
+      serviceId: seckill-service
+  sensitive-headers:                    #覆盖敏感头信息
+  # 限流的全局配置
+#  ratelimit:
+#    enabled: true #开启限流
+#    repository: REDIS  #使用
+#    default-policy: # 全局限流
+#      limit: 3
+#      refresh-interval: 60  #60s 内请求超过 3 次，服务端就抛出异常，60s 后可以恢复正常请求
+#      type: origin  #针对某个 IP 进行限流，不影响其他 IP
 by:
   cors:
     allowedOrigins:
@@ -59,19 +71,22 @@ by:
     maxAge: 3600
     filterPath: "/**"
   jwt:
-    publicKeyPath: D:\GraduationProject\BoYue\ssh\id_rsa.pub # 公钥地址
+    publicKeyPath: D:\GraduationProject\BoYue\ssh\id_rsa.pub      # 公钥地址
     user:
-      cookieName: BY_TOKEN # cookie名称
-  filter:   # 配置白名单
+      cookieName: BY_TOKEN                                        # cookie名称
+  filter:                             # 配置白名单
     allowPaths:
-      - /api/auth/login
-      - /api/search
-      - /api/user/register
-      - /api/user/check
-      - /api/user/code
-      - /api/item
-      - /api/pay
-      - /zuul/api/upload/signature
+      - /api/auth/login                 #放行登录请求请求
+      - /api/auth/adminLogin            #放行后台管理系统登录请求请求
+      - /api/search                     #放行搜索请求请求
+      - /api/user/register              #放行用户注册请求请求
+      - /api/user/userAdmin             #放行用户注册请求请求
+      - /api/user/check                 #放行用户验证请求请求
+      - /api/user/code                  #放行验证码请求请求
+      - /api/item                       #放行货物请求请求
+      - /api/pay                        #放行支付请求请求
+      - /zuul/api/upload/signature      #放行支付回调请求请求
+      - /api/manageSec                  #放行秒杀后台请求
 logging:
   config:
     classpath: logback-spring.xml

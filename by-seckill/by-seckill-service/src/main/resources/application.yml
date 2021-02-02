@@ -1,0 +1,41 @@
+server:
+  port: 8092
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: seckill-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql:///boyue_shop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    config:
+      enabled: false
+  redis:
+    host: 127.0.0.1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 5
+#MyBatisPlus 输出sql日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: ${spring.application.name}
+by:
+  worker:
+    workerId: 2
+    dataCenterId: 1
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/seckill

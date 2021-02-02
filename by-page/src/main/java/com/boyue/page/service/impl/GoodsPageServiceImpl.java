@@ -5,6 +5,8 @@ import com.boyue.common.exception.ByException;
 import com.boyue.item.client.*;
 import com.boyue.item.dto.*;
 import com.boyue.page.service.GoodsPageService;
+import com.boyue.seckill.client.SeckillClient;
+import com.boyue.seckill.dto.SeckillPolicyDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -121,7 +123,20 @@ public class GoodsPageServiceImpl implements GoodsPageService {
     @Autowired
     private TemplateEngine templateEngine;
 
-    private String htmlPath = "D:\\idea\\nginx-1.12.2\\html\\item";
+    /**
+     * 指定模板路径
+     */
+    private final String htmlPath = "D:\\idea\\nginx-1.12.2\\html";
+
+    /**
+     * 存放商品详细页的目录路径
+     */
+    private final String itemHtmlPath = htmlPath + "\\item";
+
+    /**
+     * 存放秒杀商品的详细页的目录路径
+     */
+    private final String seckillHtmlPath = htmlPath + "\\seckill";
 
     /**
      * 生成动态模板页，页面静态化
@@ -138,7 +153,7 @@ public class GoodsPageServiceImpl implements GoodsPageService {
         context.setVariables(map);
         //模板解析器     springboot自动配置
         //构造静态页面存放的目录,nginx目录下
-        File dir = new File(htmlPath);
+        File dir = new File(itemHtmlPath);
         if (!dir.exists()) {
             dir.mkdir();
         }
@@ -164,17 +179,122 @@ public class GoodsPageServiceImpl implements GoodsPageService {
      */
     @Override
     public void removeHtml(Long id) {
-        if (id == null){
+        if (id == null) {
             throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
         }
-        File dir = new File(htmlPath);
+        File dir = new File(itemHtmlPath);
         if (!dir.exists()) {
             return;
         }
         File file = new File(dir, id + ".html");
         boolean flag = file.delete();
-        if (!flag){
+        if (!flag) {
             throw new ByException(ExceptionEnum.REMOVE_PAGE_OPERATION_FAIL);
+        }
+    }
+
+    /**
+     * 注入秒杀商品的feignClient接口
+     */
+    @Autowired
+    private SeckillClient seckillClient;
+
+    /**
+     * 创建秒杀的静态页面
+     * 包含列表页 和 详情页
+     *
+     * @param date 秒杀日期
+     */
+    @Override
+    public void createSecKillPage(String date) {
+
+        //根据秒杀日期，获取对应的秒杀列表数据
+        List<SeckillPolicyDTO> secKillPolicyList = seckillClient.findSecKillPolicyList(date);
+
+        //创建列表页，seckillList
+        createSecKillListPage(secKillPolicyList);
+
+        for (SeckillPolicyDTO seckillPolicyDTO : secKillPolicyList) {
+            //创建详情页
+            createSecKillDetailPage(seckillPolicyDTO);
+        }
+    }
+
+    /**
+     * 创建详情页面
+     *
+     * @param seckillPolicyDTO 秒杀商品的dto对象
+     */
+    private void createSecKillDetailPage(SeckillPolicyDTO seckillPolicyDTO) {
+
+        //获取模板页面需要的动态数据
+        //远程调用item服务，根据spuid，获取detail数据
+        SpuDetailDTO spuDetailDTO = spuDetailClient.findSpuDetailBySpuId(seckillPolicyDTO.getSpuId());
+        //远程调用item服务，根据分类id查询规格属性组和 组内属性
+        List<SpecGroupDTO> specGroupDTOList = specGroupClient.findSpecParamAndSpecGroup(seckillPolicyDTO.getCid3());
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("detail", spuDetailDTO);
+        map.put("seckillgoods", seckillPolicyDTO);
+        //规格数据组和名字
+        map.put("specs", specGroupDTOList);
+
+        Context context = new Context();
+        context.setVariables(map);
+        //构造页面存储路径
+        File dir = new File(seckillHtmlPath);
+        if (!dir.exists()) {
+            dir.mkdir();
+        }
+        //构造列表页面file对象
+        File listPage = new File(dir, seckillPolicyDTO.getId() + ".html");
+        //构造writer对象
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter(listPage, "UTF-8");
+            //使用模板引擎生成页面
+            templateEngine.process("seckill-item", context, writer);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                writer.close();
+            }
+        }
+    }
+
+    /**
+     * 创建列表页
+     * 把静态页面放入nginx html的 /seckill/list.html
+     *
+     * @param secKillPolicyList 秒杀商品的list集合
+     */
+    private void createSecKillListPage(List<SeckillPolicyDTO> secKillPolicyList) {
+
+        //创建上下文
+        Context context = new Context();
+        //设置数据
+        context.setVariable("seckillList", secKillPolicyList);
+
+        //构造页面存储路径
+        File dir = new File(seckillHtmlPath);
+        if (!dir.exists()) {
+            dir.mkdir();
+        }
+        //构造列表页面file对象
+        File listPage = new File(dir, "list.html");
+        //构造writer对象
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter(listPage, "UTF-8");
+            //使用模板引擎生成页面
+            templateEngine.process("seckill-index", context, writer);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                writer.close();
+            }
         }
     }
 }

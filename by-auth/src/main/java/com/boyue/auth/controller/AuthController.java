@@ -1,5 +1,6 @@
 package com.boyue.auth.controller;
 
+import com.boyue.auth.dto.AdminUserDTO;
 import com.boyue.auth.service.AuthService;
 import com.boyue.common.auth.entity.UserInfo;
 import io.swagger.annotations.*;
@@ -7,10 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -54,6 +52,24 @@ public class AuthController {
                                       HttpServletResponse response) {
         log.info("[auth-service服务]login接口处理请求");
         authService.login(username, password, response);
+        return ResponseEntity.noContent().build();
+    }
+
+    /**
+     * 管理系统的登录功能，输入用户名、密码，进行登录。
+     * POST /login
+     *
+     * @param adminUserDTO 用户
+     * @param response 响应
+     * @return 空
+     */
+    @ApiOperation(value = "管理系统的登录功能,进行登录。")
+    @ApiResponse(code = 200, message = "登陆成功")
+    @PostMapping(path = "/adminLogin", name = "管理系统的登录功能，进行登录")
+    public ResponseEntity<Void> adminLogin(@RequestBody AdminUserDTO adminUserDTO,
+                                           HttpServletResponse response) {
+        log.info("[auth-service服务]adminLogin接口处理请求");
+        authService.adminLogin(adminUserDTO.getUsername(), adminUserDTO.getPassword(), response);
         return ResponseEntity.noContent().build();
     }
 

@@ -1,5 +1,8 @@
 package com.boyue.page.service;
 
+import com.boyue.seckill.dto.SeckillPolicyDTO;
+
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,4 +34,6 @@ public interface GoodsPageService {
      * @param id 商品id
      */
     void removeHtml(Long id);
+
+    void createSecKillPage(String date);
 }

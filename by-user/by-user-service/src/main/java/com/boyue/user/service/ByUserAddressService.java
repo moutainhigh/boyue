@@ -54,4 +54,22 @@ public interface ByUserAddressService extends IService<ByUserAddress> {
      * @param addressId 地址id
      */
     void deleteUserAddress(Long addressId);
+
+    /**
+     * 根据 主键id 查询收货人地址信息
+     * GET  /address/byId
+     * @param id 地址id
+     * @return 地址信息
+     */
+    UserAddressDTO findAddressById(Long id);
+
+    /**
+     * 根据用户uid 和 收货人id 查询收货人信息
+     * GET /address/byUser
+     *
+     * @param userId    用户id
+     * @param addressId 收货人id
+     * @return 用户地址userAddressDTO对象
+     */
+    UserAddressDTO findAddressByUser(Long userId, Long addressId);
 }

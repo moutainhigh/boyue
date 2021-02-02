@@ -37,7 +37,7 @@ public class ByUserAddressServiceImpl extends ServiceImpl<ByUserAddressMapper, B
      */
     @Override
     public UserAddressDTO findUserAddressById(Long id) {
-        if (id == null){
+        if (id == null) {
             throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
         }
         //获取用户id
@@ -45,13 +45,13 @@ public class ByUserAddressServiceImpl extends ServiceImpl<ByUserAddressMapper, B
 
         //构造查询条件
         QueryWrapper<ByUserAddress> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(ByUserAddress::getId,id).eq(ByUserAddress::getUserId,userId);
+        queryWrapper.lambda().eq(ByUserAddress::getId, id).eq(ByUserAddress::getUserId, userId);
         ByUserAddress userAddress = this.getOne(queryWrapper);
-        if (userAddress == null){
+        if (userAddress == null) {
             throw new ByException(ExceptionEnum.USER_ADDRESS_NOT_FOUND);
         }
 
-        return BeanHelper.copyProperties(userAddress,UserAddressDTO.class);
+        return BeanHelper.copyProperties(userAddress, UserAddressDTO.class);
     }
 
     /**
@@ -63,18 +63,18 @@ public class ByUserAddressServiceImpl extends ServiceImpl<ByUserAddressMapper, B
      */
     @Override
     public UserAddressDTO findUserAddressByUid(Long id, Long userId) {
-        if (id == null || userId == null){
+        if (id == null || userId == null) {
             throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
         }
         //构造查询条件
         QueryWrapper<ByUserAddress> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(ByUserAddress::getId,id).eq(ByUserAddress::getUserId,userId);
+        queryWrapper.lambda().eq(ByUserAddress::getId, id).eq(ByUserAddress::getUserId, userId);
         ByUserAddress userAddress = this.getOne(queryWrapper);
-        if (userAddress == null){
+        if (userAddress == null) {
             throw new ByException(ExceptionEnum.USER_ADDRESS_NOT_FOUND);
         }
 
-        return BeanHelper.copyProperties(userAddress,UserAddressDTO.class);
+        return BeanHelper.copyProperties(userAddress, UserAddressDTO.class);
     }
 
     /**
@@ -87,9 +87,9 @@ public class ByUserAddressServiceImpl extends ServiceImpl<ByUserAddressMapper, B
         try {
             Long userId = UserHolder.getUserId();
             QueryWrapper<ByUserAddress> queryWrapper = new QueryWrapper<>();
-            queryWrapper.lambda().eq(ByUserAddress::getUserId,userId);
+            queryWrapper.lambda().eq(ByUserAddress::getUserId, userId);
             List<ByUserAddress> userAddressList = this.list(queryWrapper);
-            return BeanHelper.copyWithCollection(userAddressList,UserAddressDTO.class);
+            return BeanHelper.copyWithCollection(userAddressList, UserAddressDTO.class);
         } catch (Exception e) {
             e.printStackTrace();
             throw new ByException(ExceptionEnum.USER_ADDRESS_NOT_FOUND);
@@ -105,21 +105,21 @@ public class ByUserAddressServiceImpl extends ServiceImpl<ByUserAddressMapper, B
     @Transactional(rollbackFor = Exception.class)
     public void setDefaultUserAddress(Long addressId) {
         QueryWrapper<ByUserAddress> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(ByUserAddress::getIsDefault,true);
+        queryWrapper.lambda().eq(ByUserAddress::getIsDefault, true);
         int count = this.count(queryWrapper);
-        if(count >0){
+        if (count > 0) {
             UpdateWrapper<ByUserAddress> updateWrapper = new UpdateWrapper<>();
             updateWrapper.lambda().
-                    eq(ByUserAddress::getIsDefault,true).
-                    set(ByUserAddress::getIsDefault,false);
+                    eq(ByUserAddress::getIsDefault, true).
+                    set(ByUserAddress::getIsDefault, false);
             boolean flag = this.update(updateWrapper);
-            if(!flag){
+            if (!flag) {
                 throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
             }
         }
         ByUserAddress userAddress = new ByUserAddress().setIsDefault(true).setId(addressId);
         boolean updateFlag = this.updateById(userAddress);
-        if(!updateFlag){
+        if (!updateFlag) {
             throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
         }
     }
@@ -133,10 +133,63 @@ public class ByUserAddressServiceImpl extends ServiceImpl<ByUserAddressMapper, B
     public void deleteUserAddress(Long addressId) {
         Long userId = UserHolder.getUserId();
         QueryWrapper<ByUserAddress> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(ByUserAddress::getUserId,userId).eq(ByUserAddress::getId,addressId);
+        queryWrapper.lambda().eq(ByUserAddress::getUserId, userId).eq(ByUserAddress::getId, addressId);
         boolean flag = this.remove(queryWrapper);
-        if(!flag){
+        if (!flag) {
             throw new ByException(ExceptionEnum.DELETE_OPERATION_FAIL);
         }
+    }
+
+    /**
+     * 根据 主键id 查询收货人地址信息
+     * GET  /address/byId
+     *
+     * @param id 地址id
+     * @return 地址信息
+     */
+    @Override
+    public UserAddressDTO findAddressById(Long id) {
+        //校验参数
+        if (id == null) {
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        //获取用户id
+        Long userId = UserHolder.getUserId();
+        //构造条件
+        QueryWrapper<ByUserAddress> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda().
+                eq(ByUserAddress::getId, id).
+                eq(ByUserAddress::getUserId, userId);
+        ByUserAddress userAddress = this.getOne(queryWrapper);
+        if (userAddress == null) {
+            throw new ByException(ExceptionEnum.USER_ADDRESS_NOT_FOUND);
+        }
+        return BeanHelper.copyProperties(userAddress, UserAddressDTO.class);
+    }
+
+    /**
+     * 根据用户uid 和 收货人id 查询收货人信息
+     * GET /address/byUser
+     *
+     * @param userId    用户id
+     * @param addressId 收货人id
+     * @return 用户地址userAddressDTO对象
+     */
+    @Override
+    public UserAddressDTO findAddressByUser(Long userId, Long addressId) {
+        //校验参数
+        if (userId == null || addressId == null) {
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        //构造条件
+        QueryWrapper<ByUserAddress> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda().
+                eq(ByUserAddress::getId, addressId).
+                eq(ByUserAddress::getUserId, userId);
+        ByUserAddress userAddress = this.getOne(queryWrapper);
+        if (userAddress == null) {
+            throw new ByException(ExceptionEnum.USER_ADDRESS_NOT_FOUND);
+        }
+        return BeanHelper.copyProperties(userAddress, UserAddressDTO.class);
     }
 }

@@ -106,7 +106,7 @@ public class BrandController {
      */
     @ApiOperation(value = "根据id查询品牌信息")
     @ApiImplicitParam(name = "id", value = "品牌id", dataType = "String")
-    @GetMapping(path = "/brand/{id}", name = "根据id查询品牌信息")
+    @GetMapping(path = "/api/brand/{id}", name = "根据id查询品牌信息")
     public ResponseEntity<BrandDTO> findBrandById(@PathVariable(value = "id") String id) {
         log.info("调用 findBrandById 接口");
         BrandDTO brandDTO = brandService.findBrandById(id);
@@ -180,5 +180,24 @@ public class BrandController {
         List<ByBrand> brandList = (List<ByBrand>) brandCollection;
         List<BrandDTO> brandDTOList = BeanHelper.copyWithCollection(brandList, BrandDTO.class);
         return ResponseEntity.ok(brandDTOList);
+    }
+
+    /**
+     * 通过brandId查询品牌信息
+     * @param id 品牌id
+     * @return 品牌对象
+     */
+    @ApiOperation(value = "通过brandId查询品牌信息")
+    @GetMapping(path = "/brand/{id}",name = "通过brandId查询brand")
+    public ResponseEntity<BrandDTO> findBrandListById(@PathVariable(name = "id") Long id){
+        log.info("调用 findBrandListById 接口");
+        ByBrand brand = brandService.getById(id);
+        if (brand == null){
+            throw new ByException(ExceptionEnum.BRAND_NOT_FOUND);
+        }
+        //类型转换
+        BrandDTO brandDTO = BeanHelper.copyProperties(brand, BrandDTO.class);
+
+        return ResponseEntity.ok(brandDTO);
     }
 }

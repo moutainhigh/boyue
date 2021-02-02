@@ -159,4 +159,19 @@ public class UserAddressController {
         userAddressService.deleteUserAddress(addressId);
         return ResponseEntity.noContent().build();
     }
+
+    /**
+     * 根据用户uid 和 收货人id 查询收货人信息
+     * GET /address/byUser
+     *
+     * @param userId    用户id
+     * @param addressId 收货人id
+     * @return 用户地址userAddressDTO对象
+     */
+    @ApiOperation("根据用户uid 和 收货人id 查询收货人信息")
+    @GetMapping(path = "/address/byUser", name = "根据用户uid 和 收货人id 查询收货人信息")
+    public ResponseEntity<UserAddressDTO> queryAddressByUser(@RequestParam(name = "userId") Long userId,
+                                                             @RequestParam(name = "addressId") Long addressId) {
+        return ResponseEntity.ok(userAddressService.findAddressByUser(userId, addressId));
+    }
 }

@@ -38,4 +38,13 @@ public interface AuthService {
      * @param response 响应
      */
     void logout(HttpServletRequest request, HttpServletResponse response);
+
+    /**
+     * 管理系统的登录功能，输入用户名、密码，进行登录。
+     *
+     * @param username 用户名
+     * @param password 用户密码
+     * @param response 响应
+     */
+    void adminLogin(String username, String password, HttpServletResponse response);
 }

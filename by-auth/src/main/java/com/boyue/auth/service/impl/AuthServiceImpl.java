@@ -9,6 +9,7 @@ import com.boyue.common.enums.ExceptionEnum;
 import com.boyue.common.exception.ByException;
 import com.boyue.common.utils.CookieUtils;
 import com.boyue.user.client.UserClient;
+import com.boyue.user.dto.ManagerUserDTO;
 import com.boyue.user.dto.UserDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -37,6 +38,10 @@ public class AuthServiceImpl implements AuthService {
      * redis中存储过期token的键
      */
     private static final String KEY_PREFIX = "by:user:jwt:id:";
+    /**
+     * 存放adminUser
+     */
+    private static final String ADMIN_KEY = "by:admin:user";
 
     /**
      * 注入user的feignClient接口
@@ -49,6 +54,7 @@ public class AuthServiceImpl implements AuthService {
      */
     @Autowired
     private JwtProperties properties;
+
 
     /**
      * 注入redisTemplate
@@ -212,6 +218,55 @@ public class AuthServiceImpl implements AuthService {
                     properties.getUser().getCookieName(),
                     properties.getUser().getCookieDomain(),
                     response);
+        }
+    }
+
+    /**
+     * 管理系统的登录功能，输入用户名、密码，进行登录。
+     *
+     * @param username 用户名
+     * @param password 用户密码
+     * @param response 响应
+     */
+    @Override
+    public void adminLogin(String username, String password, HttpServletResponse response) {
+        //校验参数
+        if (StringUtils.isBlank(username) || StringUtils.isBlank(password)){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+
+        try {
+            //远程调用user查询用户对象
+            ManagerUserDTO adminUser = userClient.findAdminUser(username, password);
+
+            //构建redisKey
+            String redisKey = ADMIN_KEY;
+            redisTemplate.opsForValue().set(redisKey, String.valueOf(adminUser.getId()));
+
+            //构建userInfo
+            UserInfo userInfo = new UserInfo();
+            userInfo.setId(adminUser.getId());
+            userInfo.setUsername(adminUser.getUsername());
+            userInfo.setRole("admin");
+            //通过jwt工具类生成token
+            String token = JwtUtils.generateTokenExpireInMinutes(userInfo, properties.getPrivateKey(), properties.getUser().getExpire());
+
+            //将生成的token存储到cookie中
+            CookieUtils.newCookieBuilder()
+                    //存入token
+                    .value(token)
+                    //token字cookie中存储的名称
+                    .name(properties.getUser().getCookieName())
+                    //设置域名
+                    .domain(properties.getUser().getCookieDomain())
+                    //设置为only，保证安全，防止xss攻击，不允许js操作cookie
+                    .httpOnly(true)
+                    //写入cookie中
+                    .response(response).build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.info("[auth-service服务]adminLogin接口出现错误，登录失败");
+            throw new ByException(ExceptionEnum.INVALID_USERNAME_PASSWORD);
         }
     }
 }

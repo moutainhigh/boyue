@@ -54,4 +54,15 @@ public class OrderController {
         log.info("[by-order服务]findOrderById接口接收到请求,创建订单");
         return ResponseEntity.ok(orderService.findOrderById(orderId));
     }
+
+    /**
+     * 查询秒杀订单
+     *
+     * @param orderId 订单id
+     * @return 订单的vo对象
+     */
+    @GetMapping("/order/findOrder")
+    public ResponseEntity<OrderVo> findOrder(@RequestParam(name = "id",required = false) Long orderId) {
+        return ResponseEntity.ok(orderService.findOrderByOrderId(orderId));
+    }
 }

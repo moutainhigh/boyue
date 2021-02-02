@@ -51,18 +51,4 @@ public class CreatePageTest {
             page ++;
         }
     }
-
-    @Test
-    public void test02() {
-        Map<String, Object> map = goodsDetailService.loadItemData(2L);
-        for (String key : map.keySet()) {
-            Object value = map.get(key);
-            System.out.println(key+"--------"+value);
-        }
-    }
-
-    @Test
-    public void test03() {
-        goodsDetailService.createHtml(2L);
-    }
 }

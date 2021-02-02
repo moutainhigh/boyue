@@ -16,13 +16,18 @@ import com.boyue.item.dto.SkuDTO;
 import com.boyue.order.entity.ByOrder;
 import com.boyue.order.entity.ByOrderDetail;
 import com.boyue.order.entity.ByOrderLogistics;
+import com.boyue.order.entity.ByOrderSeckillDetail;
 import com.boyue.order.enums.BusinessTypeEnum;
 import com.boyue.order.enums.OrderStatusEnum;
 import com.boyue.order.mapper.ByOrderMapper;
 import com.boyue.order.service.ByOrderDetailService;
 import com.boyue.order.service.ByOrderLogisticsService;
+import com.boyue.order.service.ByOrderSeckillDetailService;
 import com.boyue.order.service.ByOrderService;
 import com.boyue.order.utils.PayHelper;
+import com.boyue.seckill.client.SeckillClient;
+import com.boyue.seckill.dto.OrderSecKillDTO;
+import com.boyue.seckill.dto.SeckillPolicyDTO;
 import com.boyue.user.client.UserClient;
 import com.boyue.user.dto.UserAddressDTO;
 import com.boyue.vo.OrderDetailVO;
@@ -363,6 +368,19 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
     }
 
     /**
+     * 查询超时订单业务
+     * @param overDate 超时
+     * @return 超时的订单集合
+     */
+    @Override
+    public List<Long> getOverTimeIds(String overDate) {
+        if (StringUtils.isEmpty(overDate)){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        return this.baseMapper.selectOverTimeIds(overDate);
+    }
+
+    /**
      * 关闭 超时未支付的订单
      *
      * @param time 当前时间-15分钟
@@ -404,5 +422,120 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
             log.info("恢复库存失败，orderIds={}",orderIds);
             throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
         }
+    }
+
+    /**
+     * 注入秒杀数据的feign接口
+     */
+    @Autowired
+    private SeckillClient seckillClient;
+
+    /*
+     * 秒杀对象的ByOrderSeckillDetailService对象
+     */
+    @Autowired
+    private ByOrderSeckillDetailService orderSeckillDetailService;
+
+    /**
+     * 接收秒杀订单创建消息
+     *
+     * @param orderSecKillDTO 秒杀订单的dto对象
+     */
+    @Override
+    public void createSecKillOrder(OrderSecKillDTO orderSecKillDTO) {
+        Long orderId = orderSecKillDTO.getOrderId();
+        Long userId = orderSecKillDTO.getUserId();
+        Long seckillId = orderSecKillDTO.getSeckillId();
+        //远程调用seckill，获取秒杀信息
+        SeckillPolicyDTO seckillPolicyDTO = seckillClient.findSecKillPolicyById(seckillId);
+        //运费
+        long postFee = 0;
+        //实付金额
+        long actualFee = seckillPolicyDTO.getCostPrice() + postFee;
+        ByOrder tbOrder = new ByOrder();
+        tbOrder.setOrderId(orderId);
+        tbOrder.setUserId(userId);
+        tbOrder.setBType(BusinessTypeEnum.SEC_KILL.value());
+        tbOrder.setStatus(OrderStatusEnum.INIT.value());
+        tbOrder.setActualFee(actualFee);
+        tbOrder.setTotalFee(seckillPolicyDTO.getCostPrice());
+        tbOrder.setPostFee(postFee);
+        tbOrder.setPaymentType(orderSecKillDTO.getPaymentType());
+        tbOrder.setSourceType(2);
+        //保存订单表
+        boolean b = save(tbOrder);
+        if(!b){
+            throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
+        }
+        ByOrderSeckillDetail orderSeckillDetail = new ByOrderSeckillDetail();
+        orderSeckillDetail.setNum(1);
+        orderSeckillDetail.setOrderId(orderId);
+        orderSeckillDetail.setSeckillId(seckillId);
+        //保存订单详情
+        boolean b1 = orderSeckillDetailService.save(orderSeckillDetail);
+        if(!b1){
+            throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
+        }
+        //远程调用user服务，根据收货人id，查询收货人信息
+        UserAddressDTO userAddressDTO = userClient.queryAddressByUser(userId,orderSecKillDTO.getAddressId());
+        if(userAddressDTO == null){
+            throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
+        }
+        ByOrderLogistics tbOrderLogistics = BeanHelper.copyProperties(userAddressDTO, ByOrderLogistics.class);
+        tbOrderLogistics.setOrderId(orderId);
+        //保存订单物流信息表
+        boolean b2 = orderLogisticsService.save(tbOrderLogistics);
+        if(!b2){
+            throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
+        }
+        //4、减库存
+        //远程调用SecKill,secKillId,num
+        try{
+            seckillClient.minusStock(seckillId,1);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 通过订单id查询订单
+     *
+     * @param orderId 订单id
+     * @return 订单的vo对象
+     */
+    @Override
+    public OrderVo findOrderByOrderId(Long orderId) {
+        Long userId = UserHolder.getUserId();
+        Integer status = OrderStatusEnum.INIT.value();
+        QueryWrapper<ByOrder> orderQueryWrapper = new QueryWrapper<>();
+        orderQueryWrapper.lambda().eq(ByOrder::getOrderId,orderId)
+                .eq(ByOrder::getUserId,userId)
+                .eq(ByOrder::getStatus,status);
+        ByOrder order = this.getOne(orderQueryWrapper);
+        if (order == null) {
+            // 不存在
+            throw new ByException(ExceptionEnum.ORDER_NOT_FOUND);
+        }
+        // 4.封装数据
+        OrderVo orderVO = BeanHelper.copyProperties(order, OrderVo.class);
+        return orderVO;
+    }
+
+    /**
+     * 关闭秒杀订单的listener
+     */
+    @Override
+    public void closeOverTimeSecKillOrder() {
+        //        1、查询超时订单对应的订单详情数据
+        List<ByOrderSeckillDetail> seckillOrderDetailList = orderSeckillDetailService.findOvertimeSeckillOrderDetail();
+        if(seckillOrderDetailList==null||seckillOrderDetailList.size()==0){
+            return; //表示没有超时的订单
+        }
+        Map<Long, Integer> seckillIdAndNumMap = seckillOrderDetailList.stream().collect(Collectors.toMap(ByOrderSeckillDetail::getSeckillId, ByOrderSeckillDetail::getNum));
+        List<Long> orderIds = seckillOrderDetailList.stream().map(ByOrderSeckillDetail::getOrderId).collect(Collectors.toList());
+        //          2、更新超时订单数据
+        this.getBaseMapper().cleanOvertimeSeckillOrder(orderIds);
+        //        3、回复库存,别忘了还需要压栈秒杀商品库存数
+        seckillClient.plusStock(seckillIdAndNumMap);
     }
 }

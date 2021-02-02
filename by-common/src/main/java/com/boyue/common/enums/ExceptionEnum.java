@@ -57,7 +57,13 @@ public enum ExceptionEnum {
     USER_NOT_FOUND(400, "用户不存在，请先注册！"),
     UNAUTHORIZED(401, "登录失效或未登录！"),
     SEND_MESSAGE_history(400, "短信已发送，请不要频繁点击！"),
-    GOODS_DETAIL_NOT_FOUND(400, "商品详情数据不存在！");
+    GOODS_DETAIL_NOT_FOUND(400, "商品详情数据不存在！"),
+    SECKILL_NOT_FOUND(404,"秒杀信息不存在！"),
+    SECKILL_END_ERROR(400,"抢购已结束！"),
+    SECKILL_ALREADY_JOIN_ERROR(400,"当前参与用户过多，请求稍后重试！"),
+    SECKILL_NOT_BEGIN(400,"秒杀活动没有开始" ),
+    SECKILL_IS_END(400,"秒杀活动已经结束" ),
+    STOCK_NOT_ENOUGH_ERROR(500,"商品库存不足！");
 
     ExceptionEnum(Integer status, String message) {
         this.status = status;
