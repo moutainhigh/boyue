@@ -1,0 +1,52 @@
+2020-04-28 17:15:08,342 INFO DEFAULT_GROUP@@serverAddr is changed, add it to push queue.
+
+2020-04-28 17:19:52,090 INFO DEFAULT_GROUP@@seata-order-service is changed, add it to push queue.
+
+2020-04-28 17:21:05,725 INFO DEFAULT_GROUP@@seata-storage-service is changed, add it to push queue.
+
+2020-04-28 17:22:22,316 INFO DEFAULT_GROUP@@seata-account-service is changed, add it to push queue.
+
+2020-04-28 17:28:22,457 INFO DEFAULT_GROUP@@seata-account-service is changed, add it to push queue.
+
+2020-04-28 17:28:22,457 INFO serviceName: DEFAULT_GROUP@@seata-account-service changed, schedule push for: 192.168.18.4:58140, agent: Nacos-Java-Client:v1.1.1, key: 192.168.18.4,58140,271447079905700
+
+2020-04-28 17:28:22,457 INFO send udp packet: 192.168.18.4,58140,271447079905700
+
+2020-04-28 17:28:22,464 INFO received ack: {"type": "push-ack", "lastRefTime":"271447079905700", "data":""} from: 192.168.18.4:, cost: 58140 ms, unacked: 7, total push: 0
+
+2020-04-28 17:28:37,628 INFO DEFAULT_GROUP@@seata-account-service is changed, add it to push queue.
+
+2020-04-28 17:28:37,628 INFO serviceName: DEFAULT_GROUP@@seata-account-service changed, schedule push for: 192.168.18.4:58140, agent: Nacos-Java-Client:v1.1.1, key: 192.168.18.4,58140,271462251314000
+
+2020-04-28 17:28:37,628 INFO send udp packet: 192.168.18.4,58140,271462251314000
+
+2020-04-28 17:28:37,631 INFO received ack: {"type": "push-ack", "lastRefTime":"271462251314000", "data":""} from: 192.168.18.4:, cost: 58140 ms, unacked: 3, total push: 0
+
+2020-04-28 17:31:50,974 INFO DEFAULT_GROUP@@seata-storage-service is changed, add it to push queue.
+
+2020-04-28 17:31:52,324 INFO DEFAULT_GROUP@@seata-order-service is changed, add it to push queue.
+
+2020-04-28 17:32:05,992 INFO DEFAULT_GROUP@@seata-storage-service is changed, add it to push queue.
+
+2020-04-28 17:32:07,342 INFO DEFAULT_GROUP@@seata-order-service is changed, add it to push queue.
+
+2020-04-28 17:34:33,612 INFO DEFAULT_GROUP@@seata-order-service is changed, add it to push queue.
+
+2020-04-28 17:34:36,638 INFO DEFAULT_GROUP@@seata-storage-service is changed, add it to push queue.
+
+2020-04-28 17:34:40,544 INFO DEFAULT_GROUP@@seata-account-service is changed, add it to push queue.
+
+2020-04-28 17:35:53,090 INFO DEFAULT_GROUP@@seata-account-service is changed, add it to push queue.
+
+2020-04-28 17:35:56,193 INFO DEFAULT_GROUP@@seata-storage-service is changed, add it to push queue.
+
+2020-04-28 17:35:56,193 INFO DEFAULT_GROUP@@seata-storage-service is changed, add it to push queue.
+
+2020-04-28 17:35:57,503 INFO DEFAULT_GROUP@@seata-order-service is changed, add it to push queue.
+
+2020-04-28 17:36:08,098 INFO DEFAULT_GROUP@@seata-account-service is changed, add it to push queue.
+
+2020-04-28 17:36:11,199 INFO DEFAULT_GROUP@@seata-storage-service is changed, add it to push queue.
+
+2020-04-28 17:36:12,511 INFO DEFAULT_GROUP@@seata-order-service is changed, add it to push queue.
+

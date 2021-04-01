@@ -60,7 +60,7 @@ public class SpecParamController {
      * @return 空
      */
     @ApiOperation(value = "新增规格参数")
-    @PostMapping(path = "/param", name = "新增规格参数")
+    @PostMapping(path = "/spec/param", name = "新增规格参数")
     public ResponseEntity<Void> saveSpecParam(@RequestBody SpecParamDTO specParamDTO) {
         log.info("[item-service服务]saveSpecParam接口接收到请求,新增规格参数");
         specParamService.saveSpecParam(specParamDTO);
@@ -75,7 +75,7 @@ public class SpecParamController {
      * @return 空
      */
     @ApiOperation(value = "修改规格参数")
-    @PutMapping(path = "/param", name = "修改规格参数")
+    @PutMapping(path = "/spec/param", name = "修改规格参数")
     public ResponseEntity<Void> updateSpecParam(@RequestBody SpecParamDTO specParamDTO) {
         log.info("[item-service服务]updateSpecParam接口接收到请求,修改规格参数");
         specParamService.updateSpecParam(specParamDTO);
@@ -91,7 +91,7 @@ public class SpecParamController {
      */
     @ApiOperation(value = "删除规格参数")
     @ApiImplicitParam(name = "id", value = "规格参数id", required = true, dataType = "Long")
-    @DeleteMapping(path = "/param/{id}", name = "删除规格参数")
+    @DeleteMapping(path = "/spec/param/{id}", name = "删除规格参数")
     public ResponseEntity<Void> deleteSpecParam(@PathVariable(name = "id") Long id) {
         log.info("[item-service服务]deleteSpecParam接口接收到请求, 删除规格参数");
         specParamService.deleteSpecParam(id);

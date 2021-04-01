@@ -2,12 +2,15 @@ package com.boyue.order.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.boyue.common.enums.ExceptionEnum;
 import com.boyue.common.exception.ByException;
 import com.boyue.common.threadlocals.UserHolder;
 import com.boyue.common.utils.BeanHelper;
 import com.boyue.common.utils.IdWorker;
+import com.boyue.common.vo.PageResult;
 import com.boyue.dto.CartDTO;
 import com.boyue.dto.OrderDTO;
 import com.boyue.item.client.GoodsClient;
@@ -20,10 +23,7 @@ import com.boyue.order.entity.ByOrderSeckillDetail;
 import com.boyue.order.enums.BusinessTypeEnum;
 import com.boyue.order.enums.OrderStatusEnum;
 import com.boyue.order.mapper.ByOrderMapper;
-import com.boyue.order.service.ByOrderDetailService;
-import com.boyue.order.service.ByOrderLogisticsService;
-import com.boyue.order.service.ByOrderSeckillDetailService;
-import com.boyue.order.service.ByOrderService;
+import com.boyue.order.service.*;
 import com.boyue.order.utils.PayHelper;
 import com.boyue.seckill.client.SeckillClient;
 import com.boyue.seckill.dto.OrderSecKillDTO;
@@ -101,6 +101,12 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
     private PayHelper payHelper;
 
     /**
+     * 注入订单统计的service
+     */
+    @Autowired
+    private ByOrderStatisticsService orderStatisticsService;
+
+    /**
      * 用户登陆后，提交购物车数据，创建订单
      *
      * @param orderDTO 订单数据
@@ -110,7 +116,7 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
     @Transactional(rollbackFor = Exception.class)
     public Long creatOrder(OrderDTO orderDTO) {
         //校验参数
-        if (orderDTO == null){
+        if (orderDTO == null) {
             log.error("无效的请求参数");
             throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
         }
@@ -231,13 +237,20 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
         }
 
         //4、远程调度，减库存
-        log.info("map={}",map);
+        log.info("map={}", map);
         try {
             goodsClient.minusStock(map);
         } catch (Exception e) {
             e.printStackTrace();
             log.error("减库存失败");
             throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
+        }
+
+        //5.将订单信息添加到orderStatistics中
+        boolean saveOrderStatisticsFlag = orderStatisticsService.addOrderStatistics(order);
+        if (!saveOrderStatisticsFlag) {
+            log.error("orderStatistics保存失败");
+            throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
         }
 
         return orderId;
@@ -257,11 +270,11 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
         Integer status = OrderStatusEnum.INIT.value();
         //查询订单
         ByOrder order = this.findOrder(orderId, userId, status);
-        if (order == null){
+        if (order == null) {
             //订单不存在
             throw new ByException(ExceptionEnum.ORDER_NOT_FOUND);
         }
-        if (!userId.equals(order.getUserId())){
+        if (!userId.equals(order.getUserId())) {
             throw new ByException(ExceptionEnum.ORDER_NOT_FOUND);
         }
 
@@ -270,15 +283,15 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
 
         //查询订单详细
         QueryWrapper<ByOrderDetail> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(ByOrderDetail::getOrderId,orderId);
+        queryWrapper.lambda().eq(ByOrderDetail::getOrderId, orderId);
         List<ByOrderDetail> orderDetailList = orderDetailService.list(queryWrapper);
-        if(CollectionUtils.isEmpty(orderDetailList)){
+        if (CollectionUtils.isEmpty(orderDetailList)) {
             throw new ByException(ExceptionEnum.ORDER_NOT_FOUND);
         }
 
         // 3.查询订单状态
         QueryWrapper<ByOrderLogistics> orderLogisticsQueryWrapper = new QueryWrapper<>();
-        orderLogisticsQueryWrapper.lambda().eq(ByOrderLogistics::getOrderId,orderId);
+        orderLogisticsQueryWrapper.lambda().eq(ByOrderLogistics::getOrderId, orderId);
         ByOrderLogistics orderLogistics = orderLogisticsService.getOne(orderLogisticsQueryWrapper);
 //        ByOrderLogistics orderLogistics = orderLogisticsService.getById(orderId);
         if (orderLogistics == null) {
@@ -298,21 +311,21 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
      * 查询订单信息
      *
      * @param orderId 订单id
-     * @param userId 用户id
-     * @param status 订单状态
+     * @param userId  用户id
+     * @param status  订单状态
      * @return 查询出的订单对象
      */
     @Override
     public ByOrder findOrder(Long orderId, Long userId, Integer status) {
         QueryWrapper<ByOrder> queryWrapper = new QueryWrapper<>();
-        if(orderId != null){
-            queryWrapper.lambda().eq(ByOrder::getOrderId,orderId);
+        if (orderId != null) {
+            queryWrapper.lambda().eq(ByOrder::getOrderId, orderId);
         }
-        queryWrapper.lambda().eq(ByOrder::getUserId,userId).
-                eq(ByOrder::getStatus,status).
+        queryWrapper.lambda().eq(ByOrder::getUserId, userId).
+                eq(ByOrder::getStatus, status).
                 orderByDesc(ByOrder::getCreateTime);
         ByOrder order = this.getOne(queryWrapper);
-        if(order == null){
+        if (order == null) {
             throw new ByException(ExceptionEnum.ORDER_NOT_FOUND);
         }
         return order;
@@ -326,7 +339,7 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
     @Override
     public void updateOrderStatus(Map<String, String> map) {
         //校验参数 验证微信支付结果通知
-        if(map.get("result_code") == null || !map.get("result_code").equals(WXPayConstants.SUCCESS)){
+        if (map.get("result_code") == null || !map.get("result_code").equals(WXPayConstants.SUCCESS)) {
             throw new ByException(ExceptionEnum.INVALID_NOTIFY_PARAM);
         }
         try {
@@ -339,7 +352,7 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
         Long orderId = Long.valueOf(outTradeNo);
         //通过id获取订单信息
         ByOrder order = this.getById(orderId);
-        if(order == null){
+        if (order == null) {
             throw new ByException(ExceptionEnum.ORDER_NOT_FOUND);
         }
         //获取实付金额
@@ -356,12 +369,12 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
         //修改状态,一定要幂等 ，把订单状态从1 改成 2
         UpdateWrapper<ByOrder> updateWrapper = new UpdateWrapper<>();
         updateWrapper.lambda()
-                .set(ByOrder::getStatus,OrderStatusEnum.PAY_UP.value())
-                .eq(ByOrder::getOrderId,orderId)
-                .eq(ByOrder::getStatus,OrderStatusEnum.INIT.value());
+                .set(ByOrder::getStatus, OrderStatusEnum.PAY_UP.value())
+                .eq(ByOrder::getOrderId, orderId)
+                .eq(ByOrder::getStatus, OrderStatusEnum.INIT.value());
 
         boolean updateFlag = this.update(updateWrapper);
-        if(!updateFlag){
+        if (!updateFlag) {
             throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
         }
 
@@ -369,12 +382,13 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
 
     /**
      * 查询超时订单业务
+     *
      * @param overDate 超时
      * @return 超时的订单集合
      */
     @Override
     public List<Long> getOverTimeIds(String overDate) {
-        if (StringUtils.isEmpty(overDate)){
+        if (StringUtils.isEmpty(overDate)) {
             throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
         }
         return this.baseMapper.selectOverTimeIds(overDate);
@@ -388,38 +402,38 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
     @Override
     public void closeOverTimeOrder(String time) {
         //校验参数
-        if (StringUtils.isEmpty(time)){
+        if (StringUtils.isEmpty(time)) {
             throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
         }
         //查询小于time并且没有支付的订单号
-        List<Long> orderIds  = this.getBaseMapper().selectOverTimeOrderId(time);
-        if(CollectionUtils.isEmpty(orderIds)){
+        List<Long> orderIds = this.getBaseMapper().selectOverTimeOrderId(time);
+        if (CollectionUtils.isEmpty(orderIds)) {
             return;
         }
         //构造更新条件
         UpdateWrapper<ByOrder> updateWrapper = new UpdateWrapper<>();
-        updateWrapper.lambda().eq(ByOrder::getStatus,OrderStatusEnum.INIT.value()).
-                in(ByOrder::getOrderId,orderIds).
-                set(ByOrder::getStatus,OrderStatusEnum.CLOSED.value());
+        updateWrapper.lambda().eq(ByOrder::getStatus, OrderStatusEnum.INIT.value()).
+                in(ByOrder::getOrderId, orderIds).
+                set(ByOrder::getStatus, OrderStatusEnum.CLOSED.value());
         //关闭订单
         boolean updateFlag = update(updateWrapper);
-        if(!updateFlag){
+        if (!updateFlag) {
             throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
         }
         //构造查询条件\
         QueryWrapper<ByOrderDetail> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().in(ByOrderDetail::getOrderId,orderIds);
+        queryWrapper.lambda().in(ByOrderDetail::getOrderId, orderIds);
         //查询订单对应的商品数量，查询tb_order_detail
         List<ByOrderDetail> orderDetailList = orderDetailService.list(queryWrapper);
         //构造恢复库存对象集合
         Map<Long, Integer> skuIdNumMap = orderDetailList.stream().
                 collect(Collectors.groupingBy(ByOrderDetail::getSkuId, Collectors.summingInt(ByOrderDetail::getNum)));
         //恢复库存
-        try{
+        try {
             goodsClient.plusStock(skuIdNumMap);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            log.info("恢复库存失败，orderIds={}",orderIds);
+            log.info("恢复库存失败，orderIds={}", orderIds);
             throw new ByException(ExceptionEnum.UPDATE_OPERATION_FAIL);
         }
     }
@@ -464,7 +478,7 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
         tbOrder.setSourceType(2);
         //保存订单表
         boolean b = save(tbOrder);
-        if(!b){
+        if (!b) {
             throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
         }
         ByOrderSeckillDetail orderSeckillDetail = new ByOrderSeckillDetail();
@@ -473,26 +487,26 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
         orderSeckillDetail.setSeckillId(seckillId);
         //保存订单详情
         boolean b1 = orderSeckillDetailService.save(orderSeckillDetail);
-        if(!b1){
+        if (!b1) {
             throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
         }
         //远程调用user服务，根据收货人id，查询收货人信息
-        UserAddressDTO userAddressDTO = userClient.queryAddressByUser(userId,orderSecKillDTO.getAddressId());
-        if(userAddressDTO == null){
+        UserAddressDTO userAddressDTO = userClient.queryAddressByUser(userId, orderSecKillDTO.getAddressId());
+        if (userAddressDTO == null) {
             throw new ByException(ExceptionEnum.INVALID_PARAM_ERROR);
         }
         ByOrderLogistics tbOrderLogistics = BeanHelper.copyProperties(userAddressDTO, ByOrderLogistics.class);
         tbOrderLogistics.setOrderId(orderId);
         //保存订单物流信息表
         boolean b2 = orderLogisticsService.save(tbOrderLogistics);
-        if(!b2){
+        if (!b2) {
             throw new ByException(ExceptionEnum.INSERT_OPERATION_FAIL);
         }
         //4、减库存
         //远程调用SecKill,secKillId,num
-        try{
-            seckillClient.minusStock(seckillId,1);
-        }catch(Exception e){
+        try {
+            seckillClient.minusStock(seckillId, 1);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -508,9 +522,9 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
         Long userId = UserHolder.getUserId();
         Integer status = OrderStatusEnum.INIT.value();
         QueryWrapper<ByOrder> orderQueryWrapper = new QueryWrapper<>();
-        orderQueryWrapper.lambda().eq(ByOrder::getOrderId,orderId)
-                .eq(ByOrder::getUserId,userId)
-                .eq(ByOrder::getStatus,status);
+        orderQueryWrapper.lambda().eq(ByOrder::getOrderId, orderId)
+                .eq(ByOrder::getUserId, userId)
+                .eq(ByOrder::getStatus, status);
         ByOrder order = this.getOne(orderQueryWrapper);
         if (order == null) {
             // 不存在
@@ -528,7 +542,7 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
     public void closeOverTimeSecKillOrder() {
         //        1、查询超时订单对应的订单详情数据
         List<ByOrderSeckillDetail> seckillOrderDetailList = orderSeckillDetailService.findOvertimeSeckillOrderDetail();
-        if(seckillOrderDetailList==null||seckillOrderDetailList.size()==0){
+        if (seckillOrderDetailList == null || seckillOrderDetailList.size() == 0) {
             return; //表示没有超时的订单
         }
         Map<Long, Integer> seckillIdAndNumMap = seckillOrderDetailList.stream().collect(Collectors.toMap(ByOrderSeckillDetail::getSeckillId, ByOrderSeckillDetail::getNum));
@@ -537,5 +551,40 @@ public class ByOrderServiceImpl extends ServiceImpl<ByOrderMapper, ByOrder> impl
         this.getBaseMapper().cleanOvertimeSeckillOrder(orderIds);
         //        3、回复库存,别忘了还需要压栈秒杀商品库存数
         seckillClient.plusStock(seckillIdAndNumMap);
+    }
+
+    /**
+     * 查询订单信息
+     *
+     * @param page 当前页
+     * @param rows 每页显示行数
+     * @return 查询到的订单的list集合
+     */
+    @Override
+    public PageResult<OrderVo> findOrderList(Long page, Long rows) {
+        //构造分页查询条件
+        IPage<ByOrder> iPage = new Page<>(page, rows);
+        //构造查询条件
+        QueryWrapper<ByOrder> queryWrapper = new QueryWrapper<>();
+        //查询
+        IPage<ByOrder> orderIPage = this.page(iPage, queryWrapper);
+        //获取查询结果集
+        List<ByOrder> orderList = orderIPage.getRecords();
+        if (CollectionUtils.isEmpty(orderList)) {
+            throw new ByException(ExceptionEnum.BRAND_NOT_FOUND);
+        }
+
+        //转换类型
+        List<OrderVo> orderVoList = BeanHelper.copyWithCollection(orderList, OrderVo.class);
+        if (CollectionUtils.isEmpty(orderVoList)) {
+            throw new ByException(ExceptionEnum.DATA_TRANSFER_ERROR);
+        }
+
+        //获取总条数
+        long total = orderIPage.getTotal();
+        //获取总页数
+        long pages = orderIPage.getPages();
+
+        return new PageResult<OrderVo>(orderVoList, total, pages);
     }
 }

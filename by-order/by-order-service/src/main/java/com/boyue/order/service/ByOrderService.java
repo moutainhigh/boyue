@@ -1,6 +1,7 @@
 package com.boyue.order.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.boyue.common.vo.PageResult;
 import com.boyue.dto.OrderDTO;
 import com.boyue.order.entity.ByOrder;
 import com.boyue.seckill.dto.OrderSecKillDTO;
@@ -86,4 +87,13 @@ public interface ByOrderService extends IService<ByOrder> {
      * 闭秒杀订单的listener
      */
     void closeOverTimeSecKillOrder();
+
+    /**
+     * 查询订单信息
+     * @param page 当前页
+     * @param rows 每页显示行数
+     * @return 查询到的订单的list集合
+     */
+    PageResult<OrderVo> findOrderList(Long page, Long rows);
+
 }

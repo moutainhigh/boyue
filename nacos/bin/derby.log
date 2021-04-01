@@ -1,8 +1,8 @@
 ----------------------------------------------------------------
-Tue Feb 02 18:37:32 CST 2021:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0177-6251-9d5d-00000c3ecda8 
-on database directory D:\GraduationProject\BoYue\boyue\nacos\data\derby-data with class loader org.springframework.boot.loader.LaunchedURLClassLoader@21b8d17c 
-Loaded from jar:file:/D:/GraduationProject/BoYue/boyue/nacos/target/nacos-server.jar!/BOOT-INF/lib/derby-10.14.2.0.jar!/
+Thu Apr 01 10:51:44 CST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0178-8b58-0283-00001be314c8 
+on database directory D:\GraduationProject\BoYue\boyue\nacos\data\derby-data with class loader org.springframework.boot.loader.LaunchedURLClassLoader@685f4c2e 
+Loaded from jar:file:/D:/GraduationProject/BoYue/boyue/nacos/target/nacos-server.jar!/BOOT-INF/lib/derby-10.10.1.1.jar!/
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_172-b11
 user.dir=D:\GraduationProject\BoYue\boyue\nacos\bin

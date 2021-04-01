@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author Jacky
@@ -19,6 +19,7 @@ public interface ByOrderMapper extends BaseMapper<ByOrder> {
 
     /**
      * 查询超时没有支付的订单号
+     *
      * @param time 时间
      * @return 订单的id集合
      */
@@ -27,6 +28,7 @@ public interface ByOrderMapper extends BaseMapper<ByOrder> {
 
     /**
      * 查询超时订单业务
+     *
      * @param overDate 超时
      * @return 超时的订单集合
      */

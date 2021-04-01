@@ -1,148 +1,248 @@
-2021-02-02 15:13:32,023 INFO notifyConnectTimeout:200
+2021-04-01 09:49:04,365 INFO notifyConnectTimeout:200
 
-2021-02-02 15:13:32,029 INFO notifySocketTimeout:8000
+2021-04-01 09:49:04,367 INFO notifySocketTimeout:8000
 
-2021-02-02 15:13:32,029 INFO isHealthCheck:true
+2021-04-01 09:49:04,368 INFO isHealthCheck:true
 
-2021-02-02 15:13:32,030 INFO maxHealthCheckFailCount:12
+2021-04-01 09:49:04,368 INFO maxHealthCheckFailCount:12
 
-2021-02-02 15:13:32,030 INFO maxContent:10485760
+2021-04-01 09:49:04,368 INFO maxContent:10485760
 
-2021-02-02 15:13:51,456 INFO use local db service for init
+2021-04-01 09:49:04,368 INFO spring.datasource.platform:mysql
 
-2021-02-02 15:13:57,160 WARN Lexical error at line 4, column 66.  Encountered: <EOF> after : "".
+2021-04-01 09:49:04,873 WARN DumpService start
 
-2021-02-02 15:13:57,295 WARN Syntax error: Encountered "*" at line 1, column 1.
+2021-04-01 09:49:04,876 INFO start clear all config-info.
 
-2021-02-02 15:13:57,579 WARN Table/View 'CONFIG_INFO' already exists in Schema 'NACOS'.
+2021-04-01 09:49:04,926 INFO clear all config-info success.
 
-2021-02-02 15:13:58,077 WARN Table/View 'HIS_CONFIG_INFO' already exists in Schema 'NACOS'.
+2021-04-01 09:49:04,926 WARN clear all config-info-tenant failed.
 
-2021-02-02 15:13:58,228 WARN Table/View 'CONFIG_INFO_BETA' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,073 INFO [all-dump] 9 / 9
 
-2021-02-02 15:13:58,352 WARN Table/View 'CONFIG_INFO_TAG' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,073 INFO start clear all config-info-beta.
 
-2021-02-02 15:13:58,462 WARN Table/View 'CONFIG_INFO_AGGR' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,073 WARN clear all config-info-beta failed.
 
-2021-02-02 15:13:58,655 WARN Table/View 'APP_LIST' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,074 WARN clear all config-info-beta-tenant failed.
 
-2021-02-02 15:13:58,802 WARN Table/View 'APP_CONFIGDATA_RELATION_SUBS' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,081 INFO start clear all config-info-tag.
 
-2021-02-02 15:13:58,945 WARN Table/View 'APP_CONFIGDATA_RELATION_PUBS' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,081 WARN clear all config-info-tag failed.
 
-2021-02-02 15:13:59,144 WARN Table/View 'CONFIG_TAGS_RELATION' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,081 WARN clear all config-info-tag-tenant failed.
 
-2021-02-02 15:13:59,278 WARN Table/View 'GROUP_CAPACITY' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,960 INFO ServerListService address-server port:8848
 
-2021-02-02 15:13:59,396 WARN Table/View 'TENANT_CAPACITY' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,960 INFO ADDRESS_SERVER_URL:http://jmenv.tbsite.net:8080/nacos/serverlist
 
-2021-02-02 15:13:59,504 WARN Table/View 'TENANT_INFO' already exists in Schema 'NACOS'.
+2021-04-01 09:49:05,960 WARN [serverlist] updated to [192.168.202.1]
 
-2021-02-02 15:13:59,713 WARN Table/View 'USERS' already exists in Schema 'NACOS'.
+2021-04-01 10:45:13,697 INFO notifyConnectTimeout:200
 
-2021-02-02 15:13:59,854 WARN Table/View 'ROLES' already exists in Schema 'NACOS'.
+2021-04-01 10:45:13,709 INFO notifySocketTimeout:8000
 
-2021-02-02 15:13:59,976 WARN Table/View 'PERMISSIONS' already exists in Schema 'NACOS'.
+2021-04-01 10:45:13,709 INFO isHealthCheck:true
 
-2021-02-02 15:14:00,287 WARN The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL210127150956750' defined on 'USERS'.
+2021-04-01 10:45:13,709 INFO maxHealthCheckFailCount:12
 
-2021-02-02 15:14:00,295 WARN The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'UK_USERNAME_ROLE' defined on 'ROLES'.
+2021-04-01 10:45:13,709 INFO maxContent:10485760
 
-2021-02-02 15:14:00,295 INFO use StandaloneDatabaseOperateImpl
+2021-04-01 10:45:13,710 INFO spring.datasource.platform:mysql
 
-2021-02-02 15:14:03,607 WARN DumpService start
+2021-04-01 10:45:14,230 WARN DumpService start
 
-2021-02-02 15:14:03,610 INFO start clear all config-info.
+2021-04-01 10:45:14,232 INFO start clear all config-info.
 
-2021-02-02 15:14:03,636 WARN clear all config-info failed.
+2021-04-01 10:45:14,260 INFO clear all config-info success.
 
-2021-02-02 15:14:03,636 WARN clear all config-info-tenant failed.
+2021-04-01 10:45:14,260 WARN clear all config-info-tenant failed.
 
-2021-02-02 15:14:03,896 INFO [all-dump] 328440291350548480 / 328440291350548480
+2021-04-01 10:45:14,383 INFO [all-dump] 9 / 9
 
-2021-02-02 15:14:03,896 INFO start clear all config-info-beta.
+2021-04-01 10:45:14,383 INFO start clear all config-info-beta.
 
-2021-02-02 15:14:03,896 WARN clear all config-info-beta failed.
+2021-04-01 10:45:14,383 WARN clear all config-info-beta failed.
 
-2021-02-02 15:14:03,896 WARN clear all config-info-beta-tenant failed.
+2021-04-01 10:45:14,384 WARN clear all config-info-beta-tenant failed.
 
-2021-02-02 15:14:04,197 INFO start clear all config-info-tag.
+2021-04-01 10:45:14,390 INFO start clear all config-info-tag.
 
-2021-02-02 15:14:04,197 WARN clear all config-info-tag failed.
+2021-04-01 10:45:14,390 WARN clear all config-info-tag failed.
 
-2021-02-02 15:14:04,197 WARN clear all config-info-tag-tenant failed.
+2021-04-01 10:45:14,391 WARN clear all config-info-tag-tenant failed.
 
-2021-02-02 18:37:12,949 INFO notifyConnectTimeout:200
+2021-04-01 10:45:15,084 INFO ServerListService address-server port:8848
 
-2021-02-02 18:37:12,953 INFO notifySocketTimeout:8000
+2021-04-01 10:45:15,084 INFO ADDRESS_SERVER_URL:http://jmenv.tbsite.net:8080/nacos/serverlist
 
-2021-02-02 18:37:12,954 INFO isHealthCheck:true
+2021-04-01 10:45:15,085 WARN [serverlist] updated to [192.168.202.1]
 
-2021-02-02 18:37:12,954 INFO maxHealthCheckFailCount:12
+2021-04-01 10:48:38,093 INFO notifyConnectTimeout:200
 
-2021-02-02 18:37:12,954 INFO maxContent:10485760
+2021-04-01 10:48:38,093 INFO notifySocketTimeout:8000
 
-2021-02-02 18:37:30,495 INFO use local db service for init
+2021-04-01 10:48:38,094 INFO isHealthCheck:true
 
-2021-02-02 18:37:34,087 WARN Lexical error at line 4, column 66.  Encountered: <EOF> after : "".
+2021-04-01 10:48:38,094 INFO maxHealthCheckFailCount:12
 
-2021-02-02 18:37:34,191 WARN Syntax error: Encountered "*" at line 1, column 1.
+2021-04-01 10:48:38,094 INFO maxContent:10485760
 
-2021-02-02 18:37:34,336 WARN Table/View 'CONFIG_INFO' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,094 INFO spring.datasource.platform:mysql
 
-2021-02-02 18:37:34,573 WARN Table/View 'HIS_CONFIG_INFO' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,553 WARN DumpService start
 
-2021-02-02 18:37:34,780 WARN Table/View 'CONFIG_INFO_BETA' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,555 INFO start clear all config-info.
 
-2021-02-02 18:37:34,901 WARN Table/View 'CONFIG_INFO_TAG' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,569 INFO clear all config-info success.
 
-2021-02-02 18:37:35,017 WARN Table/View 'CONFIG_INFO_AGGR' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,570 WARN clear all config-info-tenant failed.
 
-2021-02-02 18:37:35,140 WARN Table/View 'APP_LIST' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,653 INFO [all-dump] 9 / 9
 
-2021-02-02 18:37:35,255 WARN Table/View 'APP_CONFIGDATA_RELATION_SUBS' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,653 INFO start clear all config-info-beta.
 
-2021-02-02 18:37:35,356 WARN Table/View 'APP_CONFIGDATA_RELATION_PUBS' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,654 WARN clear all config-info-beta failed.
 
-2021-02-02 18:37:35,462 WARN Table/View 'CONFIG_TAGS_RELATION' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,654 WARN clear all config-info-beta-tenant failed.
 
-2021-02-02 18:37:35,617 WARN Table/View 'GROUP_CAPACITY' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,661 INFO start clear all config-info-tag.
 
-2021-02-02 18:37:35,759 WARN Table/View 'TENANT_CAPACITY' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,662 WARN clear all config-info-tag failed.
 
-2021-02-02 18:37:35,914 WARN Table/View 'TENANT_INFO' already exists in Schema 'NACOS'.
+2021-04-01 10:48:38,662 WARN clear all config-info-tag-tenant failed.
 
-2021-02-02 18:37:36,095 WARN Table/View 'USERS' already exists in Schema 'NACOS'.
+2021-04-01 10:48:39,450 INFO ServerListService address-server port:8848
 
-2021-02-02 18:37:36,198 WARN Table/View 'ROLES' already exists in Schema 'NACOS'.
+2021-04-01 10:48:39,450 INFO ADDRESS_SERVER_URL:http://jmenv.tbsite.net:8080/nacos/serverlist
 
-2021-02-02 18:37:36,309 WARN Table/View 'PERMISSIONS' already exists in Schema 'NACOS'.
+2021-04-01 10:48:39,451 WARN [serverlist] updated to [192.168.202.1]
 
-2021-02-02 18:37:36,541 WARN The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL210127150956750' defined on 'USERS'.
+2021-04-01 10:49:54,673 INFO notifyConnectTimeout:200
 
-2021-02-02 18:37:36,548 WARN The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'UK_USERNAME_ROLE' defined on 'ROLES'.
+2021-04-01 10:49:54,673 INFO notifySocketTimeout:8000
 
-2021-02-02 18:37:36,548 INFO use StandaloneDatabaseOperateImpl
+2021-04-01 10:49:54,673 INFO isHealthCheck:true
 
-2021-02-02 18:37:39,100 WARN DumpService start
+2021-04-01 10:49:54,673 INFO maxHealthCheckFailCount:12
 
-2021-02-02 18:37:39,113 INFO start clear all config-info.
+2021-04-01 10:49:54,673 INFO maxContent:10485760
 
-2021-02-02 18:37:39,149 WARN clear all config-info failed.
+2021-04-01 10:49:54,674 INFO spring.datasource.platform:mysql
 
-2021-02-02 18:37:39,149 WARN clear all config-info-tenant failed.
+2021-04-01 10:49:55,190 WARN DumpService start
 
-2021-02-02 18:37:39,400 INFO [all-dump] 328440291350548480 / 328440291350548480
+2021-04-01 10:49:55,192 INFO start clear all config-info.
 
-2021-02-02 18:37:39,400 INFO start clear all config-info-beta.
+2021-04-01 10:49:55,208 INFO clear all config-info success.
 
-2021-02-02 18:37:39,400 WARN clear all config-info-beta failed.
+2021-04-01 10:49:55,208 WARN clear all config-info-tenant failed.
 
-2021-02-02 18:37:39,400 WARN clear all config-info-beta-tenant failed.
+2021-04-01 10:51:43,939 INFO notifyConnectTimeout:200
 
-2021-02-02 18:37:39,636 INFO start clear all config-info-tag.
+2021-04-01 10:51:43,940 INFO notifySocketTimeout:8000
 
-2021-02-02 18:37:39,636 WARN clear all config-info-tag failed.
+2021-04-01 10:51:43,940 INFO isHealthCheck:true
 
-2021-02-02 18:37:39,637 WARN clear all config-info-tag-tenant failed.
+2021-04-01 10:51:43,940 INFO maxHealthCheckFailCount:12
+
+2021-04-01 10:51:43,940 INFO maxContent:10485760
+
+2021-04-01 10:51:45,709 INFO Schema 'NACOS' already exists.
+
+2021-04-01 10:51:45,879 INFO Table/View 'CONFIG_INFO' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,008 INFO Table/View 'HIS_CONFIG_INFO' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,154 INFO Table/View 'CONFIG_INFO_BETA' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,275 INFO Table/View 'CONFIG_INFO_TAG' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,392 INFO Table/View 'CONFIG_INFO_AGGR' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,509 INFO Table/View 'APP_LIST' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,626 INFO Table/View 'APP_CONFIGDATA_RELATION_SUBS' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,753 INFO Table/View 'APP_CONFIGDATA_RELATION_PUBS' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,857 INFO Table/View 'CONFIG_TAGS_RELATION' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:46,975 INFO Table/View 'GROUP_CAPACITY' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:47,093 INFO Table/View 'TENANT_CAPACITY' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:47,201 INFO Table/View 'TENANT_INFO' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:47,326 INFO Table/View 'USERS' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:47,450 INFO Table/View 'ROLES' already exists in Schema 'NACOS'.
+
+2021-04-01 10:51:47,518 INFO The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL200423092912400' defined on 'USERS'.
+
+2021-04-01 10:51:47,617 WARN DumpService start
+
+2021-04-01 10:51:47,619 INFO start clear all config-info.
+
+2021-04-01 10:51:47,624 WARN clear all config-info failed.
+
+2021-04-01 10:51:47,624 WARN clear all config-info-tenant failed.
+
+2021-04-01 10:51:47,711 INFO start clear all config-info-beta.
+
+2021-04-01 10:51:47,711 WARN clear all config-info-beta failed.
+
+2021-04-01 10:51:47,712 WARN clear all config-info-beta-tenant failed.
+
+2021-04-01 10:51:47,726 INFO start clear all config-info-tag.
+
+2021-04-01 10:51:47,727 WARN clear all config-info-tag failed.
+
+2021-04-01 10:51:47,727 WARN clear all config-info-tag-tenant failed.
+
+2021-04-01 10:51:48,460 INFO ServerListService address-server port:8848
+
+2021-04-01 10:51:48,460 INFO ADDRESS_SERVER_URL:http://jmenv.tbsite.net:8080/nacos/serverlist
+
+2021-04-01 10:51:48,461 WARN [serverlist] updated to [192.168.202.1]
+
+2021-04-01 11:31:50,815 INFO notifyConnectTimeout:200
+
+2021-04-01 11:31:50,815 INFO notifySocketTimeout:8000
+
+2021-04-01 11:31:50,815 INFO isHealthCheck:true
+
+2021-04-01 11:31:50,815 INFO maxHealthCheckFailCount:12
+
+2021-04-01 11:31:50,816 INFO maxContent:10485760
+
+2021-04-01 11:31:50,816 INFO spring.datasource.platform:mysql
+
+2021-04-01 11:31:51,205 WARN DumpService start
+
+2021-04-01 11:31:51,209 INFO start clear all config-info.
+
+2021-04-01 11:31:51,216 WARN clear all config-info failed.
+
+2021-04-01 11:31:51,217 WARN clear all config-info-tenant failed.
+
+2021-04-01 11:31:51,314 INFO [all-dump] 9 / 9
+
+2021-04-01 11:31:51,314 INFO start clear all config-info-beta.
+
+2021-04-01 11:31:51,315 WARN clear all config-info-beta failed.
+
+2021-04-01 11:31:51,315 WARN clear all config-info-beta-tenant failed.
+
+2021-04-01 11:31:51,320 INFO start clear all config-info-tag.
+
+2021-04-01 11:31:51,321 WARN clear all config-info-tag failed.
+
+2021-04-01 11:31:51,322 WARN clear all config-info-tag-tenant failed.
+
+2021-04-01 11:31:52,174 INFO ServerListService address-server port:8848
+
+2021-04-01 11:31:52,174 INFO ADDRESS_SERVER_URL:http://jmenv.tbsite.net:8080/nacos/serverlist
+
+2021-04-01 11:31:52,175 WARN [serverlist] updated to [192.168.202.1]
 

@@ -1,170 +1,473 @@
-2021-02-02 15:14:03,398 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+2021-04-01 09:49:03,814 INFO listen for service meta change
 
-2021-02-02 15:14:03,399 INFO listen for service meta change
+2021-04-01 09:49:03,828 INFO [NEW-SERVICE] {"appName":"","checksum":"4c907d6d316b1a3ef3e5391e17b7ec76","clusterMap":{},"enabled":true,"groupName":"DEFAULT_GROUP","ipDeleteTimeout":30000,"lastModifiedMillis":1595500266936,"metadata":{},"name":"DEFAULT_GROUP@@localhost","namespaceId":"public","owners":[],"protectThreshold":0.0,"resetWeight":false,"selector":{"type":"none"},"token":""}
 
-2021-02-02 15:14:37,712 INFO creating empty service public:DEFAULT_GROUP@@zuul-service
+2021-04-01 09:49:07,339 INFO [SERVER-INIT] got port: 8848
 
-2021-02-02 15:14:37,789 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@zuul-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612250077719,"checksum":"f52d6a195f9603f55da77a94b087a3a3","clusterMap":{},"empty":true}
+2021-04-01 09:49:07,339 INFO [SERVER-INIT] got path: /nacos
 
-2021-02-02 15:14:37,794 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250077700,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+2021-04-01 09:49:07,534 INFO receive config info: unknown#192.168.202.1:8848#1617241747534#6
 
-2021-02-02 15:14:37,819 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@zuul-service, value: {"instanceList":[{"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250077700,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
 
-2021-02-02 15:18:06,949 INFO creating empty service public:DEFAULT_GROUP@@auth-service
+2021-04-01 09:49:07,537 ERROR [SERVER-STATUS] Exception while sending server status
 
-2021-02-02 15:18:06,949 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@auth-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612250286949,"checksum":"67f7fb4f879a2dc286d4993c964edc93","clusterMap":{},"empty":true}
+java.lang.IllegalArgumentException: server: 192.168.202.1:8848 is not in serverlist
+	at com.alibaba.nacos.naming.cluster.ServerListManager.onReceiveServerStatus(ServerListManager.java:198)
+	at com.alibaba.nacos.naming.cluster.ServerListManager$ServerStatusReporter.run(ServerListManager.java:345)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-01 09:49:09,541 INFO receive config info: unknown#192.168.202.1:8848#1617241749541#6
 
-2021-02-02 15:18:06,950 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8087#DEFAULT#DEFAULT_GROUP@@auth-service","ip":"192.168.202.1","port":8087,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250286948,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
 
-2021-02-02 15:18:06,953 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@auth-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8087#DEFAULT#DEFAULT_GROUP@@auth-service","ip":"192.168.202.1","port":8087,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250286948,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+2021-04-01 09:49:11,553 INFO [NACOS-DISTRO] healthy server list changed, disable health check for 60000 ms from now on, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.202.1","key":"192.168.202.1:8848","lastRefTime":1617241749541,"lastRefTimeStr":"2021-04-01 09:49:09","servePort":8848,"site":"unknown","weight":6}]
 
-2021-02-02 15:18:13,936 INFO creating empty service public:DEFAULT_GROUP@@oss-service
+2021-04-01 09:49:11,553 INFO receive config info: unknown#192.168.202.1:8848#1617241751553#6
 
-2021-02-02 15:18:13,936 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@oss-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612250293936,"checksum":"cfdb35848ce46b418c4c51de50b9ff52","clusterMap":{},"empty":true}
 
-2021-02-02 15:18:13,937 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8082#DEFAULT#DEFAULT_GROUP@@oss-service","ip":"192.168.202.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@oss-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250293936,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+2021-04-01 09:49:13,561 INFO receive config info: unknown#192.168.202.1:8848#1617241753561#6
 
-2021-02-02 15:18:13,937 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@oss-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8082#DEFAULT#DEFAULT_GROUP@@oss-service","ip":"192.168.202.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@oss-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250293936,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
 
-2021-02-02 15:18:15,807 INFO creating empty service public:DEFAULT_GROUP@@user-service
+2021-04-01 09:49:15,571 INFO receive config info: unknown#192.168.202.1:8848#1617241755571#6
 
-2021-02-02 15:18:15,808 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@user-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612250295807,"checksum":"09c170b3683511203520dbf5dfc1a330","clusterMap":{},"empty":true}
 
-2021-02-02 15:18:15,808 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8085#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.202.1","port":8085,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250295807,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+2021-04-01 10:45:13,127 INFO listen for service meta change
 
-2021-02-02 15:18:15,808 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@user-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8085#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.202.1","port":8085,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250295807,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+2021-04-01 10:45:13,138 INFO [NEW-SERVICE] {"appName":"","checksum":"4c907d6d316b1a3ef3e5391e17b7ec76","clusterMap":{},"enabled":true,"groupName":"DEFAULT_GROUP","ipDeleteTimeout":30000,"lastModifiedMillis":1595500266936,"metadata":{},"name":"DEFAULT_GROUP@@localhost","namespaceId":"public","owners":[],"protectThreshold":0.0,"resetWeight":false,"selector":{"type":"none"},"token":""}
 
-2021-02-02 15:18:23,774 INFO creating empty service public:DEFAULT_GROUP@@item-service
+2021-04-01 10:45:16,353 INFO [SERVER-INIT] got port: 8848
 
-2021-02-02 15:18:23,774 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@item-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612250303774,"checksum":"a5280d1f6462b15613c2fe3126a5cba9","clusterMap":{},"empty":true}
+2021-04-01 10:45:16,353 INFO [SERVER-INIT] got path: /nacos
 
-2021-02-02 15:18:23,774 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8081#DEFAULT#DEFAULT_GROUP@@item-service","ip":"192.168.202.1","port":8081,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@item-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250303773,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+2021-04-01 10:45:16,921 INFO receive config info: unknown#192.168.202.1:8848#1617245116921#6
 
-2021-02-02 15:18:23,774 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@item-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8081#DEFAULT#DEFAULT_GROUP@@item-service","ip":"192.168.202.1","port":8081,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@item-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250303773,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
 
-2021-02-02 15:18:28,189 INFO creating empty service public:DEFAULT_GROUP@@page-service
+2021-04-01 10:45:16,924 ERROR [SERVER-STATUS] Exception while sending server status
 
-2021-02-02 15:18:28,190 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@page-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612250308189,"checksum":"b0afceb61aca7de61b8aab78d8433088","clusterMap":{},"empty":true}
+java.lang.IllegalArgumentException: server: 192.168.202.1:8848 is not in serverlist
+	at com.alibaba.nacos.naming.cluster.ServerListManager.onReceiveServerStatus(ServerListManager.java:198)
+	at com.alibaba.nacos.naming.cluster.ServerListManager$ServerStatusReporter.run(ServerListManager.java:345)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-01 10:45:18,938 INFO receive config info: unknown#192.168.202.1:8848#1617245118938#6
 
-2021-02-02 15:18:28,190 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8084#DEFAULT#DEFAULT_GROUP@@page-service","ip":"192.168.202.1","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@page-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250308189,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
 
-2021-02-02 15:18:28,190 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@page-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8084#DEFAULT#DEFAULT_GROUP@@page-service","ip":"192.168.202.1","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@page-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250308189,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+2021-04-01 10:45:20,948 INFO [NACOS-DISTRO] healthy server list changed, disable health check for 60000 ms from now on, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.202.1","key":"192.168.202.1:8848","lastRefTime":1617245118938,"lastRefTimeStr":"2021-04-01 10:45:18","servePort":8848,"site":"unknown","weight":6}]
 
-2021-02-02 15:18:34,801 INFO creating empty service public:DEFAULT_GROUP@@schedule-service
+2021-04-01 10:45:20,948 INFO receive config info: unknown#192.168.202.1:8848#1617245120948#6
 
-2021-02-02 15:18:34,801 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@schedule-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612250314801,"checksum":"94ab04ebf95f877bf9d6e5f7dfda97fb","clusterMap":{},"empty":true}
 
-2021-02-02 15:18:34,802 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8093#DEFAULT#DEFAULT_GROUP@@schedule-service","ip":"192.168.202.1","port":8093,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@schedule-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250314801,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+2021-04-01 10:45:22,956 INFO receive config info: unknown#192.168.202.1:8848#1617245122956#6
 
-2021-02-02 15:18:34,802 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@schedule-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8093#DEFAULT#DEFAULT_GROUP@@schedule-service","ip":"192.168.202.1","port":8093,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@schedule-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250314801,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
 
-2021-02-02 15:18:36,513 INFO creating empty service public:DEFAULT_GROUP@@search-service
+2021-04-01 10:45:24,965 INFO receive config info: unknown#192.168.202.1:8848#1617245124965#6
 
-2021-02-02 15:18:36,513 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@search-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612250316513,"checksum":"4c6ac9880d84b36fc167691381fa8840","clusterMap":{},"empty":true}
 
-2021-02-02 15:18:36,513 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8083#DEFAULT#DEFAULT_GROUP@@search-service","ip":"192.168.202.1","port":8083,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@search-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250316512,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+2021-04-01 10:45:26,979 INFO receive config info: unknown#192.168.202.1:8848#1617245126979#6
 
-2021-02-02 15:18:36,513 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@search-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8083#DEFAULT#DEFAULT_GROUP@@search-service","ip":"192.168.202.1","port":8083,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@search-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612250316512,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
 
-2021-02-02 17:50:57,180 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@page-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8084#DEFAULT#DEFAULT_GROUP@@page-service","ip":"192.168.202.1","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@page-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612259457179,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+2021-04-01 10:45:28,987 INFO receive config info: unknown#192.168.202.1:8848#1617245128987#6
 
-2021-02-02 18:19:06,177 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@page-service, value: {"instanceList":[]}
 
-2021-02-02 18:19:33,777 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@page-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8084#DEFAULT#DEFAULT_GROUP@@page-service","ip":"192.168.202.1","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@page-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612261173777,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+2021-04-01 10:45:30,998 INFO receive config info: unknown#192.168.202.1:8848#1617245130998#6
 
-2021-02-02 18:23:35,599 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@schedule-service, value: {"instanceList":[]}
 
-2021-02-02 18:25:53,408 WARN namespace : public, [DEFAULT_GROUP@@schedule-service] services are automatically cleaned
+2021-04-01 10:45:32,999 INFO receive config info: unknown#192.168.202.1:8848#1617245132999#6
 
-2021-02-02 18:25:53,418 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@schedule-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":5,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612261415599,"checksum":"b34e96e5593a322a454d3d21a3e2470f","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@schedule-service","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
 
-2021-02-02 18:29:30,767 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@user-service, value: {"instanceList":[]}
+2021-04-01 10:45:35,006 INFO receive config info: unknown#192.168.202.1:8848#1617245135006#6
 
-2021-02-02 18:29:30,870 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@item-service, value: {"instanceList":[]}
 
-2021-02-02 18:29:30,873 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@auth-service, value: {"instanceList":[]}
+2021-04-01 10:48:37,551 INFO listen for service meta change
 
-2021-02-02 18:29:30,907 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@oss-service, value: {"instanceList":[]}
+2021-04-01 10:48:37,565 INFO [NEW-SERVICE] {"appName":"","checksum":"4c907d6d316b1a3ef3e5391e17b7ec76","clusterMap":{},"enabled":true,"groupName":"DEFAULT_GROUP","ipDeleteTimeout":30000,"lastModifiedMillis":1595500266936,"metadata":{},"name":"DEFAULT_GROUP@@localhost","namespaceId":"public","owners":[],"protectThreshold":0.0,"resetWeight":false,"selector":{"type":"none"},"token":""}
 
-2021-02-02 18:29:57,770 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@zuul-service, ip: {"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612261766430,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}
+2021-04-01 10:48:40,743 INFO [SERVER-INIT] got port: 8848
 
-2021-02-02 18:29:58,068 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@zuul-service, value: {"instanceList":[]}
+2021-04-01 10:48:40,743 INFO [SERVER-INIT] got path: /nacos
 
-2021-02-02 18:30:00,984 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@search-service, ip: {"instanceId":"192.168.202.1#8083#DEFAULT#DEFAULT_GROUP@@search-service","ip":"192.168.202.1","port":8083,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@search-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612261770130,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}
+2021-04-01 10:48:41,415 INFO receive config info: unknown#192.168.202.1:8848#1617245321415#6
 
-2021-02-02 18:30:00,987 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@search-service, value: {"instanceList":[]}
 
-2021-02-02 18:30:02,847 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@page-service, ip: {"instanceId":"192.168.202.1#8084#DEFAULT#DEFAULT_GROUP@@page-service","ip":"192.168.202.1","port":8084,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@page-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612261770082,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}
+2021-04-01 10:48:41,416 ERROR [SERVER-STATUS] Exception while sending server status
 
-2021-02-02 18:30:02,850 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@page-service, value: {"instanceList":[]}
+java.lang.IllegalArgumentException: server: 192.168.202.1:8848 is not in serverlist
+	at com.alibaba.nacos.naming.cluster.ServerListManager.onReceiveServerStatus(ServerListManager.java:198)
+	at com.alibaba.nacos.naming.cluster.ServerListManager$ServerStatusReporter.run(ServerListManager.java:345)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-01 10:48:43,423 INFO receive config info: unknown#192.168.202.1:8848#1617245323423#6
 
-2021-02-02 18:30:15,408 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@item-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8081#DEFAULT#DEFAULT_GROUP@@item-service","ip":"192.168.202.1","port":8081,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@item-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612261815408,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
 
-2021-02-02 18:30:30,716 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@zuul-service, value: {"instanceList":[{"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612261830716,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+2021-04-01 10:48:45,438 INFO [NACOS-DISTRO] healthy server list changed, disable health check for 60000 ms from now on, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.202.1","key":"192.168.202.1:8848","lastRefTime":1617245323423,"lastRefTimeStr":"2021-04-01 10:48:43","servePort":8848,"site":"unknown","weight":6}]
 
-2021-02-02 18:37:38,936 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+2021-04-01 10:48:45,438 INFO receive config info: unknown#192.168.202.1:8848#1617245325438#6
 
-2021-02-02 18:37:38,936 INFO listen for service meta change
 
-2021-02-02 18:38:39,538 INFO creating empty service public:DEFAULT_GROUP@@zuul-service
+2021-04-01 10:48:47,444 INFO receive config info: unknown#192.168.202.1:8848#1617245327444#6
 
-2021-02-02 18:38:39,613 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@zuul-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612262319544,"checksum":"f52d6a195f9603f55da77a94b087a3a3","clusterMap":{},"empty":true}
 
-2021-02-02 18:38:39,620 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612262319525,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
+2021-04-01 10:49:54,141 INFO listen for service meta change
 
-2021-02-02 18:38:39,646 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@zuul-service, value: {"instanceList":[{"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612262319525,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]}
+2021-04-01 10:49:54,154 INFO [NEW-SERVICE] {"appName":"","checksum":"4c907d6d316b1a3ef3e5391e17b7ec76","clusterMap":{},"enabled":true,"groupName":"DEFAULT_GROUP","ipDeleteTimeout":30000,"lastModifiedMillis":1595500266936,"metadata":{},"name":"DEFAULT_GROUP@@localhost","namespaceId":"public","owners":[],"protectThreshold":0.0,"resetWeight":false,"selector":{"type":"none"},"token":""}
 
-2021-02-02 18:38:51,444 INFO creating empty service public:DEFAULT_GROUP@@item-service
+2021-04-01 10:51:43,406 INFO listen for service meta change
 
-2021-02-02 18:38:51,444 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@item-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612262331444,"checksum":"a5280d1f6462b15613c2fe3126a5cba9","clusterMap":{},"empty":true}
+2021-04-01 10:51:43,419 INFO [NEW-SERVICE] {"appName":"","checksum":"4c907d6d316b1a3ef3e5391e17b7ec76","clusterMap":{},"enabled":true,"groupName":"DEFAULT_GROUP","ipDeleteTimeout":30000,"lastModifiedMillis":1595500266936,"metadata":{},"name":"DEFAULT_GROUP@@localhost","namespaceId":"public","owners":[],"protectThreshold":0.0,"resetWeight":false,"selector":{"type":"none"},"token":""}
 
-2021-02-02 18:38:51,444 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8081#DEFAULT#DEFAULT_GROUP@@item-service","ip":"192.168.202.1","port":8081,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@item-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612262331444,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
+2021-04-01 10:51:49,905 INFO [SERVER-INIT] got port: 8848
 
-2021-02-02 18:38:51,444 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@item-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8081#DEFAULT#DEFAULT_GROUP@@item-service","ip":"192.168.202.1","port":8081,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@item-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612262331444,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]}
+2021-04-01 10:51:49,905 INFO [SERVER-INIT] got path: /nacos
 
-2021-02-02 18:44:53,822 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@item-service, value: {"instanceList":[]}
+2021-04-01 10:51:51,313 INFO receive config info: unknown#192.168.202.1:8848#1617245511313#6
 
-2021-02-02 18:45:25,239 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@zuul-service, ip: {"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612262690515,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}
 
-2021-02-02 18:45:25,469 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@zuul-service, value: {"instanceList":[]}
+2021-04-01 10:51:51,315 ERROR [SERVER-STATUS] Exception while sending server status
 
-2021-02-02 18:46:58,953 WARN namespace : public, [DEFAULT_GROUP@@item-service] services are automatically cleaned
+java.lang.IllegalArgumentException: server: 192.168.202.1:8848 is not in serverlist
+	at com.alibaba.nacos.naming.cluster.ServerListManager.onReceiveServerStatus(ServerListManager.java:198)
+	at com.alibaba.nacos.naming.cluster.ServerListManager$ServerStatusReporter.run(ServerListManager.java:345)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-01 10:51:53,318 INFO receive config info: unknown#192.168.202.1:8848#1617245513318#6
 
-2021-02-02 18:46:58,956 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@item-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":5,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612262693822,"checksum":"265591265a32844ec4fbcfa90af92a6c","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@item-service","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
 
-2021-02-02 18:47:28,942 WARN namespace : public, [DEFAULT_GROUP@@zuul-service] services are automatically cleaned
+2021-04-01 10:51:55,320 INFO [NACOS-DISTRO] healthy server list changed, disable health check for 60000 ms from now on, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.202.1","key":"192.168.202.1:8848","lastRefTime":1617245513318,"lastRefTimeStr":"2021-04-01 10:51:53","servePort":8848,"site":"unknown","weight":6}]
 
-2021-02-02 18:47:28,942 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@zuul-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":5,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612262725471,"checksum":"0a8db4c55fd4c0e30c494c898ca1847c","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@zuul-service","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
+2021-04-01 10:51:55,320 INFO receive config info: unknown#192.168.202.1:8848#1617245515320#6
 
-2021-02-02 19:05:50,137 INFO creating empty service public:DEFAULT_GROUP@@item-service
 
-2021-02-02 19:05:50,137 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@item-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612263950137,"checksum":"a5280d1f6462b15613c2fe3126a5cba9","clusterMap":{},"empty":true}
+2021-04-01 10:51:57,334 INFO receive config info: unknown#192.168.202.1:8848#1617245517334#6
 
-2021-02-02 19:05:50,137 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#8081#DEFAULT#DEFAULT_GROUP@@item-service","ip":"192.168.202.1","port":8081,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@item-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612263950137,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
 
-2021-02-02 19:05:50,138 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@item-service, value: {"instanceList":[{"instanceId":"192.168.202.1#8081#DEFAULT#DEFAULT_GROUP@@item-service","ip":"192.168.202.1","port":8081,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@item-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612263950137,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]}
+2021-04-01 10:51:59,344 INFO receive config info: unknown#192.168.202.1:8848#1617245519344#6
 
-2021-02-02 19:05:58,377 INFO creating empty service public:DEFAULT_GROUP@@zuul-service
 
-2021-02-02 19:05:58,377 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@zuul-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612263958377,"checksum":"f52d6a195f9603f55da77a94b087a3a3","clusterMap":{},"empty":true}
+2021-04-01 10:52:01,350 INFO receive config info: unknown#192.168.202.1:8848#1617245521350#6
 
-2021-02-02 19:05:58,377 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612263958377,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
 
-2021-02-02 19:05:58,378 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@zuul-service, value: {"instanceList":[{"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612263958377,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]}
+2021-04-01 10:52:03,359 INFO receive config info: unknown#192.168.202.1:8848#1617245523359#6
 
-2021-02-02 19:09:45,466 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@item-service, ip: {"instanceId":"192.168.202.1#8081#DEFAULT#DEFAULT_GROUP@@item-service","ip":"192.168.202.1","port":8081,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@item-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612264150644,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}
 
-2021-02-02 19:09:45,473 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@item-service, value: {"instanceList":[]}
+2021-04-01 10:52:05,373 INFO receive config info: unknown#192.168.202.1:8848#1617245525373#6
 
-2021-02-02 19:09:48,768 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@zuul-service, ip: {"instanceId":"192.168.202.1#10010#DEFAULT#DEFAULT_GROUP@@zuul-service","ip":"192.168.202.1","port":10010,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@zuul-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1612264153813,"marked":false,"app":"unknown","instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}
 
-2021-02-02 19:09:48,770 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@zuul-service, value: {"instanceList":[]}
+2021-04-01 10:52:07,381 INFO receive config info: unknown#192.168.202.1:8848#1617245527381#6
 
-2021-02-02 19:11:58,952 WARN namespace : public, [DEFAULT_GROUP@@zuul-service] services are automatically cleaned
 
-2021-02-02 19:11:58,954 WARN namespace : public, [DEFAULT_GROUP@@item-service] services are automatically cleaned
+2021-04-01 10:52:09,395 INFO receive config info: unknown#192.168.202.1:8848#1617245529395#6
 
-2021-02-02 19:11:58,954 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@zuul-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":5,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612264188770,"checksum":"0a8db4c55fd4c0e30c494c898ca1847c","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@zuul-service","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
 
-2021-02-02 19:11:58,954 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@item-service","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":5,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1612264185473,"checksum":"265591265a32844ec4fbcfa90af92a6c","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@item-service","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
+2021-04-01 10:52:11,406 INFO receive config info: unknown#192.168.202.1:8848#1617245531406#6
+
+
+2021-04-01 10:52:13,420 INFO receive config info: unknown#192.168.202.1:8848#1617245533420#6
+
+
+2021-04-01 10:52:15,424 INFO receive config info: unknown#192.168.202.1:8848#1617245535424#6
+
+
+2021-04-01 10:52:17,428 INFO receive config info: unknown#192.168.202.1:8848#1617245537428#6
+
+
+2021-04-01 11:31:50,217 INFO listen for service meta change
+
+2021-04-01 11:31:50,234 INFO [NEW-SERVICE] {"appName":"","checksum":"4c907d6d316b1a3ef3e5391e17b7ec76","clusterMap":{},"enabled":true,"groupName":"DEFAULT_GROUP","ipDeleteTimeout":30000,"lastModifiedMillis":1595500266936,"metadata":{},"name":"DEFAULT_GROUP@@localhost","namespaceId":"public","owners":[],"protectThreshold":0.0,"resetWeight":false,"selector":{"type":"none"},"token":""}
+
+2021-04-01 11:31:53,322 INFO [SERVER-INIT] got port: 8848
+
+2021-04-01 11:31:53,322 INFO [SERVER-INIT] got path: /nacos
+
+2021-04-01 11:31:54,074 INFO receive config info: unknown#192.168.202.1:8848#1617247914074#6
+
+
+2021-04-01 11:31:54,075 ERROR [SERVER-STATUS] Exception while sending server status
+
+java.lang.IllegalArgumentException: server: 192.168.202.1:8848 is not in serverlist
+	at com.alibaba.nacos.naming.cluster.ServerListManager.onReceiveServerStatus(ServerListManager.java:198)
+	at com.alibaba.nacos.naming.cluster.ServerListManager$ServerStatusReporter.run(ServerListManager.java:345)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-01 11:31:56,076 INFO receive config info: unknown#192.168.202.1:8848#1617247916076#6
+
+
+2021-04-01 11:31:58,080 INFO [NACOS-DISTRO] healthy server list changed, disable health check for 60000 ms from now on, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.202.1","key":"192.168.202.1:8848","lastRefTime":1617247916076,"lastRefTimeStr":"2021-04-01 11:31:56","servePort":8848,"site":"unknown","weight":6}]
+
+2021-04-01 11:31:58,080 INFO receive config info: unknown#192.168.202.1:8848#1617247918080#6
+
+
+2021-04-01 11:32:00,083 INFO receive config info: unknown#192.168.202.1:8848#1617247920083#6
+
+
+2021-04-01 11:32:02,092 INFO receive config info: unknown#192.168.202.1:8848#1617247922092#6
+
+
+2021-04-01 11:32:04,095 INFO receive config info: unknown#192.168.202.1:8848#1617247924095#6
+
+
+2021-04-01 11:32:06,100 INFO receive config info: unknown#192.168.202.1:8848#1617247926100#6
+
+
+2021-04-01 11:32:08,114 INFO receive config info: unknown#192.168.202.1:8848#1617247928114#6
+
+
+2021-04-01 11:32:10,116 INFO receive config info: unknown#192.168.202.1:8848#1617247930116#6
+
+
+2021-04-01 11:32:12,131 INFO receive config info: unknown#192.168.202.1:8848#1617247932131#6
+
+
+2021-04-01 11:32:14,144 INFO receive config info: unknown#192.168.202.1:8848#1617247934144#6
+
+
+2021-04-01 11:32:16,156 INFO receive config info: unknown#192.168.202.1:8848#1617247936156#6
+
+
+2021-04-01 11:32:18,162 INFO receive config info: unknown#192.168.202.1:8848#1617247938162#6
+
+
+2021-04-01 11:32:20,164 INFO receive config info: unknown#192.168.202.1:8848#1617247940164#6
+
+
+2021-04-01 11:32:22,171 INFO receive config info: unknown#192.168.202.1:8848#1617247942171#6
+
+
+2021-04-01 11:32:24,176 INFO receive config info: unknown#192.168.202.1:8848#1617247944176#6
+
+
+2021-04-01 11:32:26,187 INFO receive config info: unknown#192.168.202.1:8848#1617247946187#6
+
+
+2021-04-01 11:32:28,201 INFO receive config info: unknown#192.168.202.1:8848#1617247948201#6
+
+
+2021-04-01 11:32:30,212 INFO receive config info: unknown#192.168.202.1:8848#1617247950212#6
+
+
+2021-04-01 11:32:32,222 INFO receive config info: unknown#192.168.202.1:8848#1617247952222#6
+
+
+2021-04-01 11:32:34,223 INFO receive config info: unknown#192.168.202.1:8848#1617247954223#6
+
+
+2021-04-01 11:32:36,224 INFO receive config info: unknown#192.168.202.1:8848#1617247956224#6
+
+
+2021-04-01 11:32:38,239 INFO receive config info: unknown#192.168.202.1:8848#1617247958239#6
+
+
+2021-04-01 11:32:40,246 INFO receive config info: unknown#192.168.202.1:8848#1617247960246#6
+
+
+2021-04-01 11:32:42,256 INFO receive config info: unknown#192.168.202.1:8848#1617247962256#6
+
+
+2021-04-01 11:32:44,270 INFO receive config info: unknown#192.168.202.1:8848#1617247964270#6
+
+
+2021-04-01 11:32:46,270 INFO receive config info: unknown#192.168.202.1:8848#1617247966270#6
+
+
+2021-04-01 11:32:48,281 INFO receive config info: unknown#192.168.202.1:8848#1617247968281#6
+
+
+2021-04-01 11:32:50,283 INFO receive config info: unknown#192.168.202.1:8848#1617247970283#6
+
+
+2021-04-01 11:32:52,288 INFO receive config info: unknown#192.168.202.1:8848#1617247972288#6
+
+
+2021-04-01 11:32:54,291 INFO receive config info: unknown#192.168.202.1:8848#1617247974291#6
+
+
+2021-04-01 11:32:56,295 INFO receive config info: unknown#192.168.202.1:8848#1617247976295#6
+
+
+2021-04-01 11:32:58,297 INFO [NACOS-DISTRO] distro threshold restored and stable now, enable health check. current ratio: 1.0
+
+2021-04-01 11:32:58,297 INFO receive config info: unknown#192.168.202.1:8848#1617247978297#6
+
+
+2021-04-01 11:33:00,302 INFO receive config info: unknown#192.168.202.1:8848#1617247980302#6
+
+
+2021-04-01 11:33:02,315 INFO receive config info: unknown#192.168.202.1:8848#1617247982315#6
+
+
+2021-04-01 11:33:04,320 INFO receive config info: unknown#192.168.202.1:8848#1617247984320#6
+
+
+2021-04-01 11:33:06,331 INFO receive config info: unknown#192.168.202.1:8848#1617247986331#6
+
+
+2021-04-01 11:33:08,332 INFO receive config info: unknown#192.168.202.1:8848#1617247988332#6
+
+
+2021-04-01 11:33:10,346 INFO receive config info: unknown#192.168.202.1:8848#1617247990346#6
+
+
+2021-04-01 11:33:12,351 INFO receive config info: unknown#192.168.202.1:8848#1617247992351#6
+
+
+2021-04-01 11:33:14,363 INFO receive config info: unknown#192.168.202.1:8848#1617247994363#6
+
+
+2021-04-01 11:33:16,377 INFO receive config info: unknown#192.168.202.1:8848#1617247996377#6
+
+
+2021-04-01 11:33:18,390 INFO receive config info: unknown#192.168.202.1:8848#1617247998390#6
+
+
+2021-04-01 11:33:20,400 INFO receive config info: unknown#192.168.202.1:8848#1617248000400#6
+
+
+2021-04-01 11:33:22,414 INFO receive config info: unknown#192.168.202.1:8848#1617248002414#6
+
+
+2021-04-01 11:33:24,426 INFO receive config info: unknown#192.168.202.1:8848#1617248004426#6
+
+
+2021-04-01 11:33:26,437 INFO receive config info: unknown#192.168.202.1:8848#1617248006437#6
+
+
+2021-04-01 11:33:28,438 INFO receive config info: unknown#192.168.202.1:8848#1617248008438#6
+
+
+2021-04-01 11:33:30,442 INFO receive config info: unknown#192.168.202.1:8848#1617248010442#6
+
+
+2021-04-01 11:33:32,449 INFO receive config info: unknown#192.168.202.1:8848#1617248012449#6
+
+
+2021-04-01 11:33:34,461 INFO receive config info: unknown#192.168.202.1:8848#1617248014461#6
+
+
+2021-04-01 11:33:36,462 INFO receive config info: unknown#192.168.202.1:8848#1617248016462#6
+
+
+2021-04-01 11:33:38,471 INFO receive config info: unknown#192.168.202.1:8848#1617248018471#6
+
+
+2021-04-01 11:33:40,475 INFO receive config info: unknown#192.168.202.1:8848#1617248020475#6
+
+
+2021-04-01 11:33:42,489 INFO receive config info: unknown#192.168.202.1:8848#1617248022489#6
+
+
+2021-04-01 11:33:44,491 INFO receive config info: unknown#192.168.202.1:8848#1617248024491#6
+
+
+2021-04-01 11:33:46,505 INFO receive config info: unknown#192.168.202.1:8848#1617248026505#6
+
+
+2021-04-01 11:33:48,507 INFO receive config info: unknown#192.168.202.1:8848#1617248028507#6
+
+
+2021-04-01 11:33:50,508 INFO receive config info: unknown#192.168.202.1:8848#1617248030508#6
+
+
+2021-04-01 11:33:52,512 INFO receive config info: unknown#192.168.202.1:8848#1617248032512#6
+
+
+2021-04-01 11:33:54,525 INFO receive config info: unknown#192.168.202.1:8848#1617248034525#6
+
+
+2021-04-01 11:33:56,536 INFO receive config info: unknown#192.168.202.1:8848#1617248036536#6
+
+
+2021-04-01 11:33:58,547 INFO receive config info: unknown#192.168.202.1:8848#1617248038547#6
+
+
+2021-04-01 11:34:00,561 INFO receive config info: unknown#192.168.202.1:8848#1617248040561#6
+
+
+2021-04-01 11:34:02,563 INFO receive config info: unknown#192.168.202.1:8848#1617248042563#6
+
+
+2021-04-01 11:34:04,567 INFO receive config info: unknown#192.168.202.1:8848#1617248044567#6
+
+
+2021-04-01 11:34:06,568 INFO receive config info: unknown#192.168.202.1:8848#1617248046568#6
+
+
+2021-04-01 11:34:08,584 INFO receive config info: unknown#192.168.202.1:8848#1617248048584#6
+
+
+2021-04-01 11:34:10,584 INFO receive config info: unknown#192.168.202.1:8848#1617248050584#6
+
+
+2021-04-01 11:34:12,592 INFO receive config info: unknown#192.168.202.1:8848#1617248052592#6
+
+
+2021-04-01 11:34:14,599 INFO receive config info: unknown#192.168.202.1:8848#1617248054599#6
+
+
+2021-04-01 11:34:16,605 INFO receive config info: unknown#192.168.202.1:8848#1617248056605#6
+
+
+2021-04-01 11:34:18,613 INFO receive config info: unknown#192.168.202.1:8848#1617248058613#6
+
+
+2021-04-01 11:34:20,621 INFO receive config info: unknown#192.168.202.1:8848#1617248060621#6
+
+
+2021-04-01 11:34:22,630 INFO receive config info: unknown#192.168.202.1:8848#1617248062630#6
+
+
+2021-04-01 11:34:24,634 INFO receive config info: unknown#192.168.202.1:8848#1617248064634#6
+
+
+2021-04-01 11:34:26,649 INFO receive config info: unknown#192.168.202.1:8848#1617248066649#6
+
+
+2021-04-01 11:34:28,658 INFO receive config info: unknown#192.168.202.1:8848#1617248068658#6
+
+
+2021-04-01 11:34:30,671 INFO receive config info: unknown#192.168.202.1:8848#1617248070671#6
+
+
+2021-04-01 11:34:32,686 INFO receive config info: unknown#192.168.202.1:8848#1617248072686#6
+
+
+2021-04-01 11:34:34,696 INFO receive config info: unknown#192.168.202.1:8848#1617248074696#6
+
+
+2021-04-01 11:34:36,706 INFO receive config info: unknown#192.168.202.1:8848#1617248076706#6
+
+
+2021-04-01 11:34:38,711 INFO receive config info: unknown#192.168.202.1:8848#1617248078711#6
+
+
+2021-04-01 11:34:40,714 INFO receive config info: unknown#192.168.202.1:8848#1617248080714#6
+
+
+2021-04-01 11:34:42,725 INFO receive config info: unknown#192.168.202.1:8848#1617248082725#6
+
+
+2021-04-01 11:34:44,737 INFO receive config info: unknown#192.168.202.1:8848#1617248084737#6
+
 

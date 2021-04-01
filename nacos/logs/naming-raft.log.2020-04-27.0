@@ -1,0 +1,32 @@
+2020-04-27 22:33:12,364 INFO initializing Raft sub-system
+
+2020-04-27 22:33:12,366 INFO raft notifier started
+
+2020-04-27 22:33:12,365 INFO finish loading all datums, size: 0 cost 0 ms.
+
+2020-04-27 22:33:12,393 INFO cache loaded, datum count: 0, current term: 0
+
+2020-04-27 22:33:12,393 INFO finish to load data from disk, cost: 29 ms.
+
+2020-04-27 22:33:12,396 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2020-04-27 22:33:12,240 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2020-04-27 22:33:12,402 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-04-27 22:33:12,457 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2020-04-27 22:33:16,128 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2020-04-27 22:33:22,218 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-27 22:33:22,218 INFO server list is updated, dead: 1, servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-04-27 22:33:22,219 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-27 22:33:24,230 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-27 22:33:37,234 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@serverAddr
+
+2020-04-27 22:43:48,531 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@seata-order-service
+

@@ -1,0 +1,24 @@
+2020-12-31 09:01:14,408 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-31 09:01:14,538 WARN isQuickStart:false
+
+2020-12-31 09:01:14,719 WARN useAddressServer:true
+
+2020-12-31 09:01:52,568 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-31 09:01:52,661 WARN isQuickStart:false
+
+2020-12-31 09:01:52,842 WARN useAddressServer:true
+
+2020-12-31 09:05:21,860 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-31 09:05:21,968 WARN isQuickStart:false
+
+2020-12-31 09:05:22,136 WARN useAddressServer:true
+
+2020-12-31 09:11:11,814 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-31 09:11:11,906 WARN isQuickStart:false
+
+2020-12-31 09:11:12,083 WARN useAddressServer:true
+

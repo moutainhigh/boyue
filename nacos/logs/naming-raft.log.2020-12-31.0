@@ -1,0 +1,156 @@
+2020-12-31 09:01:12,897 INFO initializing Raft sub-system
+
+2020-12-31 09:01:12,898 INFO raft notifier started
+
+2020-12-31 09:01:12,837 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:01:12,911 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:01:12,921 INFO add task com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:01:12,924 INFO remove task com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:01:12,924 INFO finish loading all datums, size: 1 cost 26 ms.
+
+2020-12-31 09:01:12,926 INFO cache loaded, datum count: 1, current term: 100
+
+2020-12-31 09:01:12,926 INFO finish to load data from disk, cost: 28 ms.
+
+2020-12-31 09:01:12,927 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2020-12-31 09:01:12,965 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2020-12-31 09:01:12,965 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost, value: Service{name='DEFAULT_GROUP@@localhost', protectThreshold=0.0, appName='', groupName='DEFAULT_GROUP', metadata={}}
+
+2020-12-31 09:01:12,965 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:01:14,502 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2020-12-31 09:01:51,213 INFO initializing Raft sub-system
+
+2020-12-31 09:01:51,213 INFO raft notifier started
+
+2020-12-31 09:01:51,154 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:01:51,221 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:01:51,231 INFO add task com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:01:51,233 INFO finish loading all datums, size: 1 cost 20 ms.
+
+2020-12-31 09:01:51,233 INFO remove task com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:01:51,234 INFO cache loaded, datum count: 1, current term: 100
+
+2020-12-31 09:01:51,234 INFO finish to load data from disk, cost: 21 ms.
+
+2020-12-31 09:01:51,235 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2020-12-31 09:01:51,273 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2020-12-31 09:01:51,273 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost, value: Service{name='DEFAULT_GROUP@@localhost', protectThreshold=0.0, appName='', groupName='DEFAULT_GROUP', metadata={}}
+
+2020-12-31 09:01:51,274 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:01:52,638 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2020-12-31 09:05:20,473 INFO initializing Raft sub-system
+
+2020-12-31 09:05:20,473 INFO raft notifier started
+
+2020-12-31 09:05:20,408 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:05:20,482 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:05:20,494 INFO add task com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:05:20,497 INFO finish loading all datums, size: 1 cost 24 ms.
+
+2020-12-31 09:05:20,497 INFO remove task com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:05:20,499 INFO cache loaded, datum count: 1, current term: 100
+
+2020-12-31 09:05:20,499 INFO finish to load data from disk, cost: 26 ms.
+
+2020-12-31 09:05:20,500 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2020-12-31 09:05:20,557 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2020-12-31 09:05:20,557 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost, value: Service{name='DEFAULT_GROUP@@localhost', protectThreshold=0.0, appName='', groupName='DEFAULT_GROUP', metadata={}}
+
+2020-12-31 09:05:20,558 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:05:21,941 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2020-12-31 09:11:10,479 INFO initializing Raft sub-system
+
+2020-12-31 09:11:10,480 INFO raft notifier started
+
+2020-12-31 09:11:10,418 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:11:10,488 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:11:10,498 INFO add task com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:11:10,500 INFO finish loading all datums, size: 1 cost 20 ms.
+
+2020-12-31 09:11:10,500 INFO remove task com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:11:10,501 INFO cache loaded, datum count: 1, current term: 100
+
+2020-12-31 09:11:10,501 INFO finish to load data from disk, cost: 21 ms.
+
+2020-12-31 09:11:10,503 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2020-12-31 09:11:10,542 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2020-12-31 09:11:10,542 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@localhost, value: Service{name='DEFAULT_GROUP@@localhost', protectThreshold=0.0, appName='', groupName='DEFAULT_GROUP', metadata={}}
+
+2020-12-31 09:11:10,543 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@localhost
+
+2020-12-31 09:11:11,882 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2020-12-31 09:11:15,421 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-12-31 09:11:15,421 INFO server list is updated, dead: 1, servers: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-12-31 09:11:15,421 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-12-31 09:11:18,448 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-12-31 09:13:31,491 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@grid-gateway-job
+
+2020-12-31 09:13:50,448 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@grid-image-service
+
+2020-12-31 09:14:06,482 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@grid-consumer-client-service
+
+2020-12-31 09:14:27,294 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@grid-provider-client-service
+
+2020-12-31 12:25:12,771 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":19601,"state":"FOLLOWER","term":100,"voteFor":""}, term: 100
+
+2020-12-31 12:25:12,772 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":19767,"state":"CANDIDATE","term":101,"voteFor":"192.168.9.131:8848"}, term: 101
+
+2020-12-31 12:25:12,772 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":18222,"state":"CANDIDATE","term":102,"voteFor":"192.168.9.131:8848"}, term: 102
+
+2020-12-31 12:25:12,772 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":18170,"state":"CANDIDATE","term":103,"voteFor":"192.168.9.131:8848"}, term: 103
+
+2020-12-31 12:25:12,772 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":16796,"state":"CANDIDATE","term":104,"voteFor":"192.168.9.131:8848"}, term: 104
+
+2020-12-31 12:25:12,772 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":19968,"state":"CANDIDATE","term":105,"voteFor":"192.168.9.131:8848"}, term: 105
+
+2020-12-31 12:25:12,772 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":19818,"state":"CANDIDATE","term":106,"voteFor":"192.168.9.131:8848"}, term: 106
+
+2020-12-31 12:25:12,772 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":16172,"state":"CANDIDATE","term":107,"voteFor":"192.168.9.131:8848"}, term: 107
+
+2020-12-31 12:25:12,773 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":15333,"state":"CANDIDATE","term":108,"voteFor":"192.168.9.131:8848"}, term: 108
+
+2020-12-31 12:25:12,773 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":17621,"state":"CANDIDATE","term":109,"voteFor":"192.168.9.131:8848"}, term: 109
+
+2020-12-31 12:25:12,773 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":15214,"state":"CANDIDATE","term":110,"voteFor":"192.168.9.131:8848"}, term: 110
+
+2020-12-31 12:25:12,773 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.9.131:8848","leaderDueMs":17172,"state":"CANDIDATE","term":111,"voteFor":"192.168.9.131:8848"}, term: 111
+
+2020-12-31 12:25:14,532 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-12-31 12:25:16,548 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.9.131","key":"192.168.9.131:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+

@@ -1,0 +1,66 @@
+2020-04-25 15:07:23,455 INFO initializing Raft sub-system
+
+2020-04-25 15:07:23,456 INFO raft notifier started
+
+2020-04-25 15:07:23,344 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2020-04-25 15:07:23,488 INFO finish loading all datums, size: 0 cost 33 ms.
+
+2020-04-25 15:07:23,508 INFO cache loaded, datum count: 0, current term: 0
+
+2020-04-25 15:07:23,508 INFO finish to load data from disk, cost: 53 ms.
+
+2020-04-25 15:07:23,508 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-04-25 15:07:23,510 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2020-04-25 15:07:23,567 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2020-04-25 15:07:26,905 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2020-04-25 15:07:31,925 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@cloudalibaba-sentinel-service
+
+2020-04-25 15:07:33,322 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-25 15:07:33,322 INFO server list is updated, dead: 1, servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-04-25 15:07:33,323 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-25 15:07:35,014 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.18.4:8848","leaderDueMs":18237,"state":"FOLLOWER","term":0,"voteFor":""}, term: 0
+
+2020-04-25 15:07:35,335 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-25 22:04:26,261 INFO initializing Raft sub-system
+
+2020-04-25 22:04:26,262 INFO raft notifier started
+
+2020-04-25 22:04:26,262 INFO finish loading all datums, size: 0 cost 0 ms.
+
+2020-04-25 22:04:26,264 INFO cache loaded, datum count: 0, current term: 0
+
+2020-04-25 22:04:26,264 INFO finish to load data from disk, cost: 2 ms.
+
+2020-04-25 22:04:26,267 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2020-04-25 22:04:26,166 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2020-04-25 22:04:26,274 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-04-25 22:04:26,325 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2020-04-25 22:04:29,328 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2020-04-25 22:04:31,108 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-25 22:04:31,108 INFO server list is updated, dead: 1, servers: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-04-25 22:04:31,108 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-25 22:04:34,125 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.18.4","key":"192.168.18.4:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-04-25 22:06:43,828 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@nacos-payment-provider
+
+2020-04-25 22:06:55,336 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@nacos-order-consumer
+
+2020-04-25 22:59:20,722 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@cloudalibaba-sentinel-service
+

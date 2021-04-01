@@ -1,0 +1,76 @@
+2020-04-25 15:07:24,176 INFO notifyConnectTimeout:200
+
+2020-04-25 15:07:24,188 INFO notifySocketTimeout:8000
+
+2020-04-25 15:07:24,189 INFO isHealthCheck:true
+
+2020-04-25 15:07:24,189 INFO maxHealthCheckFailCount:12
+
+2020-04-25 15:07:24,189 INFO maxContent:10485760
+
+2020-04-25 15:07:24,189 INFO spring.datasource.platform:mysql
+
+2020-04-25 15:07:27,105 WARN DumpService start
+
+2020-04-25 15:07:27,108 INFO start clear all config-info.
+
+2020-04-25 15:07:27,117 INFO clear all config-info success.
+
+2020-04-25 15:07:27,117 WARN clear all config-info-tenant failed.
+
+2020-04-25 15:07:27,143 INFO start clear all config-info-beta.
+
+2020-04-25 15:07:27,143 WARN clear all config-info-beta failed.
+
+2020-04-25 15:07:27,144 WARN clear all config-info-beta-tenant failed.
+
+2020-04-25 15:07:27,148 INFO start clear all config-info-tag.
+
+2020-04-25 15:07:27,148 WARN clear all config-info-tag failed.
+
+2020-04-25 15:07:27,148 WARN clear all config-info-tag-tenant failed.
+
+2020-04-25 15:07:27,404 INFO ServerListService address-server port:8848
+
+2020-04-25 15:07:27,404 INFO ADDRESS_SERVER_URL:http://jmenv.tbsite.net:8080/nacos/serverlist
+
+2020-04-25 15:07:27,405 WARN [serverlist] updated to [192.168.18.4]
+
+2020-04-25 22:04:26,920 INFO notifyConnectTimeout:200
+
+2020-04-25 22:04:26,920 INFO notifySocketTimeout:8000
+
+2020-04-25 22:04:26,920 INFO isHealthCheck:true
+
+2020-04-25 22:04:26,920 INFO maxHealthCheckFailCount:12
+
+2020-04-25 22:04:26,920 INFO maxContent:10485760
+
+2020-04-25 22:04:26,920 INFO spring.datasource.platform:mysql
+
+2020-04-25 22:04:29,359 WARN DumpService start
+
+2020-04-25 22:04:29,362 INFO start clear all config-info.
+
+2020-04-25 22:04:29,368 WARN clear all config-info failed.
+
+2020-04-25 22:04:29,368 WARN clear all config-info-tenant failed.
+
+2020-04-25 22:04:29,397 INFO start clear all config-info-beta.
+
+2020-04-25 22:04:29,398 WARN clear all config-info-beta failed.
+
+2020-04-25 22:04:29,398 WARN clear all config-info-beta-tenant failed.
+
+2020-04-25 22:04:29,403 INFO start clear all config-info-tag.
+
+2020-04-25 22:04:29,403 WARN clear all config-info-tag failed.
+
+2020-04-25 22:04:29,403 WARN clear all config-info-tag-tenant failed.
+
+2020-04-25 22:04:29,553 INFO ServerListService address-server port:8848
+
+2020-04-25 22:04:29,553 INFO ADDRESS_SERVER_URL:http://jmenv.tbsite.net:8080/nacos/serverlist
+
+2020-04-25 22:04:29,554 WARN [serverlist] updated to [192.168.18.4]
+

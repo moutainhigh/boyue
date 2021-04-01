@@ -1,0 +1,82 @@
+2020-12-31 09:13:32,543 INFO DEFAULT_GROUP@@grid-gateway-job is changed, add it to push queue.
+
+2020-12-31 09:13:51,460 INFO DEFAULT_GROUP@@grid-image-service is changed, add it to push queue.
+
+2020-12-31 09:14:07,483 INFO DEFAULT_GROUP@@grid-consumer-client-service is changed, add it to push queue.
+
+2020-12-31 09:14:28,305 INFO DEFAULT_GROUP@@grid-provider-client-service is changed, add it to push queue.
+
+2020-12-31 12:25:14,374 INFO DEFAULT_GROUP@@grid-consumer-client-service is changed, add it to push queue.
+
+2020-12-31 12:25:14,374 INFO DEFAULT_GROUP@@grid-image-service is changed, add it to push queue.
+
+2020-12-31 12:25:14,383 INFO DEFAULT_GROUP@@grid-provider-client-service is changed, add it to push queue.
+
+2020-12-31 12:25:14,383 INFO DEFAULT_GROUP@@grid-gateway-job is changed, add it to push queue.
+
+2020-12-31 12:25:15,690 INFO DEFAULT_GROUP@@grid-gateway-job is changed, add it to push queue.
+
+2020-12-31 12:25:17,233 INFO DEFAULT_GROUP@@grid-provider-client-service is changed, add it to push queue.
+
+2020-12-31 12:25:17,235 INFO serviceName: DEFAULT_GROUP@@grid-provider-client-service changed, schedule push for: 192.168.9.131:56404, agent: Nacos-Java-Client:v1.1.4, key: 192.168.9.131,56404,168974373358100
+
+2020-12-31 12:25:17,235 INFO send udp packet: 192.168.9.131,56404,168974373358100
+
+2020-12-31 12:25:17,253 INFO received ack: {"type": "push-ack", "lastRefTime":"168974373358100", "data":""} from: 192.168.9.131:, cost: 56404 ms, unacked: 18, total push: 0
+
+2020-12-31 12:25:18,369 INFO DEFAULT_GROUP@@grid-image-service is changed, add it to push queue.
+
+2020-12-31 14:11:54,637 INFO DEFAULT_GROUP@@grid-gateway-job is changed, add it to push queue.
+
+2020-12-31 14:11:54,637 INFO DEFAULT_GROUP@@grid-image-service is changed, add it to push queue.
+
+2020-12-31 14:11:54,637 INFO DEFAULT_GROUP@@grid-consumer-client-service is changed, add it to push queue.
+
+2020-12-31 14:11:54,637 INFO DEFAULT_GROUP@@grid-provider-client-service is changed, add it to push queue.
+
+2020-12-31 14:12:25,271 INFO DEFAULT_GROUP@@grid-gateway-job is changed, add it to push queue.
+
+2020-12-31 14:12:26,407 INFO DEFAULT_GROUP@@grid-image-service is changed, add it to push queue.
+
+2020-12-31 14:12:27,433 INFO DEFAULT_GROUP@@grid-provider-client-service is changed, add it to push queue.
+
+2020-12-31 14:12:28,275 INFO DEFAULT_GROUP@@grid-consumer-client-service is changed, add it to push queue.
+
+2020-12-31 17:46:50,661 INFO DEFAULT_GROUP@@grid-consumer-client-service is changed, add it to push queue.
+
+2020-12-31 17:46:50,661 INFO serviceName: DEFAULT_GROUP@@grid-consumer-client-service changed, schedule push for: 192.168.9.131:63213, agent: Nacos-Java-Client:v1.1.4, key: 192.168.9.131,63213,188267800118900
+
+2020-12-31 17:46:50,661 INFO send udp packet: 192.168.9.131,63213,188267800118900
+
+2020-12-31 17:46:50,669 INFO received ack: {"type": "push-ack", "lastRefTime":"188267800118900", "data":""} from: 192.168.9.131:, cost: 63213 ms, unacked: 8, total push: 0
+
+2020-12-31 17:46:50,697 INFO DEFAULT_GROUP@@grid-image-service is changed, add it to push queue.
+
+2020-12-31 17:46:50,697 INFO serviceName: DEFAULT_GROUP@@grid-image-service changed, schedule push for: 192.168.9.131:63213, agent: Nacos-Java-Client:v1.1.4, key: 192.168.9.131,63213,188267836483900
+
+2020-12-31 17:46:50,697 INFO send udp packet: 192.168.9.131,63213,188267836483900
+
+2020-12-31 17:46:50,700 INFO received ack: {"type": "push-ack", "lastRefTime":"188267836483900", "data":""} from: 192.168.9.131:, cost: 63213 ms, unacked: 3, total push: 0
+
+2020-12-31 17:46:50,738 INFO DEFAULT_GROUP@@grid-gateway-job is changed, add it to push queue.
+
+2020-12-31 17:46:50,738 INFO serviceName: DEFAULT_GROUP@@grid-gateway-job changed, schedule push for: 192.168.9.131:63213, agent: Nacos-Java-Client:v1.1.4, key: 192.168.9.131,63213,188267877194400
+
+2020-12-31 17:46:50,738 INFO send udp packet: 192.168.9.131,63213,188267877194400
+
+2020-12-31 17:46:50,740 INFO received ack: {"type": "push-ack", "lastRefTime":"188267877194400", "data":""} from: 192.168.9.131:, cost: 63213 ms, unacked: 2, total push: 0
+
+2020-12-31 17:46:50,799 INFO DEFAULT_GROUP@@grid-provider-client-service is changed, add it to push queue.
+
+2020-12-31 17:46:50,799 INFO serviceName: DEFAULT_GROUP@@grid-provider-client-service changed, schedule push for: 192.168.9.131:63213, agent: Nacos-Java-Client:v1.1.4, key: 192.168.9.131,63213,188267938790800
+
+2020-12-31 17:46:50,799 INFO send udp packet: 192.168.9.131,63213,188267938790800
+
+2020-12-31 17:46:50,801 INFO serviceName: DEFAULT_GROUP@@grid-provider-client-service changed, schedule push for: 192.168.9.131:56404, agent: Nacos-Java-Client:v1.1.4, key: 192.168.9.131,56404,188267938790800
+
+2020-12-31 17:46:50,801 INFO send udp packet: 192.168.9.131,56404,188267938790800
+
+2020-12-31 17:46:50,801 INFO received ack: {"type": "push-ack", "lastRefTime":"188267938790800", "data":""} from: 192.168.9.131:, cost: 63213 ms, unacked: 2, total push: 1
+
+2020-12-31 17:46:50,818 INFO received ack: {"type": "push-ack", "lastRefTime":"188267938790800", "data":""} from: 192.168.9.131:, cost: 56404 ms, unacked: 17, total push: 0
+

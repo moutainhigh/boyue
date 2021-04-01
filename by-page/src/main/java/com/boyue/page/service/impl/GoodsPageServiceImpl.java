@@ -30,7 +30,7 @@ import java.util.Map;
  */
 @Service
 @Slf4j
-public class GoodsPageServiceImpl implements GoodsPageService {
+public class  GoodsPageServiceImpl implements GoodsPageService {
 
     /**
      * 注入spu的feignClient接口

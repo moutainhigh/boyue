@@ -1,0 +1,24 @@
+2020-04-27 22:33:37,292 INFO DEFAULT_GROUP@@serverAddr {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [192.168.18.4:8091:unknown:default_1.0_true_false_default]
+
+2020-04-27 22:33:37,294 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@serverAddr, ips: 192.168.18.4:8091_true,
+
+2020-04-27 22:43:48,535 INFO DEFAULT_GROUP@@seata-order-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.18.4:2001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-27 22:43:48,535 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@seata-order-service, ips: 192.168.18.4:2001_true,
+
+2020-04-27 22:46:13,566 INFO {POS} {IP-DISABLED} valid: 192.168.18.4:2001@DEFAULT@DEFAULT_GROUP@@seata-order-service, region: unknown, msg: client timeout after 15000, last beat: 1587998753834
+
+2020-04-27 22:46:17,581 INFO service: DEFAULT_GROUP@@seata-order-service {POS} {IP-ENABLED} valid: 192.168.18.4:2001@DEFAULT, region: unknown, msg: client beat ok
+
+2020-04-27 22:46:17,582 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@seata-order-service, ips: 192.168.18.4:2001_true,
+
+2020-04-27 22:47:33,585 INFO {POS} {IP-DISABLED} valid: 192.168.18.4:2001@DEFAULT@DEFAULT_GROUP@@seata-order-service, region: unknown, msg: client timeout after 15000, last beat: 1587998837701
+
+2020-04-27 22:47:48,745 INFO DEFAULT_GROUP@@seata-order-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.18.4:2001:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-04-27 22:47:48,746 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@seata-order-service, ips: 
+
+2020-04-27 22:48:34,440 INFO DEFAULT_GROUP@@seata-order-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.18.4:2001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-27 22:48:34,440 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@seata-order-service, ips: 192.168.18.4:2001_true,
+

@@ -1,0 +1,15 @@
+17:16:52.956 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+17:16:55.194 [main] INFO  c.a.n.c.c.i.LocalConfigInfoProcessor - [<clinit>,212] - LOCAL_SNAPSHOT_PATH:C:\Users\18745\nacos\config
+17:16:55.308 [main] INFO  c.a.n.c.c.i.Limiter - [<clinit>,54] - limitTime:5.0
+17:16:58.379 [main] INFO  c.a.n.c.c.u.JvmUtil - [<clinit>,49] - isMultiInstance:false
+17:17:07.463 [main] INFO  c.r.f.RuoYFileApplication - [logStartupProfileInfo,655] - The following profiles are active: dev
+17:17:11.113 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9300"]
+17:17:11.113 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:17:11.114 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+17:17:11.116 [main] INFO  o.a.c.c.AprLifecycleListener - [log,173] - An older version [1.2.16] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+17:17:11.116 [main] INFO  o.a.c.c.AprLifecycleListener - [log,173] - Loaded Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:17:11.117 [main] INFO  o.a.c.c.AprLifecycleListener - [log,173] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:17:11.117 [main] INFO  o.a.c.c.AprLifecycleListener - [log,173] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:17:12.214 [main] INFO  o.a.c.c.AprLifecycleListener - [log,173] - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:17:12.331 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:17:12.586 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]

@@ -1,0 +1,822 @@
+2020-12-25 08:31:45,164 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:31:45,167 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 08:31:51,114 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:31:51,114 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 08:31:51,527 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:31:51,527 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 08:31:53,652 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:31:53,652 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 08:31:54,369 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:31:54,369 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 08:32:42,968 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:42,971 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 08:32:43,104 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:43,104 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 08:32:43,300 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:43,300 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 08:32:43,630 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:43,631 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 08:32:43,723 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:43,723 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 08:32:53,640 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:53,640 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 08:32:53,680 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:53,680 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 08:32:53,714 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:53,714 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 08:32:53,746 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:53,746 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 08:32:53,809 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:32:53,809 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 08:33:07,276 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:33:07,276 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 08:33:16,325 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:33:16,325 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 08:33:17,730 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:33:17,730 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 08:33:19,675 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:33:19,675 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 08:33:20,469 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:33:20,469 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 08:41:47,327 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:41:47,327 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 08:41:47,385 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:41:47,385 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 08:41:47,413 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:41:47,413 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 08:41:47,440 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:41:47,440 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 08:41:47,470 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:41:47,470 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 08:46:27,371 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:46:27,376 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 08:46:32,745 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:46:32,745 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 08:46:33,357 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:46:33,357 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 08:46:36,012 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:46:36,012 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 08:46:37,291 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 08:46:37,291 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 09:05:23,334 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:23,334 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 09:05:23,363 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:23,363 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 09:05:23,400 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:23,400 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 09:05:23,420 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:23,420 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 09:05:23,450 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:23,450 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 09:05:37,192 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:37,192 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 09:05:48,726 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:48,726 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 09:05:58,252 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:58,252 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 09:05:58,598 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:05:58,598 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 09:06:01,760 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:06:01,760 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 09:08:14,317 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:14,317 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 09:08:14,354 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:14,354 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 09:08:14,383 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:14,383 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 09:08:14,409 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:14,409 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 09:08:14,440 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:14,440 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 09:08:26,415 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:26,415 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 09:08:37,614 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:37,614 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 09:08:43,557 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:43,557 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 09:08:44,421 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:44,421 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 09:08:46,796 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:08:46,796 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 09:21:06,279 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:06,279 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 09:21:06,280 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:06,280 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 09:21:06,314 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:06,314 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 09:21:06,333 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:06,333 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 09:21:06,364 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:06,364 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 09:21:19,789 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:19,789 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 09:21:29,699 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:29,699 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 09:21:34,834 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:34,834 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 09:21:36,859 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:36,859 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 09:21:38,603 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:21:38,603 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 09:33:34,214 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:33:34,214 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 09:33:34,242 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:33:34,242 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 09:33:34,277 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:33:34,277 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 09:33:34,296 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:33:34,296 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 09:33:34,329 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:33:34,329 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 09:33:46,983 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:33:46,983 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 09:34:00,023 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:34:00,023 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 09:34:06,225 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:34:06,225 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 09:34:08,280 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:34:08,280 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 09:34:10,057 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 09:34:10,057 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 10:06:53,292 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:06:53,292 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 10:06:53,328 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:06:53,328 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 10:06:53,379 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:06:53,379 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 10:06:53,395 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:06:53,395 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 10:06:53,424 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:06:53,424 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 10:07:07,576 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:07:07,576 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 10:07:19,273 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:07:19,273 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 10:07:22,102 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:07:22,102 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 10:07:22,753 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:07:22,753 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 10:07:25,454 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:07:25,454 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 10:08:01,595 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:01,595 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 10:08:01,626 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:01,627 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 10:08:01,662 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:01,662 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 10:08:01,686 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:01,686 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 10:08:01,714 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:01,714 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 10:08:13,768 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:13,768 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 10:08:24,349 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:24,349 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 10:08:29,709 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:29,709 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 10:08:29,969 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:29,969 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 10:08:32,206 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:08:32,206 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 10:51:11,085 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11504@DEFAULT@DEFAULT_GROUP@@grid-provider-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608864575380
+
+2020-12-25 10:51:11,085 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11604@DEFAULT@DEFAULT_GROUP@@grid-consumer-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608864572968
+
+2020-12-25 10:51:11,085 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11601@DEFAULT@DEFAULT_GROUP@@grid-login-service, region: unknown, msg: client timeout after 15000, last beat: 1608864574317
+
+2020-12-25 10:51:11,085 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:8080@DEFAULT@DEFAULT_GROUP@@grid-gateway-job, region: unknown, msg: client timeout after 15000, last beat: 1608864574473
+
+2020-12-25 10:51:11,165 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11607@DEFAULT@DEFAULT_GROUP@@grid-image-service, region: unknown, msg: client timeout after 15000, last beat: 1608864573123
+
+2020-12-25 10:51:11,174 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 10:51:11,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 10:51:11,174 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 10:51:11,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 10:51:11,174 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 10:51:11,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 10:51:11,174 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 10:51:11,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 10:51:11,174 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 10:51:11,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 10:51:11,901 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:51:11,901 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 10:51:12,070 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:51:12,070 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 10:51:13,246 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:51:13,246 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 10:51:13,408 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:51:13,409 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 10:51:14,324 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 10:51:14,324 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 11:02:21,900 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:21,901 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 11:02:21,938 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:21,938 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 11:02:21,973 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:21,973 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 11:02:21,994 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:21,994 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 11:02:22,024 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:22,024 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 11:02:34,773 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:34,773 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 11:02:46,373 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:46,373 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 11:02:52,757 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:52,757 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 11:02:55,196 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:55,196 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 11:02:56,722 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:02:56,722 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 11:05:05,656 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:05,656 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 11:05:05,692 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:05,692 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 11:05:05,729 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:05,729 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 11:05:05,785 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:05,785 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 11:05:05,790 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:05,790 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 11:05:18,635 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:18,635 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 11:05:28,665 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:28,665 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 11:05:33,365 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:33,365 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 11:05:35,491 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:35,491 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 11:05:38,352 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:05:38,353 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 11:10:52,048 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:10:52,048 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 11:10:55,250 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:10:55,250 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 11:10:56,184 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:10:56,184 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 11:11:01,567 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:11:01,567 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 11:11:02,633 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:11:02,634 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 11:33:30,095 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:30,096 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 11:33:30,129 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:30,129 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 11:33:30,176 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:30,176 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 11:33:30,201 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:30,201 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 11:33:30,255 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:30,255 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 11:33:44,947 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:44,947 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 11:33:50,555 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:50,555 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 11:33:54,393 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:54,393 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 11:33:56,976 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:56,976 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 11:33:57,254 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 11:33:57,254 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 12:25:08,153 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11604@DEFAULT@DEFAULT_GROUP@@grid-consumer-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608868339558
+
+2020-12-25 12:25:08,153 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:8080@DEFAULT@DEFAULT_GROUP@@grid-gateway-job, region: unknown, msg: client timeout after 15000, last beat: 1608868337816
+
+2020-12-25 12:25:08,153 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11601@DEFAULT@DEFAULT_GROUP@@grid-login-service, region: unknown, msg: client timeout after 15000, last beat: 1608868335539
+
+2020-12-25 12:25:08,153 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11504@DEFAULT@DEFAULT_GROUP@@grid-provider-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608868340005
+
+2020-12-25 12:25:12,380 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11607@DEFAULT@DEFAULT_GROUP@@grid-image-service, region: unknown, msg: client timeout after 15000, last beat: 1608868336975
+
+2020-12-25 12:25:12,381 INFO service: DEFAULT_GROUP@@grid-login-service {POS} {IP-ENABLED} valid: 192.168.9.131:11601@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-25 12:25:12,418 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 12:25:12,418 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 12:25:12,418 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 12:25:12,418 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 12:25:12,418 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 12:25:12,418 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 12:25:12,418 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 12:25:12,421 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 12:25:12,422 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 12:25:12,422 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 12:25:12,426 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 12:25:12,426 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 12:36:49,435 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11601@DEFAULT@DEFAULT_GROUP@@grid-login-service, region: unknown, msg: client timeout after 15000, last beat: 1608870312484
+
+2020-12-25 12:36:49,436 INFO service: DEFAULT_GROUP@@grid-login-service {POS} {IP-ENABLED} valid: 192.168.9.131:11601@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-25 12:36:49,441 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 12:36:49,441 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 12:36:49,442 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 12:36:49,442 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 12:36:50,471 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 12:36:50,471 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 12:36:51,303 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 12:36:51,303 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 12:36:53,043 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 12:36:53,043 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 12:36:53,493 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 12:36:53,493 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 13:47:59,671 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:47:59,671 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 13:48:04,384 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:48:04,385 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 13:48:04,419 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:48:04,419 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 13:48:04,467 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:48:04,467 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 13:48:04,490 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:48:04,490 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 13:49:44,255 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:49:44,255 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 13:49:45,638 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:49:45,638 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 13:49:49,142 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:49:49,142 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 13:49:55,723 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:49:55,723 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 13:49:55,879 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 13:49:55,879 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 14:12:43,150 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11504@DEFAULT@DEFAULT_GROUP@@grid-provider-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608875987247
+
+2020-12-25 14:12:43,150 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11604@DEFAULT@DEFAULT_GROUP@@grid-consumer-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608875985797
+
+2020-12-25 14:12:43,150 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11607@DEFAULT@DEFAULT_GROUP@@grid-image-service, region: unknown, msg: client timeout after 15000, last beat: 1608875985720
+
+2020-12-25 14:12:43,150 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:8080@DEFAULT@DEFAULT_GROUP@@grid-gateway-job, region: unknown, msg: client timeout after 15000, last beat: 1608875987137
+
+2020-12-25 14:12:43,151 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11601@DEFAULT@DEFAULT_GROUP@@grid-login-service, region: unknown, msg: client timeout after 15000, last beat: 1608875985847
+
+2020-12-25 14:12:43,151 INFO service: DEFAULT_GROUP@@grid-consumer-client-service {POS} {IP-ENABLED} valid: 192.168.9.131:11604@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-25 14:12:43,151 INFO service: DEFAULT_GROUP@@grid-login-service {POS} {IP-ENABLED} valid: 192.168.9.131:11601@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-25 14:12:43,151 INFO service: DEFAULT_GROUP@@grid-image-service {POS} {IP-ENABLED} valid: 192.168.9.131:11607@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-25 14:12:43,155 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 14:12:43,155 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 14:12:43,155 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 14:12:43,155 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 14:12:43,156 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 14:12:43,156 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 14:12:43,157 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 14:12:43,157 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 14:12:43,261 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 14:12:43,261 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 14:12:43,371 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 14:12:43,371 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 14:12:47,617 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 14:12:47,617 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 14:12:47,636 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 14:12:47,636 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 15:13:43,603 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11604@DEFAULT@DEFAULT_GROUP@@grid-consumer-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608880404828
+
+2020-12-25 15:13:51,450 INFO service: DEFAULT_GROUP@@grid-consumer-client-service {POS} {IP-ENABLED} valid: 192.168.9.131:11604@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-25 15:14:38,710 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11604@DEFAULT@DEFAULT_GROUP@@grid-consumer-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608880459999
+
+2020-12-25 15:14:53,737 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 15:14:53,737 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 15:15:41,669 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 15:15:41,669 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 15:15:58,856 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11604@DEFAULT@DEFAULT_GROUP@@grid-consumer-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608880541668
+
+2020-12-25 15:16:13,887 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 15:16:13,887 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 15:19:11,912 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 15:19:11,912 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 15:19:29,177 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11504@DEFAULT@DEFAULT_GROUP@@grid-provider-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608880751225
+
+2020-12-25 15:19:44,208 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 15:19:44,208 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 15:27:12,143 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 15:27:12,143 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 15:27:16,013 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 15:27:16,014 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 15:27:16,994 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 15:27:16,994 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 15:27:22,611 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 15:27:22,611 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 15:27:23,001 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 15:27:23,001 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 17:02:01,068 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11607@DEFAULT@DEFAULT_GROUP@@grid-image-service, region: unknown, msg: client timeout after 15000, last beat: 1608886594552
+
+2020-12-25 17:02:01,068 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:8080@DEFAULT@DEFAULT_GROUP@@grid-gateway-job, region: unknown, msg: client timeout after 15000, last beat: 1608886594395
+
+2020-12-25 17:02:01,068 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11504@DEFAULT@DEFAULT_GROUP@@grid-provider-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608886590385
+
+2020-12-25 17:02:01,068 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11601@DEFAULT@DEFAULT_GROUP@@grid-login-service, region: unknown, msg: client timeout after 15000, last beat: 1608886592569
+
+2020-12-25 17:02:01,162 INFO {POS} {IP-DISABLED} valid: 192.168.9.131:11604@DEFAULT@DEFAULT_GROUP@@grid-consumer-client-service, region: unknown, msg: client timeout after 15000, last beat: 1608886592723
+
+2020-12-25 17:02:01,173 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 17:02:01,173 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 17:02:01,174 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 17:02:01,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 17:02:01,174 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 17:02:01,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 17:02:01,179 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 17:02:01,179 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 17:02:01,179 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-25 17:02:01,179 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+
+2020-12-25 17:02:01,657 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:02:01,657 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 192.168.9.131:11504_true,
+
+2020-12-25 17:02:03,826 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:02:03,826 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 192.168.9.131:11601_true,
+
+2020-12-25 17:02:03,982 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:02:03,982 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 192.168.9.131:11604_true,
+
+2020-12-25 17:02:05,660 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:02:05,660 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 192.168.9.131:8080_true,
+
+2020-12-25 17:02:05,815 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:02:05,816 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 192.168.9.131:11607_true,
+
+2020-12-25 17:47:00,397 INFO DEFAULT_GROUP@@grid-consumer-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11604:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:47:00,397 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-consumer-client-service, ips: 
+
+2020-12-25 17:47:00,464 INFO DEFAULT_GROUP@@grid-image-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11607:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:47:00,464 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-image-service, ips: 
+
+2020-12-25 17:47:00,523 INFO DEFAULT_GROUP@@grid-gateway-job {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:47:00,523 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-gateway-job, ips: 
+
+2020-12-25 17:47:00,549 INFO DEFAULT_GROUP@@grid-provider-client-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11504:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:47:00,549 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-provider-client-service, ips: 
+
+2020-12-25 17:47:00,568 INFO DEFAULT_GROUP@@grid-login-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.9.131:11601:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-25 17:47:00,568 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@grid-login-service, ips: 
+

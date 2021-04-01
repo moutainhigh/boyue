@@ -1,0 +1,42 @@
+2020-12-25 08:31:39,046 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-25 08:31:39,159 WARN isQuickStart:false
+
+2020-12-25 08:31:39,452 WARN useAddressServer:true
+
+2020-12-25 08:32:41,419 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-25 08:32:41,555 WARN isQuickStart:false
+
+2020-12-25 08:32:41,726 WARN useAddressServer:true
+
+2020-12-25 08:45:20,060 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-25 08:45:20,153 WARN isQuickStart:false
+
+2020-12-25 08:45:20,322 WARN useAddressServer:true
+
+2020-12-25 08:45:58,331 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-25 08:45:58,425 WARN isQuickStart:false
+
+2020-12-25 08:45:58,588 WARN useAddressServer:true
+
+2020-12-25 11:09:42,906 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-25 11:09:43,000 WARN isQuickStart:false
+
+2020-12-25 11:09:43,180 WARN useAddressServer:true
+
+2020-12-25 11:09:58,771 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-25 11:09:58,849 WARN isQuickStart:false
+
+2020-12-25 11:09:59,017 WARN useAddressServer:true
+
+2020-12-25 15:26:24,529 WARN [master-db] jdbc:mysql://127.0.0.1:3306/ag_nacos?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2020-12-25 15:26:24,634 WARN isQuickStart:false
+
+2020-12-25 15:26:24,812 WARN useAddressServer:true
+
