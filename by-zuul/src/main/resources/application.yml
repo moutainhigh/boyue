@@ -87,6 +87,7 @@ by:
       - /api/pay                        #放行支付请求请求
       - /zuul/api/upload/signature      #放行支付回调请求请求
       - /api/manageSec                  #放行秒杀后台请求
+      - /api/order/statistics           #放行订单统计请求
 logging:
   config:
     classpath: logback-spring.xml
