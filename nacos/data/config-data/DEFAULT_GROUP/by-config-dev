@@ -1,0 +1,24 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/YuyangSun/boyue-config.git     #这里要写自己的git地址
+  rabbitmq:
+    host: 127.0.0.1
+    virtual-host: /boyue
+    username: boyue
+    password: boyue
+management: #暴露触发消息总线的地址 post请求
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/config

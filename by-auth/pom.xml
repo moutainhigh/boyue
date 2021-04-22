@@ -73,8 +73,16 @@
     <build>
         <plugins>
             <plugin>
+                <!--当子工程之间存在依赖关系时使用下面的打包方式，防止出现依赖的工程打包时找不到被依赖工程的class问题-->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

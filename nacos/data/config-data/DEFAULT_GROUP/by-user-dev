@@ -1,0 +1,39 @@
+server:
+  port: 8085
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///boyue_shop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#myBatis-plus
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #输出sql日志
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/user
+  level:
+    com.boyue: debug
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: ${spring.application.name}
+    sendMessageTimeout: 1000
+by:
+  encoder:
+    crypt:
+      secret: ${random.uuid} # 随机的密钥，使用uuid
+      strength: 10 # 加密强度,密码和盐加密时的运算次数

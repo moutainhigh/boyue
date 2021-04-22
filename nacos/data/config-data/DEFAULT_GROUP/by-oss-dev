@@ -1,0 +1,25 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: oss-service
+  servlet:
+    multipart:
+      max-file-size: 5MB
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+by:
+  oss:
+    accessKeyId: LTAI4G5VGwBxzzpx9BUVAMTA
+    accessKeySecret: fwKRfIeC22AIuT08ApJDOzcVmi4UXl
+    host: http://boyue-oss.oss-cn-beijing.aliyuncs.com # 访问oss的域名，很重要bucket + endpoint
+    endpoint: oss-cn-beijing.aliyuncs.com # 你的服务的端点，不一定跟我一样
+    dir: boyue-image/ # 保存到bucket的某个子目录
+    expireTime: 120 # 过期时间，单位是S
+    maxFileSize: 5242880 #文件大小限制，这里是5M
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/upload

@@ -1,37 +1,12 @@
-2021-04-01 09:49:04,747 WARN [master-db] jdbc:mysql://172.31.31.151:13306/ry-config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+2021-04-21 18:35:11,410 WARN [master-db] jdbc:mysql://127.0.0.1:3306/boyue_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
 
-2021-04-01 09:49:04,875 WARN isQuickStart:false
+2021-04-21 18:35:11,535 WARN isQuickStart:false
 
-2021-04-01 09:49:05,960 WARN useAddressServer:true
+2021-04-21 18:35:12,609 WARN useAddressServer:true
 
-2021-04-01 10:45:14,114 WARN [master-db] jdbc:mysql://172.31.31.151:13306/ry-config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+2021-04-21 20:29:27,356 WARN [master-db] jdbc:mysql://127.0.0.1:3306/boyue_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
 
-2021-04-01 10:45:14,232 WARN isQuickStart:false
+2021-04-21 20:29:27,476 WARN isQuickStart:false
 
-2021-04-01 10:45:15,084 WARN useAddressServer:true
-
-2021-04-01 10:48:38,424 WARN [master-db] jdbc:mysql://172.31.31.151:13306/ry-config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
-
-2021-04-01 10:48:38,555 WARN isQuickStart:false
-
-2021-04-01 10:48:39,450 WARN useAddressServer:true
-
-2021-04-01 10:49:55,089 ERROR [master-db] master db not found.
-
-2021-04-01 10:49:55,097 ERROR [db-error] master db 127.0.0.1 down.
-
-2021-04-01 10:49:55,192 WARN isQuickStart:false
-
-2021-04-01 10:49:55,236 ERROR Nacos Server did not start because dumpservice bean construction failure :
-No DataSource set
-
-2021-04-01 10:51:47,619 WARN isQuickStart:false
-
-2021-04-01 10:51:48,460 WARN useAddressServer:true
-
-2021-04-01 11:31:51,116 WARN [master-db] jdbc:mysql://127.0.0.1:3306/boyue_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
-
-2021-04-01 11:31:51,209 WARN isQuickStart:false
-
-2021-04-01 11:31:52,174 WARN useAddressServer:true
+2021-04-21 20:29:28,513 WARN useAddressServer:true
 

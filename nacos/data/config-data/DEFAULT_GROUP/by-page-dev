@@ -1,0 +1,19 @@
+server:
+  port: 8084
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: page-service
+  thymeleaf:
+    cache: false
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/page
+rocketmq:
+  name-server: 127.0.0.1:9876

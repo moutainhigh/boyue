@@ -1,0 +1,26 @@
+server:
+  port: 8093
+spring:
+  application:
+    name: schedule-service
+  redis:
+    host: 127.0.0.1
+  task:
+    scheduling:
+      pool:
+        size: 10
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    send-message-timeout: 30000
+    group: ${spring.application.name}
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/schedule

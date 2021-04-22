@@ -1,0 +1,29 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: auth-service
+  rabbitmq:
+    host: 127.0.0.1
+    virtual-host: /boyue
+    username: boyue
+    password: boyue
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+by:
+  jwt:
+    publicKeyPath: D:\GraduationProject\BoYue\ssh\id_rsa.pub # 公钥地址
+    privateKeyPath: D:\GraduationProject\BoYue\ssh\id_rsa # 私钥地址
+    user:
+      expire: 30 # 过期时间,单位分钟
+      cookieName: BY_TOKEN # cookie名称
+      cookieDomain: boyue.com # cookie的域
+      minRefreshInterval: 15
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/auth
+  level:
+    com.boyue: debug

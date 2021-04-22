@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boyue.item.mapper.BySeckillPolicyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.boyue.item.entity.BySeckillPolicy">
+        <id column="id" property="id" />
+        <result column="spu_id" property="spuId" />
+        <result column="cid1" property="cid1" />
+        <result column="cid2" property="cid2" />
+        <result column="cid3" property="cid3" />
+        <result column="brand_id" property="brandId" />
+        <result column="sku_id" property="skuId" />
+        <result column="title" property="title" />
+        <result column="sub_title" property="subTitle" />
+        <result column="num" property="num" />
+        <result column="stock_count" property="stockCount" />
+        <result column="sku_pic" property="skuPic" />
+        <result column="old_price" property="oldPrice" />
+        <result column="cost_price" property="costPrice" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="name" property="name" />
+        <result column="sec_kill_date" property="secKillDate" />
+    </resultMap>
+
+</mapper>

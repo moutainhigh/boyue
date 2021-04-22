@@ -1,0 +1,28 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: sendSMS-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:   #用于测试
+    group: ${spring.application.name}   #生产者组
+    send-message-timeout: 20000         #超时时间
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/sendSMS
+by:
+  sms:
+    accessKeyId: LTAI4G4FRHBwiPojhdwxTcY9
+    accessKeySecret: Egr1D2yCRB0Bttlq54egSx952Gx8NV
+    signName: 傲宇 # 签名名称
+    verifyCodeTemplate: SMS_205125999 # 模板名称
+    domain: dysmsapi.aliyuncs.com # 域名
+    action: SendSMS # API类型，发送短信
+    version: 2017-05-25 # API版本，固定值
+    regionID: cn-hangzhou # 区域id

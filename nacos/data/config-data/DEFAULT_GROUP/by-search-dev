@@ -1,0 +1,26 @@
+server:
+  port: 8083
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: search-service
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9300
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+ribbon:
+  ConnectTimeout: 500 # 连接超时时长
+  ReadTimeout: 2000 # 数据通信超时时长
+  MaxAutoRetries: 0 # 当前服务器的重试次数
+  MaxAutoRetriesNextServer: 1 # 重试多少次服务
+  OkToRetryOnAllOperations: false # 是否对所有的请求方式都重试 GET PUT DELETE POST
+logging:
+  config:
+    classpath: logback-spring.xml
+  path: D:/GraduationProject/BoYue/boyue-logback/search
+rocketmq:
+  name-server: 127.0.0.1:9876

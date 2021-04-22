@@ -14,7 +14,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  *
  * @Date: 2021/1/15 21:33
  * @Author: Jacky
- * @Description: zuul网官的启动类
+ * @Description: zuul网关的启动类
  */
 @SpringBootApplication
 @EnableDiscoveryClient
